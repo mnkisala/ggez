@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.537255, 0.121569, 0.882353, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.92549, 0.866667, 0.945098, 1 )
+
+[node name="kubek"]
+
+[node name="kubek" parent="." index="0"]
+material/0 = SubResource( 1 )
+
+[node name="pokrywka" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.215852, 0 )
+material/0 = SubResource( 2 )
