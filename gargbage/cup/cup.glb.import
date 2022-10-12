@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/kubek.glb-5f7f92b89c324bc97187fd0c17c70d96.scn"
+path="res://.import/cup.glb-85c6c0d2594fa13c3d4f6d697132bdcf.scn"
 
 [deps]
 
-source_file="res://Assets-test/kubek.glb"
-dest_files=[ "res://.import/kubek.glb-5f7f92b89c324bc97187fd0c17c70d96.scn" ]
+source_file="res://gargbage/cup/cup.glb"
+dest_files=[ "res://.import/cup.glb-85c6c0d2594fa13c3d4f6d697132bdcf.scn" ]
 
 [params]
 
