@@ -11,13 +11,18 @@ config_version=4
 [application]
 
 config/name="ggez"
-run/main_scene="res://Scenes/Scene1.tscn"
+run/main_scene="res://Scenes/MainSceneOpener.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
+
+[global]
+
+scene=false
+main=false
 
 [gui]
 
