@@ -22,50 +22,56 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0.396078, 0.415686, 0.411765, 1 )
 
-[node name="Label" type="Label" parent="."]
-margin_right = 1920.0
-margin_bottom = 405.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 461.0
+margin_top = 313.0
+margin_right = 1458.0
+margin_bottom = 767.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 997.0
+margin_bottom = 158.0
 theme = SubResource( 1 )
 custom_colors/font_color = Color( 0.0588235, 0.894118, 0.423529, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Ekolodzy k**wy"
+text = "Ekolodzy kurwy"
 align = 1
 valign = 1
 uppercase = true
 
-[node name="ButtonNewGame" type="Button" parent="."]
-margin_left = 824.0
-margin_top = 467.0
-margin_right = 1091.0
-margin_bottom = 564.0
+[node name="ButtonNewGame" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 997.0
+margin_bottom = 232.0
 custom_fonts/font = SubResource( 3 )
 action_mode = 0
 text = "New Game"
 icon_align = 1
 script = ExtResource( 2 )
 
-[node name="ButtonExit" type="Button" parent="."]
-margin_left = 820.0
-margin_top = 901.0
-margin_right = 1087.0
-margin_bottom = 998.0
+[node name="ButtonExit" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 236.0
+margin_right = 997.0
+margin_bottom = 306.0
 custom_fonts/font = SubResource( 3 )
 text = "Exit"
 
-[node name="ButtonContinue" type="Button" parent="."]
-margin_left = 822.0
-margin_top = 607.0
-margin_right = 1089.0
-margin_bottom = 704.0
+[node name="ButtonContinue" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 310.0
+margin_right = 997.0
+margin_bottom = 380.0
 custom_fonts/font = SubResource( 3 )
 text = "Contiune"
 
-[node name="ButtonSettings" type="Button" parent="."]
-margin_left = 820.0
-margin_top = 754.0
-margin_right = 1087.0
-margin_bottom = 851.0
+[node name="ButtonSettings" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 384.0
+margin_right = 997.0
+margin_bottom = 454.0
 custom_fonts/font = SubResource( 3 )
 text = "Settings"
 
-[connection signal="pressed" from="ButtonNewGame" to="ButtonNewGame" method="_on_ButtonNewGame_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonNewGame" to="CenterContainer/VBoxContainer/ButtonNewGame" method="_on_ButtonNewGame_pressed"]
