@@ -53,25 +53,25 @@ text = "New Game"
 icon_align = 1
 script = ExtResource( 2 )
 
-[node name="ButtonExit" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="ButtonContinue" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 236.0
 margin_right = 997.0
 margin_bottom = 306.0
 custom_fonts/font = SubResource( 3 )
-text = "Exit"
+text = "Contiune"
 
-[node name="ButtonContinue" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="ButtonSettings" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 310.0
 margin_right = 997.0
 margin_bottom = 380.0
 custom_fonts/font = SubResource( 3 )
-text = "Contiune"
+text = "Settings"
 
-[node name="ButtonSettings" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="ButtonExit" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 384.0
 margin_right = 997.0
 margin_bottom = 454.0
 custom_fonts/font = SubResource( 3 )
-text = "Settings"
+text = "Exit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonNewGame" to="CenterContainer/VBoxContainer/ButtonNewGame" method="_on_ButtonNewGame_pressed"]
