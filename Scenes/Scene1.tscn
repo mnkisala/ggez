@@ -9,7 +9,7 @@
 [ext_resource path="res://gargbage/Wilkolu_garbage/papierkilka.gltf" type="PackedScene" id=7]
 [ext_resource path="res://gargbage/Wilkolu_garbage/can.gltf" type="PackedScene" id=8]
 [ext_resource path="res://Models/trashcan1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://gargbage/Wilkolu_garbage/tree.gltf" type="PackedScene" id=10]
+[ext_resource path="res://Models/tree.tscn" type="PackedScene" id=10]
 [ext_resource path="res://gargbage/Wilkolu_garbage/TrashCan2.gltf" type="PackedScene" id=11]
 [ext_resource path="res://gargbage/Wilkolu_garbage/TrashCan3.gltf" type="PackedScene" id=12]
 [ext_resource path="res://gargbage/Wilkolu_garbage/TrashCan2Klapa.gltf" type="PackedScene" id=13]
@@ -46,6 +46,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95944, 0 )
 
 [node name="test_level" parent="." instance=ExtResource( 2 )]
 
+[node name="RUBBISH" parent="test_level" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158738, 0.280258, 11.5092 )
+
 [node name="ladder" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 15.9261, 0.273845, -18.644 )
 
@@ -71,7 +74,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.65055, 5.73118, 0.649249 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.008, 0.100001, -7.6805 )
 
 [node name="tree" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.33814, -0.466958, 6.52514 )
-
-[node name="RUBBISH" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0375, 0.240879, 9.8702 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7737, 0.0999999, 8.29496 )
