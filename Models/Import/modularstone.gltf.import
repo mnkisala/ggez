@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/modularstone1.gltf-c6829ee0bc1440c4524de24f58a4be5c.scn"
+path="res://.import/modularstone.gltf-ea7e8c1ec02e0466e9499389a0569280.scn"
 
 [deps]
 
-source_file="res://Models/Import/modularstone1.gltf"
-dest_files=[ "res://.import/modularstone1.gltf-c6829ee0bc1440c4524de24f58a4be5c.scn" ]
+source_file="res://Models/Import/modularstone.gltf"
+dest_files=[ "res://.import/modularstone.gltf-ea7e8c1ec02e0466e9499389a0569280.scn" ]
 
 [params]
 
