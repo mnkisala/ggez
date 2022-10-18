@@ -17,8 +17,8 @@ Struktura folderów
 | Fonts         | Czcionki                                                                                                                                               |
 | Scripts       | Skrypty (Nazwa folderu - "Scripts" oznacza "Skrypty" ale po angielsku, jest to nawiązanie do faktu że folder ten ma służyć do przechowywania skryptów) |
 
-Poziomy:
---------
+Poziomy
+-------
 
 -	**Parkour** : skakanie
 -	**Fps** : Strzelanie (Mikołaj rób co chesz)
@@ -26,4 +26,10 @@ Poziomy:
 -	**Labirint** : Pytanie wraz z 3 odpowiedziamy po wyborze złego otwierają siędrzwi po których droga prowadzi do przycisku, który wywala nas na start. Natomiast dobra odp otwieraz ścieżkę, która umożliwia przejście labiryntu. Pytania się resetują dopiero gdy na wszystkich ścieżkach wyboru źle wybierzemy.
 -	**Zbieractwo** : Odblowkowuje się dopiero gdy przejdziemy wszystkie poziomy. Wyrzucamy tu śmieci do odpowiednich śmietników.
 
--	**Mechaniki ogólne**: Zbieranie śmieci(Podnoszenie śmieci, animacja zbierania papieru), Rzucanie(thrownig do śmietników, jeśli śmieć nie zgadza to go odrzuca i trzeba podnieść jeszcze raz), otwieranie drzwi(labirynt), ogólne wyświetlanie ekwipunku oraz punktów.
+Mechaniki ogólne
+----------------
+
+-	Zbieranie śmieci(Podnoszenie śmieci, animacja zbierania papieru)
+-	Rzucanie(thrownig do śmietników, jeśli śmieć nie zgadza to go odrzuca i trzeba podnieść jeszcze raz)
+-	otwieranie drzwi(labirynt)
+-	ogólne wyświetlanie ekwipunku oraz punktów.
