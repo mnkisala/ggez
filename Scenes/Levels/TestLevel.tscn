@@ -1,18 +1,18 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Models/RUBBISH.glb" type="PackedScene" id=1]
-[ext_resource path="res://Models/test_level.glb" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/cup.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Models/papier.gltf" type="PackedScene" id=5]
-[ext_resource path="res://Models/drabinaPoprawka.gltf" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Models/cup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Models/TrashCan2Klapa.gltf" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Models/trashcan1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Models/test_level.glb" type="PackedScene" id=5]
+[ext_resource path="res://Models/TrashCan2.gltf" type="PackedScene" id=6]
 [ext_resource path="res://Models/papierkilka.gltf" type="PackedScene" id=7]
-[ext_resource path="res://Models/can.gltf" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/trashcan1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/tree.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Models/TrashCan2.gltf" type="PackedScene" id=11]
-[ext_resource path="res://Models/TrashCan3.gltf" type="PackedScene" id=12]
-[ext_resource path="res://Models/TrashCan2Klapa.gltf" type="PackedScene" id=13]
+[ext_resource path="res://Models/TrashCan3.gltf" type="PackedScene" id=8]
+[ext_resource path="res://Models/can.gltf" type="PackedScene" id=9]
+[ext_resource path="res://Models/drabinaPoprawka.gltf" type="PackedScene" id=10]
+[ext_resource path="res://Models/papier.gltf" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Models/tree.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ProceduralSky" id=2]
 
@@ -35,43 +35,43 @@ adjustment_saturation = 1.46
 
 [node name="Spatial" type="Spatial"]
 
-[node name="TrashCan2Klapa" parent="." instance=ExtResource( 13 )]
+[node name="TrashCan2Klapa" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20213, 0.0999999, -1.66611 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
-[node name="player" parent="." instance=ExtResource( 3 )]
+[node name="player" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95944, 0 )
 
-[node name="test_level" parent="." instance=ExtResource( 2 )]
+[node name="test_level" parent="." instance=ExtResource( 5 )]
 
-[node name="RUBBISH" parent="test_level" instance=ExtResource( 9 )]
+[node name="RUBBISH" parent="test_level" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158738, 0.280258, 11.5092 )
 
 [node name="ladder" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 15.9261, 0.273845, -18.644 )
 
-[node name="kubek" parent="." instance=ExtResource( 4 )]
+[node name="kubek" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044701, 1.00039, -7.49435 )
 
-[node name="can" parent="." instance=ExtResource( 8 )]
+[node name="can" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.74535, 0.100002, -3.12191 )
 
 [node name="papierkilka" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72502, 0.295469, -11.7529 )
 
-[node name="TrashCan3" parent="." instance=ExtResource( 12 )]
+[node name="TrashCan3" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7162, 0.0999994, -0.182791 )
 
-[node name="TrashCan2" parent="." instance=ExtResource( 11 )]
+[node name="TrashCan2" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.71935, 3.18941, -7.92593 )
 
-[node name="papier" parent="." instance=ExtResource( 5 )]
+[node name="papier" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.65055, 5.73118, 0.649249 )
 
-[node name="drabinaPoprawka" parent="." instance=ExtResource( 6 )]
+[node name="drabinaPoprawka" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.008, 0.100001, -7.6805 )
 
-[node name="tree" parent="." instance=ExtResource( 10 )]
+[node name="tree" parent="." instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7737, 0.0999999, 8.29496 )
