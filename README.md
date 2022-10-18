@@ -8,16 +8,14 @@ pozdro
 Struktura folderów
 ------------------
 
-| Folder        | Funkcja                                                                         |
-|---------------|---------------------------------------------------------------------------------|
-| Models        | Worek na wszystko co eksportuje blender, każdy asset                            |
-|               | wypadałoby przerobić na customową scene w folderze `Scenes/Models`              |
-| Scenes        | Wszystkie sceny                                                                 |
-| Scenes/Models | Sceny z zaadaptowanych modeli z Models                                          |
-| Scenes/Levels | Poziomy                                                                         |
-| Fonts         | Czcionki                                                                        |
-| Scripts       | Skrypty (Nazwa folderu - "Scripts" oznacza "Skrypty" ale po angielsku,          |
-|               | jest to nawiązanie do faktu że folder ten ma służyć do przechowywania skryptów) |
+| Folder        | Funkcja                                                                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Models        | Worek na wszystko co eksportuje blender, każdy asset trzeba przerobić na customową scene w folderze `Scenes/Models`                                    |
+| Scenes        | Wszystkie sceny                                                                                                                                        |
+| Scenes/Models | Sceny z zaadaptowanych modeli z Models                                                                                                                 |
+| Scenes/Levels | Poziomy                                                                                                                                                |
+| Fonts         | Czcionki                                                                                                                                               |
+| Scripts       | Skrypty (Nazwa folderu - "Scripts" oznacza "Skrypty" ale po angielsku, jest to nawiązanie do faktu że folder ten ma służyć do przechowywania skryptów) |
 
 Poziomy:
 --------
