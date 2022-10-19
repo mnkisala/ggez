@@ -38,8 +38,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95944, 0 )
 [node name="BeerCan" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8848, 0.0999999, 12.8882 )
 
+[node name="tree" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08156, 2.71548, -8.8319 )
+
 [node name="Paper" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2689, 0.112729, 11.4706 )
-
-[node name="tree" parent="Paper" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18734, 2.60275, -20.3025 )
