@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Garbage/Paper.tres" type="Resource" id=1]
+[ext_resource path="res://Scenes/GarbageBase.tscn" type="PackedScene" id=2]
+
+[node name="Paper" type="Spatial"]
+
+[node name="Garbage" parent="." instance=ExtResource( 2 )]
+resource = ExtResource( 1 )
