@@ -3,7 +3,7 @@ extends Spatial
 
 export(Resource) var resource = null setget _resource_set, _resource_get
 
-var scene
+var scene = null
 
 func _ready():
 	if (resource != null):
@@ -13,7 +13,9 @@ func _ready():
 
 func _resource_set(v):
 	resource = v
-	self.remove_child(scene)
+
+	if (scene != null):
+		self.remove_child(scene)
 	if (resource != null):
 		scene = resource.model.instance()
 		self.add_child(scene)

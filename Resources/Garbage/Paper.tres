@@ -6,4 +6,4 @@
 [resource]
 script = ExtResource( 1 )
 model = ExtResource( 2 )
-worth = 50
+points = 100
