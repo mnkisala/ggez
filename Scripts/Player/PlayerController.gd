@@ -16,6 +16,8 @@ export var mouse_sensitivty = 0.005
 var _yaw: float = 90.0
 var _pitch: float = 0.0
 
+var points = 0
+
 onready var _head = $"./head"
 onready var _raycast: RayCast = $"./head/RayCast"
 onready var _hud_hint: Label = $"./hud/hint"
@@ -72,10 +74,16 @@ func _process(_delta):
 	if Input.is_action_just_pressed("jump"):
 		_jump = true
 
+	_hud_hint.text = ""
+
 	# smieci
-	if _raycast.is_colliding():
-		var collision: Node = _raycast.get_collider()
+	var collision: Node = _raycast.get_collider()
+	if collision:
 		if collision.get_parent().get_parent() is Garbage:
 			_hud_hint.text = "[E] to collect"
-	else:
-		_hud_hint.text = ""
+			if Input.is_action_just_pressed("collect"):
+				self.points += int(collision.get_parent().get_parent().resource.points)
+				print("points: %d" % self.points)
+				var grandgrandparent = collision.get_parent().get_parent().get_parent()
+				grandgrandparent.hide()
+				grandgrandparent.queue_free()
