@@ -1,5 +1,6 @@
 tool
 extends Spatial
+class_name Garbage
 
 export(Resource) var resource = null setget _resource_set, _resource_get
 

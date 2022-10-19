@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "Garbage",
+"language": "GDScript",
+"path": "res://Scripts/Garbage.gd"
+}, {
 "base": "Resource",
 "class": "GarbageRes",
 "language": "GDScript",
 "path": "res://Scripts/GarbageRes.gd"
 } ]
 _global_script_class_icons={
+"Garbage": "",
 "GarbageRes": ""
 }
 

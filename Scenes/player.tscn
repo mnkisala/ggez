@@ -28,3 +28,35 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30992, 0 )
 
 [node name="Camera" type="Camera" parent="head"]
+
+[node name="RayCast" type="RayCast" parent="head"]
+enabled = true
+cast_to = Vector3( 0, 0, -5 )
+collide_with_areas = true
+
+[node name="hud" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="hud"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="hud/CenterContainer"]
+margin_left = 979.0
+margin_top = 559.0
+margin_right = 981.0
+margin_bottom = 561.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 2, 2 )
+
+[node name="hint" type="Label" parent="hud"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -50.0
+text = "HINT"
+align = 1
+valign = 1
