@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/stone3.gltf-382bdff556c72e8a0002267210e2827a.scn"
+path="res://.import/floor.gltf-abc51d693c34f4f92a119f3d0197ec29.scn"
 
 [deps]
 
-source_file="res://Models/stone3.gltf"
-dest_files=[ "res://.import/stone3.gltf-382bdff556c72e8a0002267210e2827a.scn" ]
+source_file="res://Models/floor.gltf"
+dest_files=[ "res://.import/floor.gltf-abc51d693c34f4f92a119f3d0197ec29.scn" ]
 
 [params]
 
