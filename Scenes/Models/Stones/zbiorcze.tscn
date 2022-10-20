@@ -12,25 +12,25 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="modularstone2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5229, -4.35075, -26.8434 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.26428, 0, 0 )
 
-[node name="modularstone3" parent="modularstone2" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6665, 0.813853, 18.5839 )
+[node name="modularstone3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97602, 0, 0 )
 
-[node name="modularstone4" parent="modularstone2" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17211, 1.40333, 34.8025 )
+[node name="modularstone4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.33343 )
 
-[node name="modularstone5" parent="modularstone2" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6665, 0.813853, 37.1783 )
+[node name="modularstone6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.60532 )
 
-[node name="modularstone6" parent="modularstone2" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8786, 0.813853, 18.5839 )
+[node name="modularstone5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2511, 0, 0 )
 
-[node name="modularstone7" parent="modularstone2" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501427, 4.21994, 27.1583 )
+[node name="modularstone8" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -4.65726 )
 
-[node name="modularstone8" parent="modularstone2" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7438, 0.813853, 18.5839 )
+[node name="modularstone7" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.0328, 0, 0 )
 
-[node name="modularstone" parent="modularstone2" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26659, -1.39, 29.0706 )
+[node name="modularstone" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )

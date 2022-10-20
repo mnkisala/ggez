@@ -17,17 +17,16 @@ surfaces/0 = {
 "vertex_count": 24
 }
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=9]
 extents = Vector3( 0.65912, 0.528533, 1.01927 )
 
 [node name="modularstone3" type="Spatial"]
 
 [node name="Cube007" type="MeshInstance" parent="."]
-transform = Transform( 2.09442, 0, 0, 0, 2.09442, 0, 0, 0, 2.09442, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube007"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube007/StaticBody"]
 transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.0408468, 0.56624, -0.0850678 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
