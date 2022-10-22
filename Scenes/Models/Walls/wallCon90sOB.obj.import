@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallCon90sOB.obj-b4258db03584c869d7e393edd6ae8b09.mesh"
+
+[deps]
+
+files=[ "res://.import/wallCon90sOB.obj-b4258db03584c869d7e393edd6ae8b09.mesh" ]
+
+source_file="res://Scenes/Models/Walls/wallCon90sOB.obj"
+dest_files=[ "res://.import/wallCon90sOB.obj-b4258db03584c869d7e393edd6ae8b09.mesh", "res://.import/wallCon90sOB.obj-b4258db03584c869d7e393edd6ae8b09.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
