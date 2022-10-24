@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Models/Walls/proba.tres" type="MeshLibrary" id=1]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 0.516236, 50 )
@@ -18,3 +20,12 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Floor"]
 mesh = SubResource( 2 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+data = {
+"cells": PoolIntArray( 65516, 0, 1, 65519, 0, 0, 65516, 1, 1, 65519, 1, 0, 65516, 2, 1, 65519, 2, 0, 65516, 3, 1, 65519, 3, 0, 65516, 4, 1, 65519, 4, 0, 65516, 5, 1, 65516, 6, 1, 65516, 7, 1, 65511, 65532, 0, 65512, 65532, 0, 65513, 65532, 0, 65514, 65532, 0, 65515, 65532, 0, 65516, 65532, 0, 65519, 65532, 0, 65520, 65532, 0, 65521, 65532, 0, 65511, 65535, 0, 65512, 65535, 0, 65513, 65535, 0, 65514, 65535, 0, 65515, 65535, 0, 65516, 65535, 0, 65519, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
