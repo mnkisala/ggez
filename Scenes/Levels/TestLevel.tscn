@@ -34,7 +34,6 @@ environment = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95944, 0 )
 
 [node name="test_level" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.76284, 0, 0 )
 
 [node name="BeerCan" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8848, 0.0999999, 12.8882 )
