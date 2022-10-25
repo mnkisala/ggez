@@ -7,3 +7,4 @@
 script = ExtResource( 1 )
 model = ExtResource( 2 )
 points = 50
+name = "paper"

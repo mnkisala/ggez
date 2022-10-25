@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "GarbageRes",
 "language": "GDScript",
 "path": "res://Scripts/GarbageRes.gd"
+}, {
+"base": "Resource",
+"class": "PlayerState",
+"language": "GDScript",
+"path": "res://Scripts/Player/PlayerState.gd"
 } ]
 _global_script_class_icons={
 "Garbage": "",
-"GarbageRes": ""
+"GarbageRes": "",
+"PlayerState": ""
 }
 
 [application]

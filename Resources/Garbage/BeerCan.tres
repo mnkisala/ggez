@@ -7,3 +7,4 @@
 script = ExtResource( 1 )
 model = ExtResource( 2 )
 points = 100
+name = "beer_can"
