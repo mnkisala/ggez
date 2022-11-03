@@ -33,3 +33,7 @@ Mechaniki ogólne
 -	Rzucanie(thrownig do śmietników, jeśli śmieć nie zgadza to go odrzuca i trzeba podnieść jeszcze raz)
 -	otwieranie drzwi(labirynt)
 -	ogólne wyświetlanie ekwipunku oraz punktów.
+
+
+**Link do trello**
+https://trello.com/invite/zielony_ad/ATTIb2eb9fda8174d8e759c949dda24a622a3FD89C30

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Garbage/Paper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Models/Tree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=3]
+[ext_resource path="res://Pipes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Models/test_level.glb" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=14]
@@ -36,15 +37,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95944, 0 )
 state_provider = NodePath("../PlayerStateProvider")
 
 [node name="test_level" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -102.576, 0, 0 )
 
 [node name="BeerCan" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8848, 0.0999999, 12.8882 )
 
 [node name="tree" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08156, 2.71548, -8.8319 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75187, 2.71548, 14.4578 )
 
 [node name="Paper" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2689, 0.112729, 11.4706 )
 
 [node name="PlayerStateProvider" type="Node" parent="."]
 script = ExtResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.613622, 0.787126, -0.0624594, 0.714817, 0.587367, 0.379521, 0.335417, 0.188235, -0.923072, 20.1844, 6.02131, 32.7264 )
+
+[node name="Pipes" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.87803, 177.099 )

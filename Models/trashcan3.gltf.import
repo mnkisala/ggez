@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/trashcan3.gltf-13084864ef0ad25d6fad68d6ca9d7581.scn"
+path="res://.import/TrashCan3.gltf-42b406b33ac0c0a2b4d19b5399a55967.scn"
 
 [deps]
 
-source_file="res://Models/trashcan3.gltf"
-dest_files=[ "res://.import/trashcan3.gltf-13084864ef0ad25d6fad68d6ca9d7581.scn" ]
+source_file="res://Models/TrashCan3.gltf"
+dest_files=[ "res://.import/TrashCan3.gltf-42b406b33ac0c0a2b4d19b5399a55967.scn" ]
 
 [params]
 
