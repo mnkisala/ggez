@@ -20,7 +20,7 @@ Struktura folderów
 Poziomy
 -------
 
--	**Parkour** : skakanie
+
 -	**Fps** : Strzelanie (Mikołaj rób co chesz)
 -	**Pytania wybierz z 2** : Zbiór pytań, wybierz z 2 wraz z zapadnią (Masz 10 sekund na wybranie swojej odpowiedzi stając na odpowiednie pole. Po tym czasie zapada się pole ze złą odp , jeśli gracz tam stał to spada i po chwili "umiera" i tak do "5" pytań na wszystkie musi odp dobrze żeby przejść poziom)
 -	**Labirint** : Pytanie wraz z 3 odpowiedziamy po wyborze złego otwierają siędrzwi po których droga prowadzi do przycisku, który wywala nas na start. Natomiast dobra odp otwieraz ścieżkę, która umożliwia przejście labiryntu. Pytania się resetują dopiero gdy na wszystkich ścieżkach wyboru źle wybierzemy.
