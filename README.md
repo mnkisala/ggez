@@ -35,5 +35,3 @@ Mechaniki ogólne
 -	ogólne wyświetlanie ekwipunku oraz punktów.
 
 
-**Link do trello**
-https://trello.com/invite/zielony_ad/ATTIb2eb9fda8174d8e759c949dda24a622a3FD89C30
