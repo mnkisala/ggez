@@ -34,7 +34,7 @@ func randomize_question():
 	var right_answer = get_node("RightPlate/Answer")
 	var _sign = get_node("Sign/Label3D")
 	question_index = randi_range(0, active_questions.size() - 1)
-	_sign.text = questions[question_index][0]
+	_sign.text = active_questions[question_index][0]
 	if randi_range(0, 1) == 0:
 		correct_side = "left"
 		left_anwser.text = active_questions[question_index][1]
@@ -50,7 +50,7 @@ func trigger_anwser(side):
 		active_questions.pop_at(question_index)
 	else:
 		points = 0
-		active_questions = questions # clone
+		active_questions = questions # TODO: clone
 	randomize_question()
 	get_node("Player").transform = origin_transform
 	print(points)
