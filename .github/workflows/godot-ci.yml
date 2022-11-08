@@ -5,6 +5,7 @@ on: push
 env:
   GODOT_VERSION: 3.5.1
   EXPORT_NAME: ggez
+  GITHUB_TOKEN: ${{ github.token }}
 
 jobs:
   export-web:
