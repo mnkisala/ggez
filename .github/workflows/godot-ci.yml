@@ -2,6 +2,10 @@ name: godot-ci build web and publish to github pages
 
 on: push
 
+env:
+  GODOT_VERSION: 3.5.1
+  EXPORT_NAME: ggez
+
 jobs:
   export-web:
     name: Web Export
