@@ -27,6 +27,7 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Web Build
         run: |
+          sh ./optimize_assets.sh
           mkdir -v -p build/web
           godot -v --no-window --export "HTML5" ./build/web/index.html
       - name: Upload Artifact
