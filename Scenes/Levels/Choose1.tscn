@@ -41,4 +41,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23508, -0.230876, 10.7521 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94083, -0.230885, 11.6031 )
 
 [node name="Sign" parent="." instance=ExtResource( 4 )]
-transform = Transform( 7.35426, 0, 0, 0, 7.35426, 0, 0, 0, 1, 0, 3.82307, 0 )
+transform = Transform( 7.35426, 0, 0, 0, 7.35426, 0, 0, 0, 1, 0, 4.64371, 0 )

@@ -2,14 +2,54 @@ extends Spatial
 
 var questions = [
 	[
-		"pytanie1",
-		"dobra",
-		"zla"
+		"W jaki sposob mozna dbac o srodowisko?",
+		"jeżdżąc na rowerze",
+		"jeżdżąc samochodem"
 	],
 	[
-		"pytanie2",
-		"dobra",
-		"zla"
+		"Do jakiego kosza na śmieci należy wrzucać plastik?",
+		"żółtego",
+		"zielonego"
+	],
+	[
+		"Co to jest recykling?",
+		"powtórne wykorzystanie odpadów",
+		"zbieranie śmieci w lesie"
+	],
+	[
+		"Do jakiego kosza na śmieci należy wrzucać szkło?",
+		"zielonego",
+		"żółtego"
+	],
+	[
+		"Dlaczego kartonowe pudełka należy\nzgniatać przed wyrzuceniem?",
+		"żeby zajmowały mniej miejsca na wysypisku",
+		"wtedy szybciej sie rozłożą"
+	],
+	[
+		"Do jakiego kosza na śmieci należy wrzucać papier?",
+		"niebieskiego",
+		"żółtego"
+	],
+	[
+		"Czym są zielone płuca ziemii?",
+		"to lasy",
+		"to największe rzeki"
+	],
+	[
+		"Co jest przyczyną zanieczyszczenia wody?",
+		"wrzucanie do niej odpadów i scieków",
+		"rosnące w niej rośliny"
+	],
+	[
+		"Dlaczego nalezy sadzic drzewa?",
+		"ponieważ wchłaniają trujące gazy i dają tlen",
+		"ponieważ ładnie wyglądają"
+	],
+	[
+		"Co to jest smog?",
+		"zanieczyszczenie powietrza powstałe\nz mgły z dymem i spalinami",
+		"dym wylatujący z komina"
 	]
 ]
 

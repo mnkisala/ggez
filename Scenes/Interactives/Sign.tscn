@@ -5,7 +5,7 @@
 [node name="Sign" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.524091, 0, 0, 0, 0.0862084, 0, 0, 0 )
+transform = Transform( 1.6335, 0, 0, 0, 0.666581, 0, 0, 0, 0.0862084, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="Label3D" type="Label3D" parent="."]
