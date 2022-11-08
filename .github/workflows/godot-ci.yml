@@ -27,10 +27,6 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Web Build
         run: |
-          # optimizations
-          find . -name "*.material" -type f -delete
-          # export
-          
           mkdir -v -p build/web
           godot -v --no-window --export "HTML5" ./build/web/index.html
       - name: Upload Artifact
