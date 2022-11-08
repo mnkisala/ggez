@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Sign" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.524091, 0, 0, 0, 0.0862084, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.102934 )
+text = "THIS IS A TEST"
