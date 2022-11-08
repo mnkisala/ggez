@@ -38,16 +38,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5108, 0, 16.9244 )
 environment = ExtResource( 8 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 80, 0, -8.45774, 0 )
+transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 80, 0, -0.805437, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 2 )
 
-[node name="BeerCan" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4083, -3.27097, 12.7469 )
-
 [node name="Paper" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01025, -6.19025, 15.5873 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2285, 0.313012, 15.5873 )
+
+[node name="BeerCan" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.004, 0.194563, 11.8999 )
