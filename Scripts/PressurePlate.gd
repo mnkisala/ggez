@@ -1,13 +1,13 @@
 extends Spatial
 
-var good: bool
+var side: String
 
 func _process(delta):
 	pass
 
+func _ready():
+	get_node("Answer/Label3D").get_font().size = 126
+
 func _plate_entered(body):
 	if body.is_in_group("player"):
-		if good == true:
-			print("is good")
-		else:
-			print("is bad")
+		get_node("/root/Choose1").trigger_anwser(side)
