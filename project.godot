@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ggez"
-run/main_scene="res://Scenes/MainSceneOpener.tscn"
+run/main_scene="res://Scenes/Levels/TestLevel.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -86,7 +86,3 @@ collect={
 [physics]
 
 common/enable_pause_aware_picking=true
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
