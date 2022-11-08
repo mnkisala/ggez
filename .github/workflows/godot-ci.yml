@@ -6,6 +6,11 @@ env:
   GODOT_VERSION: 3.5.1
   EXPORT_NAME: ggez
   GITHUB_TOKEN: ${{ github.token }}
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   export-web:
