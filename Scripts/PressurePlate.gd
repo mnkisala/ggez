@@ -2,8 +2,6 @@ extends Spatial
 
 var side: String
 
-func _process(delta):
-	pass
 
 func _ready():
 	get_node("Answer/Label3D").get_font().size = 64
