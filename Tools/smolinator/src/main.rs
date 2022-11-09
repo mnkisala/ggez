@@ -2,7 +2,7 @@ use std::io::Cursor;
 
 use clap::Parser;
 use gltf::json::image::MimeType;
-use image::imageops::FilterType;
+use image::{imageops::FilterType, EncodableLayout};
 
 /// The most powerful tool for optimizing game assets in the Tri-State Area!
 #[derive(Parser, Debug)]
@@ -39,12 +39,43 @@ fn gltf_image_to_image_image(data: &gltf::image::Data) -> image::DynamicImage {
         gltf::image::Format::R8G8B8A8 => image::DynamicImage::ImageRgba8(
             image::RgbaImage::from_raw(data.width, data.height, data.pixels.clone()).unwrap(),
         ),
-        _ => panic!("input image format not implemented!"),
+        gltf::image::Format::R16G16B16 => image::DynamicImage::ImageRgb16(
+            image::ImageBuffer::<image::Rgb<u16>, Vec<u16>>::from_raw(
+                data.width,
+                data.height,
+                unsafe {
+                    std::slice::from_raw_parts(
+                        data.pixels.as_ptr() as *const u16,
+                        (data.width * data.height * 3) as usize,
+                    )
+                }
+                .to_owned(),
+            )
+            .unwrap(),
+        ),
+        gltf::image::Format::R16G16B16A16 => image::DynamicImage::ImageRgba16(
+            image::ImageBuffer::<image::Rgba<u16>, Vec<u16>>::from_raw(
+                data.width,
+                data.height,
+                unsafe {
+                    std::slice::from_raw_parts(
+                        data.pixels.as_ptr() as *const u16,
+                        (data.width * data.height * 4) as usize,
+                    )
+                }
+                .to_owned(),
+            )
+            .unwrap(),
+        ),
+        _ => panic!("input image format not implemented! {:?}", data.format),
     }
 }
 
 fn main() {
     let args = Args::parse();
+
+    println!("SMOLINATOR: optimizing {}", args.input);
+
     let (document, buffers, image_data) = gltf::import(args.input).unwrap();
 
     let images = document
@@ -53,23 +84,16 @@ fn main() {
         .map(|(image_view, image_data)| {
             let image = gltf_image_to_image_image(image_data);
 
-            print!("input texture size: {}x{}, ", image.width(), image.height());
-
             let image = image.resize(
                 args.max_texture_dimensions,
                 args.max_texture_dimensions,
                 FilterType::Gaussian,
             );
 
-            println!(
-                "output texture size: {}x{}, ",
-                image.width(),
-                image.height()
-            );
-
             let mut buf = Vec::new();
             let mut cursor = Cursor::new(&mut buf);
             image
+                .to_rgb8()
                 .write_to(
                     &mut cursor,
                     image::ImageOutputFormat::Jpeg(args.texture_quality as u8),
@@ -145,5 +169,5 @@ fn main() {
     root.buffer_views = views_json;
 
     let mut out = std::fs::File::create(args.output).unwrap();
-    root.to_writer_pretty(&mut out).unwrap();
+    root.to_writer(&mut out).unwrap();
 }
