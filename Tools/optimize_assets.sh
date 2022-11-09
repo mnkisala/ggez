@@ -22,14 +22,14 @@ find . -name "*.material" -type f -delete
 # smolnify assets
 for ass in `find . -name "*.glb" -type f`; do
   prev=$(du -h $ass | cut -f 1)
-  ./Tools/smolinator/target/release/smolinator --input $ass --max-texture-dimensions 512 --texture-quality 80 --output /tmp/smol.gltf && ./Tools/meshoptimizer-0.17/gltfpack -i /tmp/smol.gltf -o $ass
+  ./Tools/smolinator/target/release/smolinator --input $ass --max-texture-dimensions 512 --texture-quality 80 --output /tmp/smol.gltf && ./Tools/meshoptimizer-0.17/gltfpack -noq -i /tmp/smol.gltf -o $ass
   rm -f /tmp/smol.gltf
   echo optimized \'$ass\' from $prev to $(du -h $ass | cut -f 1)
 done
 
 for ass in `find . -name "*.gltf" -type f`; do
   prev=$(du -h $ass | cut -f 1)
-  ./Tools/smolinator/target/release/smolinator --input $ass --max-texture-dimensions 512 --texture-quality 80 --output /tmp/smol.gltf && ./Tools/meshoptimizer-0.17/gltfpack -i /tmp/smol.gltf -o $ass
+  ./Tools/smolinator/target/release/smolinator --input $ass --max-texture-dimensions 512 --texture-quality 80 --output /tmp/smol.gltf && ./Tools/meshoptimizer-0.17/gltfpack -noq -i /tmp/smol.gltf -o $ass
   rm -f /tmp/smol.gltf
   echo optimized \'$ass\' from $prev to $(du -h $ass | cut -f 1)
 done
