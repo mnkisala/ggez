@@ -16,7 +16,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90257, 1.44606, -113.567 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 108.611 )
 
 [node name="CollisionShape" type="CollisionShape" parent="hub/StaticBody"]
-transform = Transform( 21.4963, 0, 0, 0, 1, 0, 0, 0, 21.3682, 0, -0.293323, 0 )
+transform = Transform( 21.4963, 0, 0, 0, 1, 0, 0, 0, 21.3682, 0, -0.0411398, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="hub/StaticBody"]
