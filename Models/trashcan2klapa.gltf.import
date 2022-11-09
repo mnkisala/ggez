@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/TrashCan2Klapa.gltf-4e58be771188a6de3645a0e62aad2ec4.scn"
+path="res://.import/trashcan2klapa.gltf-a634856aab0d4040ff36b9c57d53a753.scn"
 
 [deps]
 
-source_file="res://Models/TrashCan2Klapa.gltf"
-dest_files=[ "res://.import/TrashCan2Klapa.gltf-4e58be771188a6de3645a0e62aad2ec4.scn" ]
+source_file="res://Models/trashcan2klapa.gltf"
+dest_files=[ "res://.import/trashcan2klapa.gltf-a634856aab0d4040ff36b9c57d53a753.scn" ]
 
 [params]
 

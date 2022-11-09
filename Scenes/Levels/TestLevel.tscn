@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Tree.tscn" type="PackedScene" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://default_env.tres" type="Environment" id=8]
 [ext_resource path="res://Scenes/Models/Walls/hub.glb" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Models/Walls/roof1.glb" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Models/Walls/treeCale.glb" type="PackedScene" id=11]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -60,6 +59,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.50466, 3.01668, -104.245 )
 
 [node name="roof1" parent="hub" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.882, 0.0251694, 4.25393 )
-
-[node name="treeCale" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9911, 2.56159, 62.0672 )
