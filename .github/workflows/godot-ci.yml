@@ -31,11 +31,6 @@ jobs:
           sh Tools/optimize_assets.sh
           mkdir -v -p build/web
           godot -v --no-window --export "HTML5" ./build/web/index.html
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: web
-          path: ./build/web/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
