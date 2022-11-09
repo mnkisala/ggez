@@ -32,7 +32,7 @@ transform = Transform( 0.496307, 0, 0, 0, 1.00711, 0, 0, 0, 0.496307, 0, 1, 0 )
 mesh = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47035e-08, 1, 22 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47035e-08, 1.92283, 22 )
 
 [node name="RightPlate" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23508, -0.230876, 10.7521 )
