@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Tree.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Scenes/Garbage/Paper.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://default_env.tres" type="Environment" id=8]
+[ext_resource path="res://Scenes/Models/Walls/hub.glb" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Models/Walls/roof1.glb" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Models/Walls/treeCale.glb" type="PackedScene" id=11]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -23,7 +26,7 @@ state_provider = NodePath("../PlayerStateProvider")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -102.576, 0, 0 )
 
 [node name="tree" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75187, 2.71548, 14.4578 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75187, 2.71548, -115.477 )
 
 [node name="PlayerStateProvider" type="Node" parent="."]
 script = ExtResource( 1 )
@@ -32,7 +35,7 @@ script = ExtResource( 1 )
 transform = Transform( -0.613622, 0.787126, -0.0624594, 0.714817, 0.587367, 0.379521, 0.335417, 0.188235, -0.923072, 20.1844, 6.02131, 32.7264 )
 
 [node name="Pipes" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5108, 0, 16.9244 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8327, 0, -205.309 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 8 )
@@ -41,7 +44,6 @@ environment = ExtResource( 8 )
 transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 80, 0, -0.805437, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
@@ -52,3 +54,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2285, 0.313012, 15.5873 )
 
 [node name="BeerCan" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.004, 0.194563, 11.8999 )
+
+[node name="hub" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.50466, 3.01668, -104.245 )
+
+[node name="roof1" parent="hub" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.882, 0.0251694, 4.25393 )
+
+[node name="treeCale" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9911, 2.56159, 62.0672 )
