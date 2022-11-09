@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo TODO: optimize assets
+# cleanup
+rm -rf .import
+find . -name "*.material" -type f -delete
