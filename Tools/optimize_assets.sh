@@ -1,7 +1,17 @@
 #!/bin/sh
 
+# build meshoptimizer (just gltfpack tho)
+cd ./Tools
+
+curl http://archive.ubuntu.com/ubuntu/pool/universe/m/meshoptimizer/meshoptimizer_0.17+dfsg.orig.tar.xz > meshoptimizer-0.17.tar.xz
+tar -xvf ./meshoptimizer-0.17.tar.xz
+
+cd meshoptimizer-0.17
+make gltfpack
+cd ..
+
 # build smolinator
-cd ./Tools/smolinator
+cd ./smolinator
 cargo build --release
 cd ../../
 
@@ -12,6 +22,6 @@ find . -name "*.material" -type f -delete
 # smolnify assets
 for ass in `find . -name "*.glb" -type f`; do
   prev=$(du -h $ass)
-  ./Tools/smolinator/target/release/smolinator --input $ass --max-texture-dimensions 256 --texture-quality 40 --output /tmp/smol.gltf && gltfpack -i /tmp/smol.gltf -o $ass
+  ./Tools/smolinator/target/release/smolinator --input $ass --max-texture-dimensions 256 --texture-quality 40 --output /tmp/smol.gltf && ./Tools/meshoptimizer-0.17/gltfpack -i /tmp/smol.gltf -o $ass
   echo optimizied \'$ass\' from $prev to $(du -h $ass)
 done
