@@ -22,4 +22,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2285, 0.313012, 15.5873 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.004, 0.194563, 11.8999 )
 
 [node name="hub" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.99738, 2.48835, -108.733 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81922, 1.53373, -108.67 )
