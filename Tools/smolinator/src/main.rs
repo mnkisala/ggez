@@ -39,34 +39,41 @@ fn gltf_image_to_image_image(data: &gltf::image::Data) -> image::DynamicImage {
         gltf::image::Format::R8G8B8A8 => image::DynamicImage::ImageRgba8(
             image::RgbaImage::from_raw(data.width, data.height, data.pixels.clone()).unwrap(),
         ),
-        gltf::image::Format::R16G16B16 => image::DynamicImage::ImageRgb16(
-            image::ImageBuffer::<image::Rgb<u16>, Vec<u16>>::from_raw(
-                data.width,
-                data.height,
-                unsafe {
-                    std::slice::from_raw_parts(
-                        data.pixels.as_ptr() as *const u16,
-                        (data.width * data.height * 3) as usize,
-                    )
-                }
-                .to_owned(),
+        gltf::image::Format::R16G16B16 => image::DynamicImage::ImageRgb8(
+            image::DynamicImage::ImageRgb16(
+                image::ImageBuffer::<image::Rgb<u16>, Vec<u16>>::from_raw(
+                    data.width,
+                    data.height,
+                    unsafe {
+                        std::slice::from_raw_parts(
+                            data.pixels.as_ptr() as *const u16,
+                            (data.width * data.height * 3) as usize,
+                        )
+                    }
+                    .to_owned(),
+                )
+                .unwrap(),
             )
-            .unwrap(),
+            .to_rgb8(),
         ),
-        gltf::image::Format::R16G16B16A16 => image::DynamicImage::ImageRgba16(
-            image::ImageBuffer::<image::Rgba<u16>, Vec<u16>>::from_raw(
-                data.width,
-                data.height,
-                unsafe {
-                    std::slice::from_raw_parts(
-                        data.pixels.as_ptr() as *const u16,
-                        (data.width * data.height * 4) as usize,
-                    )
-                }
-                .to_owned(),
+        gltf::image::Format::R16G16B16A16 => image::DynamicImage::ImageRgba8(
+            image::DynamicImage::ImageRgba16(
+                image::ImageBuffer::<image::Rgba<u16>, Vec<u16>>::from_raw(
+                    data.width,
+                    data.height,
+                    unsafe {
+                        std::slice::from_raw_parts(
+                            data.pixels.as_ptr() as *const u16,
+                            (data.width * data.height * 4) as usize,
+                        )
+                    }
+                    .to_owned(),
+                )
+                .unwrap(),
             )
-            .unwrap(),
+            .to_rgba8(),
         ),
+
         _ => panic!("input image format not implemented! {:?}", data.format),
     }
 }
@@ -93,7 +100,6 @@ fn main() {
             let mut buf = Vec::new();
             let mut cursor = Cursor::new(&mut buf);
             image
-                .to_rgb8()
                 .write_to(
                     &mut cursor,
                     image::ImageOutputFormat::Jpeg(args.texture_quality as u8),
@@ -108,10 +114,7 @@ fn main() {
             (
                 gltf::json::Image {
                     buffer_view: None,
-                    uri: Some(format!(
-                        "data:application/octet-stream;base64,{}",
-                        base64::encode(&buf)
-                    )),
+                    uri: Some(format!("data:image/jpeg;base64,{}", base64::encode(&buf))),
                     mime_type: Some(MimeType("image/jpeg".into())),
                     name: image_view.name().map(|s| s.into()),
                     extensions: None,
@@ -121,19 +124,22 @@ fn main() {
             )
         });
 
-    let excluded_views: Vec<usize> = images
-        .clone()
-        .filter_map(|p| p.1.map(|p| p.index()))
-        .collect();
+    /* Right now it doesn't really matter that smolinator itself doesnt strip
+    binary data, but it would be cool to implement at some point
+        let excluded_views: Vec<usize> = images
+            .clone()
+            .filter_map(|p| p.1.map(|p| p.index()))
+            .collect();
 
-    let views: Vec<gltf::buffer::View> = document
-        .views()
-        .filter(|v| !excluded_views.contains(&v.index()))
-        .collect();
+        let views: Vec<gltf::buffer::View> = document
+            .views()
+            .filter(|v| !excluded_views.contains(&v.index()))
+            .collect();
+    */
 
     let mut giga_buffer: Vec<u8> = Vec::new();
     let mut views_json: Vec<gltf::json::buffer::View> = Vec::new();
-    for view in &views {
+    for view in document.views() {
         let start = giga_buffer.len();
         let buf = &buffers[view.buffer().index()].0;
         giga_buffer.extend_from_slice(&buf[view.offset()..(view.offset() + view.length())]);
@@ -169,5 +175,5 @@ fn main() {
     root.buffer_views = views_json;
 
     let mut out = std::fs::File::create(args.output).unwrap();
-    root.to_writer(&mut out).unwrap();
+    root.to_writer_pretty(&mut out).unwrap();
 }
