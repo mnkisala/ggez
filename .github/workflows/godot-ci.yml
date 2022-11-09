@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v1
       - name: Setup
         run: |
-          apt-get update && apt-get -y install cargo make curl xz-utils build-essentials
+          apt-get update && apt-get -y install cargo make curl xz-utils build-essential
           mkdir -v -p ~/.local/share/godot/templates
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Web Build
