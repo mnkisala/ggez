@@ -1,0 +1,12 @@
+[package]
+name = "smolinator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.13.1"
+clap = { version = "4.0.22", features = ["derive"] }
+gltf = "1.0"
+image = "0.24.4"
