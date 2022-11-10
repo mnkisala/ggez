@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Models/Hub/hub.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Garbage/Paper.tscn" type="PackedScene" id=6]
@@ -23,3 +24,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.004, 0.194563, 11.8999 )
 
 [node name="hub" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.819, 0.4, -108.67 )
+
+[node name="roof2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91917, 0.470612, -189.535 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64994, 12.3712, -1.30648 )
+omni_range = 53.2668
