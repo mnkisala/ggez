@@ -2,7 +2,7 @@ extends Spatial
 
 var questions = [
 	[
-		"W jaki sposob mozna dbac o srodowisko?",
+		"W jaki sposób można dbać o środowisko?",
 		"jeżdżąc na rowerze",
 		"jeżdżąc samochodem"
 	],
@@ -42,7 +42,7 @@ var questions = [
 		"rosnące w niej rośliny"
 	],
 	[
-		"Dlaczego nalezy sadzic drzewa?",
+		"Dlaczego należy sadzić drzewa?",
 		"ponieważ wchłaniają trujące gazy i dają tlen",
 		"ponieważ ładnie wyglądają"
 	],
