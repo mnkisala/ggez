@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Models/GarbageScene/scennemain.glb" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Garbage.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Models/GarbageScene/komin2glb.glb" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Models/GarbageScene/atom.glb" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Models/GarbageScene/floor.glb" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Models/GarbageScene/komin.glb" type="PackedScene" id=7]
+[ext_resource path="res://Models/TrashCan3.gltf" type="PackedScene" id=8]
+[ext_resource path="res://Models/TrashCan.gltf" type="PackedScene" id=9]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 42.1982, 44.1414, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 11.6908, 44.3659 )
+
+[node name="Garbage" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="scennemain" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 128.09, 3.27616, -5.63167 )
+
+[node name="Coliders" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7854, 0, -0.380474 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Coliders"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.72975, 3.16007, -7.69569 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Coliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0848, 12.5786, -2.86662 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Coliders"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.27073, 12.5786, -43.7693 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Coliders"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.45511, 12.5786, 33.0657 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="Coliders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3299, 12.5786, -2.86662 )
+shape = SubResource( 2 )
+
+[node name="KinematicBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8618, 8.38329, 1.46118 )
+
+[node name="komin2glb" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 81.8428 )
+
+[node name="komin2glb" parent="komin2glb" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8213, 0, 0 )
+
+[node name="komin2glb2" parent="komin2glb" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 67.905, 0, 0 )
+
+[node name="komin" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 347.805 )
+
+[node name="komin" parent="komin" instance=ExtResource( 7 )]
+
+[node name="komin2" parent="komin" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.916, 0, -29.0466 )
+
+[node name="komin3" parent="komin" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.879, 0, -57.1885 )
+
+[node name="floor" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8348, 0, 57.4622 )
+
+[node name="floor" parent="floor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 230.323, 0, 0 )
+
+[node name="floor" parent="floor/floor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 208.595 )
+
+[node name="floor" parent="floor/floor/floor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27042, 0, 214.783 )
+
+[node name="floor" parent="floor/floor/floor/floor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -236.236, 0, 0 )
+
+[node name="floor" parent="floor/floor/floor/floor/floor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35567, 0, -213.398 )
+
+[node name="atom" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 219.48, -8.10981, 149.446 )
+
+[node name="atom" parent="atom" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4867, 0, 49.6722 )
+
+[node name="atom2" parent="atom" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4507, -1.52588e-05, -80.7687 )
+
+[node name="TrashCan" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.194, 3.40351, 0 )
+
+[node name="TrashCan3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.523, 4.52725, 15.3102 )
+
+[node name="TrashCan4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6734, 3.48062, -9.02379 )
