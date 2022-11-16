@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Garbage/Paper.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Models/Hub/hub.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
@@ -16,12 +14,6 @@ state_provider = NodePath("../PlayerStateProvider")
 
 [node name="PlayerStateProvider" type="Node" parent="."]
 script = ExtResource( 1 )
-
-[node name="Paper" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2285, 0.313012, 15.5873 )
-
-[node name="BeerCan" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.004, 0.194563, 11.8999 )
 
 [node name="hub" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.819, 0.4, -108.67 )
