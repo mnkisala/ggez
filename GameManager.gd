@@ -18,7 +18,8 @@ const __portalTarget = {
 
 
 func __changeScene(path):
-	assert(get_tree().change_scene(path) == OK)
+	var err = get_tree().change_scene(path)
+	assert(err == OK)
 
 
 # level - LevelEnum.Level
