@@ -29,6 +29,7 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30992, 0 )
 
 [node name="Camera" type="Camera" parent="head"]
+far = 500.0
 
 [node name="RayCast" type="RayCast" parent="head"]
 enabled = true
