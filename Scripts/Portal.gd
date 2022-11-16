@@ -8,8 +8,10 @@ func _ready():
 
 	if GameManager.isPortalTargetActive(target):
 		get_node("Particles").process_material.color = Color(0, 1.0, 0, 0.15)
+		get_node("OmniLight").light_color = Color(0, 1.0, 0, 0.15)
 	else:
-		get_node("Particles").process_material.color = Color(1.0, 0, 0, 0.15)
+		get_node("Particles").process_material.color = Color(1.0, 0.0, 0, 0.15)
+		get_node("OmniLight").light_color = Color(1.0, 0, 0, 0.15)
 
 
 func _on_Area_body_entered(body:Node):
