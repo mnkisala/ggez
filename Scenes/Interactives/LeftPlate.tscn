@@ -3,6 +3,5 @@
 [ext_resource path="res://Scripts/LeftPlate.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Interactives/PressurePlate.tscn" type="PackedScene" id=2]
 
-
 [node name="PressurePlate" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
