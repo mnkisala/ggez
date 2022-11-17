@@ -67,6 +67,7 @@ draw_pass_1 = SubResource( 5 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0265747, 0.0696905 )
+light_color = Color( 1, 0.101961, 0.4, 1 )
 light_energy = 8.0
 light_specular = 2.5
 omni_attenuation = 2.0
