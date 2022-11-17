@@ -1,9 +1,9 @@
 lekcja1 - wstep (fabula)
-lekcja2 - dzien 1 ()
-lekcja3 - dzien 2 (xor + )
-lekcja4 - dzien 3 ()
-lekcja5 - dzien 4 ()
-lekcja6 - dzien 5 ()
+lekcja2 - dzien 1 (sql + maze)
+lekcja3 - dzien 2 (xor + parkour)
+lekcja4 - dzien 3 (cypher + choose 1)
+lekcja5 - dzien 4 ( + )
+lekcja6 - dzien 5 (quiz? + garbage)
 lekcja7 - zakonczenie (fabula)
 
 dzien sklada sie z:
