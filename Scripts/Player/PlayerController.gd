@@ -5,6 +5,7 @@ export var jump_force: float = 500
 
 var _direction: Vector3 = Vector3.ZERO
 var _jump: bool = false
+var _run: bool = false
 
 var _h_acc: float = 20
 var _h_vel: Vector3 = Vector3.ZERO
@@ -12,6 +13,8 @@ var _v_acc: float = 5
 var _v_vel: float = 0
 
 export var mouse_sensitivty = 0.005
+
+export var running_multiplier = 1.5
 
 var _state: PlayerState = null
 
@@ -33,7 +36,10 @@ func _ready():
 
 
 func _physics_process(delta):
-	_h_vel = _h_vel.linear_interpolate(_direction.normalized() * speed, _h_acc * delta)
+	var mul = 1.0
+	if _run:
+		mul = running_multiplier
+	_h_vel = _h_vel.linear_interpolate(_direction.normalized() * speed * mul, _h_acc * delta)
 
 	var vforce = -9.8
 	if _jump and is_on_floor():
@@ -78,6 +84,10 @@ func _process(_delta):
 		_direction += right
 	if Input.is_action_just_pressed("jump"):
 		_jump = true
+	if Input.is_action_just_pressed("run"):
+		_run = true
+	if Input.is_action_just_released("run"):
+		_run = false
 
 	_hud_hint.text = ""
 
