@@ -1,0 +1,18 @@
+lekcja1 - wstep (fabula)
+lekcja2 - dzien 1 ()
+lekcja3 - dzien 2 (xor + )
+lekcja4 - dzien 3 ()
+lekcja5 - dzien 4 ()
+lekcja6 - dzien 5 ()
+lekcja7 - zakonczenie (fabula)
+
+dzien sklada sie z:
+- wstajesz z rana
+- idziesz do pracy
+- czytasz kartke na monitorze (zadanie prog.)
+- rozwiazujesz zadanie, wynik z zadania to haslo do odblokowania poziomu w grze (snie)
+- wracasz do "bloku mieszkalnego", po drodze z kazdym dniem co raz bardziej zauwarzasz problemy ze srodowiskiem
+- ewentualnie robisz cos w mieszkaniu (fabularnie cos dodac)
+- ze zmeczenia idziesz spac (level w grze, gdzie na koniec dostajesz info potrzebne do wykonania zadania w pracy w kolejnym dniu)
+
+mozna gdzies pomiedzy wrzucic fabularne lekcje
