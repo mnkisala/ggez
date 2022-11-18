@@ -1,0 +1,11 @@
+CREATE TABLE firmy_odpady (id INTEGER PRIMARY KEY, firma TEXT NOT NULL, ilosc_odpadow INTEGER NOT NULL, ilosc_zuzytego_papieru INTEGER, ilosc_zuzytego_plastiku INTEGER, ilosc_zuzytego_szkla, ilosc_zmarnowanego_materialu INTEGER);
+INSERT INTO firmy_odpady VALUES(1,'Startal', 4815, 11485, 5003, 2855, 1502);
+INSERT INTO firmy_odpady VALUES(2,'Elrof', 5926, 20257, 3051, 4812, 1750);
+INSERT INTO firmy_odpady VALUES(3,'Auto-Maran', 8551, 41771, 5505, 8120, 4221);
+INSERT INTO firmy_odpady VALUES(4,'Supinex', 1820, 7122, 2700, 581, 709);
+INSERT INTO firmy_odpady VALUES(5,'Dukot', 2831, 12884, 8147, 3803, 6494);
+INSERT INTO firmy_odpady VALUES(6,'Proton', 8652, 12966, 5709, 6259, 7870);
+INSERT INTO firmy_odpady VALUES(7,'Gregor', 4516, 13333, 8392, 4187, 7518);
+INSERT INTO firmy_odpady VALUES(8,'Blantex', 6474, 11444, 8288, 4860, 1432);
+INSERT INTO firmy_odpady VALUES(9,'Gamni', 7965, 13879, 1578, 1033, 8385);
+INSERT INTO firmy_odpady VALUES(10,'Lontex', 5751, 14922, 2443, 2305, 4133);
