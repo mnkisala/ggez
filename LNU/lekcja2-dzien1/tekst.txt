@@ -1,11 +1,12 @@
 ...
 
-Potrzebujemy abys wyciagnal z bazy informacje o nazwach oraz ilosci zmarnowanego materialu przez 3 firmy, ktorych:
+Potrzebujemy abys wyciagnal z bazy informacje o nazwach oraz ilosci zmarnowanego materialu przez firmy, ktorych:
 - ilosc odpadow przekracza 8000
 - ilosc zuzytego papieru jest mniejsza od 8000
 - ilosc zuzytego plastiku jest wieksza badz rowna 2000
 - ilosc zuzytego szkla jest wieksza od 2500
 - ilosc zmarnowanego materialu zawiera sie w granicach od 1500 i 8000
 Posortuj dane wedlug ilosci zmarnowanego materialu, malejaco.
+Ogranicz ilosc rekordow do 3.
 
 ...
