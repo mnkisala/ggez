@@ -13,7 +13,7 @@ var _h_vel: Vector3 = Vector3.ZERO
 var _v_acc: float = 5
 var _v_vel: float = 0
 
-export var mouse_sensitivty = 0.005
+export var mouse_sensitivty = 0.003
 
 export var running_multiplier = 1.5
 
