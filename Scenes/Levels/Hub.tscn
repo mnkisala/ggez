@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/water.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Interactives/CodeMachine.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Models/Hub/hub.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
@@ -50,3 +51,6 @@ transform = Transform( -1.31134e-07, 0, 1, 0, 3, 0, -3, 0, -4.37114e-08, -36.569
 target = 5
 
 [node name="water" parent="." instance=ExtResource( 3 )]
+
+[node name="CodeMachine" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.696, 0, 21.3946 )
