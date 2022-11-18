@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Models/Hub/hub.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Interactives/MessageBubble.tscn" type="PackedScene" id=8]
 
 [node name="Spatial" type="Spatial"]
 
@@ -54,3 +55,9 @@ target = 5
 
 [node name="CodeMachine" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.696, 0, 21.3946 )
+
+[node name="Spatial" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 19.6326, 4, -3 )
+text = "Sterowanie: WSAD
+Interakcja: E
+Sprint: Shift"
