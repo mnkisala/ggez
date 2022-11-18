@@ -1,13 +1,39 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Scenes/Models/Maze/maze.glb" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Models/Maze/maze2.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Models/Maze/pass.glb" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Models/Maze/mazeTrimesh.tscn" type="PackedScene" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 0.516236, 50 )
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 100, 1, 100 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.550511, 7.28198, 13.6464 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.537198, 1, 16.8151 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.524931, 8.14106, 3.00168 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 3.53458, 4.25837, 0.540023 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.5047, 4.31503, 48.2544 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 22.9258, 4.58102, 0.541607 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.528743, 4.08038, 6.46936 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.542851, 3.86851, 3.1281 )
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766335, -0.00540543, -0.0763702 )
@@ -24,7 +50,394 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.383194, 0.0960732, 0.167585 
 mesh = SubResource( 2 )
 
 [node name="KinematicBody" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54414, 0.76005, -43.0005 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.562324, 0.76005, -46.581 )
 
-[node name="maze" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.72265, -1.14886, -32.9139 )
+[node name="maze2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -116.637, -0.880054, 47.1371 )
+visible = false
+
+[node name="Maze" type="StaticBody" parent="maze2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17077, 0.880054, -30.5977 )
+
+[node name="wall" type="CollisionShape" parent="maze2/Maze"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60059, 0.829357, -52.5345 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/Maze"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2844, 0, -49.6599 )
+shape = SubResource( 4 )
+
+[node name="Pion" type="StaticBody" parent="maze2/Maze"]
+
+[node name="wPion2" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37557, 0, -54.8904 )
+shape = SubResource( 5 )
+
+[node name="wPion3" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6177, 0, -48.8867 )
+shape = SubResource( 5 )
+
+[node name="wPion4" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6283, -0.0144834, -60.8778 )
+shape = SubResource( 5 )
+
+[node name="wPion5" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6287, 0, -35.8569 )
+shape = SubResource( 5 )
+
+[node name="wPion6" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.619, 0, -28.8562 )
+shape = SubResource( 5 )
+
+[node name="wPion7" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.6401, 0, -22.8598 )
+shape = SubResource( 5 )
+
+[node name="wPion8" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2674, 0, -24.9881 )
+shape = SubResource( 5 )
+
+[node name="wPion9" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.2324, 0, -17.9875 )
+shape = SubResource( 5 )
+
+[node name="wPion10" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2597, 0, 3.11584 )
+shape = SubResource( 5 )
+
+[node name="wPion11" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3739, 0, 6.11643 )
+shape = SubResource( 5 )
+
+[node name="wPion12" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3841, 0, 20.1106 )
+shape = SubResource( 5 )
+
+[node name="wPion13" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3689, 0, 27.1111 )
+shape = SubResource( 5 )
+
+[node name="wPion16" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.62304, 0, 34.1465 )
+shape = SubResource( 5 )
+
+[node name="wPion15" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62157, 0, 20.1084 )
+shape = SubResource( 5 )
+
+[node name="wPion14" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3851, 0, 27.1029 )
+shape = SubResource( 5 )
+
+[node name="wPion17" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6392, 0, 9.08287 )
+shape = SubResource( 5 )
+
+[node name="wPion18" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7474, 0, -11.0161 )
+shape = SubResource( 5 )
+
+[node name="wPion19" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.623, 0, -12.8723 )
+shape = SubResource( 5 )
+
+[node name="wPion20" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7288, 0, -17.9375 )
+shape = SubResource( 5 )
+
+[node name="wPion21" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7561, 0, -17.9448 )
+shape = SubResource( 5 )
+
+[node name="wPion22" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25675, 0, 1.78019 )
+shape = SubResource( 5 )
+
+[node name="wPion" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.2107, 0, -43.9899 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2637, 0, -48.7628 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2622, 0, -30.0669 )
+shape = SubResource( 5 )
+
+[node name="wPion23" type="CollisionShape" parent="maze2/Maze/Pion"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7553, 0, -25.0064 )
+shape = SubResource( 5 )
+
+[node name="Poziom" type="StaticBody" parent="maze2/Maze"]
+
+[node name="poziom" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6107, 4.00191, -45.4022 )
+shape = SubResource( 7 )
+
+[node name="poziom2" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.638, 4.00191, -44.4041 )
+shape = SubResource( 7 )
+
+[node name="poziom3" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7513, 4.00191, -46.2839 )
+shape = SubResource( 7 )
+
+[node name="poziom4" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27342, 4.00191, -45.394 )
+shape = SubResource( 7 )
+
+[node name="poziom5" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36379, 4.00191, -51.4012 )
+shape = SubResource( 7 )
+
+[node name="poziom6" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2605, 4.00191, -45.394 )
+shape = SubResource( 7 )
+
+[node name="poziom7" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.2609, 4.00191, -19.4018 )
+shape = SubResource( 7 )
+
+[node name="poziom8" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.249, 4.00191, -14.5074 )
+shape = SubResource( 7 )
+
+[node name="poziom9" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2888, 4.00191, -6.40553 )
+shape = SubResource( 7 )
+
+[node name="poziom10" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3791, 4.00191, 9.60464 )
+shape = SubResource( 7 )
+
+[node name="poziom11" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.2717, 4.00191, 19.5995 )
+shape = SubResource( 7 )
+
+[node name="poziom12" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8748, 4.00191, 25.595 )
+shape = SubResource( 7 )
+
+[node name="poziom13" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3912, 4.00191, 23.6297 )
+shape = SubResource( 7 )
+
+[node name="poziom14" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.384, 4.00191, 16.6016 )
+shape = SubResource( 7 )
+
+[node name="poziom15" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.357368, 4.00191, 16.6016 )
+shape = SubResource( 7 )
+
+[node name="poziom16" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6255, 4.00191, 23.6066 )
+shape = SubResource( 7 )
+
+[node name="poziom17" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6347, 4.00191, 12.5977 )
+shape = SubResource( 7 )
+
+[node name="poziom18" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2944, 4.00191, -57.3914 )
+shape = SubResource( 7 )
+
+[node name="poziom19" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6403, 4.00191, -57.3914 )
+shape = SubResource( 7 )
+
+[node name="poziom20" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.981508, 4.00191, -65.8962 )
+shape = SubResource( 7 )
+
+[node name="poziom21" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22908, 4.00191, 5.24868 )
+shape = SubResource( 7 )
+
+[node name="poziom22" type="CollisionShape" parent="maze2/Maze/Poziom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74853, 4.00191, -1.50314 )
+shape = SubResource( 7 )
+
+[node name="obrys" type="StaticBody" parent="maze2/Maze"]
+
+[node name="CollisionShape4" type="CollisionShape" parent="maze2/Maze/obrys"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6137, 3.8587, -16.6329 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="maze2/Maze/obrys"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.2557, 3.8587, -16.6329 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/Maze/obrys"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6485, 3.98581, -64.4039 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="maze2/Maze/obrys"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2659, 3.98581, -64.4039 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="maze2/Maze/obrys"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0412, 3.98581, 30.6396 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="maze2/Maze/obrys"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0205, 3.98581, 30.5748 )
+shape = SubResource( 9 )
+
+[node name="dwojki" type="StaticBody" parent="maze2/Maze"]
+
+[node name="CollisionShape2" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26046, 3.32162, -33.3863 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2806, 3.32162, -38.5371 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7224, 3.32162, -39.2693 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.261, 3.32162, -8.77511 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.637, 3.32162, -13.4603 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape7" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.74745, 3.32162, 5.55697 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape8" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2859, 3.32162, -50.3303 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape9" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5945, 3.32162, -2.47753 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape10" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.38897, 3.32162, 23.6131 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape11" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6328, 3.32162, 23.5553 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape12" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6348, 3.32162, 23.5658 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape13" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.6203, 3.32162, 17.5451 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape14" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35.5931, 3.32162, 17.6223 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape15" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.5665, 3.32162, 16.5966 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape16" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5781, 3.32162, 5.60972 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape17" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5117, 3.32162, 3.62439 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape18" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.8604, 3.32162, -1.52124 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape19" type="CollisionShape" parent="maze2/Maze/dwojki"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 42.5584, 3.32162, -1.39024 )
+shape = SubResource( 10 )
+
+[node name="pass" parent="maze2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.9173, -0.223477, -14.1882 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0295258, 0, 12.9881 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass2" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5058, 0, 9.31391 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass2/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass4" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0726, 0, -0.909645 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass4/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass5" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9895, 0, -0.879255 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass5/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass6" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.435, 0, 42.186 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass6/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass7" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.0838, 0, -26.882 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass7/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="pass3" parent="maze2/pass" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39.4501, 0, 48.2106 )
+
+[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+
+[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass3/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
+shape = SubResource( 8 )
+
+[node name="maze3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64037, 0, 47.1385 )

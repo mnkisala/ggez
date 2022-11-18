@@ -7,6 +7,7 @@ const __ID_TO_LEVEL_PATH = {
 	LevelEnum.Level.CHOOSE1: "res://Scenes/Levels/Choose1.tscn",
 	LevelEnum.Level.GARGABE_BASE: "res://Scenes/Levels/GarbageBase.tscn",
 	LevelEnum.Level.MAZE: "res://Scenes/Levels/Maze.tscn",
+	LevelEnum.Level.PARKOUR: "res://Scenes/Levels/Parkour.tscn",
 }
 
 const __portalTarget = {
@@ -14,6 +15,7 @@ const __portalTarget = {
 	LevelEnum.Level.CHOOSE1: true,
 	LevelEnum.Level.GARGABE_BASE: true,
 	LevelEnum.Level.MAZE: true,
+	LevelEnum.Level.PARKOUR: true,
 }
 
 
