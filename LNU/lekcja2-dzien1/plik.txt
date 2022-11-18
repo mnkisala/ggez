@@ -1,0 +1,10 @@
+result_query:
+SELECT firma, ilosc_zmarnowanego_materialu FROM firmy_odpady
+	WHERE ilosc_odpadow < 8000
+	AND ilosc_zuzytego_papieru > 8000
+	AND ilosc_zuzytego_plastiku >= 2000
+	AND ilosc_zuzytego_szkla > 2500
+	AND ilosc_zmarnowanego_materialu BETWEEN 1500 AND 8000
+	ORDER BY ilosc_zmarnowanego_materialu DESC
+	LIMIT 3;
+
