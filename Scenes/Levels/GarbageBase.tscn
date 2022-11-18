@@ -65,26 +65,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.916, 0, -29.0466 )
 [node name="komin3" parent="komin" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.879, 0, -57.1885 )
 
-[node name="floor" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8348, 0, 57.4622 )
-
-[node name="floor" parent="floor" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 230.323, 0, 0 )
-
-[node name="floor" parent="floor/floor" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 208.595 )
-
-[node name="floor" parent="floor/floor/floor" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27042, 0, 214.783 )
-
-[node name="floor" parent="floor/floor/floor/floor" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -236.236, 0, 0 )
-
-[node name="floor" parent="floor/floor/floor/floor/floor" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35567, 0, -213.398 )
-
 [node name="atom" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 219.48, -8.10981, 149.446 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 219.48, -1.38446, 149.446 )
 
 [node name="atom" parent="atom" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4867, 0, 49.6722 )
@@ -103,3 +85,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6734, 3.48062, -9.02379 )
 
 [node name="scennemain" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120.721, 4.42763, -7.28161 )
+
+[node name="floor" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.2523, -0.270077, -29.0574 )
