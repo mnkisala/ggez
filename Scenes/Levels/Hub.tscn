@@ -57,7 +57,8 @@ target = 5
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.696, 0, 21.3946 )
 
 [node name="Spatial" parent="." instance=ExtResource( 8 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 19.6326, 4, -3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6326, 4, -3 )
 text = "Sterowanie: WSAD
 Interakcja: E
 Sprint: Shift"
+font_size = 3
