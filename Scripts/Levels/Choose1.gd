@@ -80,6 +80,10 @@ func trigger_anwser(side):
 	else:
 		points = 0
 		active_questions = questions  # TODO: clone
-	randomize_question()
-	get_node("Player").transform = origin_transform
-	print(points)
+
+	if questions.size() == 0 or points >= 10:
+		GameManager.changeScene(LevelEnum.Level.HUB)
+	else:
+		randomize_question()
+		get_node("Player").transform = origin_transform
+		print(points)
