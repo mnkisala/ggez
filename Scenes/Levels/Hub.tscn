@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
@@ -8,6 +8,12 @@
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Interactives/MessageBubble.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Models/Hub/Computer/komputer.glb" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Models/Hub/Computer/klawiatura1.glb" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Models/Hub/Computer/stol.glb" type="PackedScene" id=11]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.18907, 2.20846, 1.81839 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -53,12 +59,27 @@ target = 5
 
 [node name="water" parent="." instance=ExtResource( 3 )]
 
-[node name="CodeMachine" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.696, 0, 21.3946 )
-
 [node name="Spatial" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6326, 4, -3 )
 text = "Sterowanie: WSAD
 Interakcja: E
 Sprint: Shift"
 font_size = 3
+
+[node name="komputer" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.6709, 1.70169, 22.3867 )
+
+[node name="klawiatura1" parent="komputer" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.181438, 0.0624633, -0.0461845 )
+
+[node name="stol" parent="komputer" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.490528, -0.00608921, -0.236408 )
+
+[node name="StaticBody" type="StaticBody" parent="komputer"]
+
+[node name="CollisionShape" type="CollisionShape" parent="komputer/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87058, 0 )
+shape = SubResource( 1 )
+
+[node name="CodeMachine" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, -33.4511, 0, 16.9927 )
