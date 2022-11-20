@@ -29,6 +29,7 @@ transform = Transform( 155.153, 0, 0, 0, 35.7323, 0, 0, 0, 26.3659, 8.41319, -13
 transform = Transform( 155.153, 0, 0, 0, 21.023, 0, 0, 0, 60.1627, 8.41319, -13.4502, 123.749 )
 
 [node name="water" parent="." instance=ExtResource( 3 )]
+transform = Transform( 10.4041, 0, 0, 0, 1, 0, 0, 0, 4.03925, 0, 0, 0 )
 
 [node name="cube" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1.93521, 0, 0, 0, 1.54464, 0, 0, 0, 2.16628, -9.91669, 8.62927, -66.8012 )
