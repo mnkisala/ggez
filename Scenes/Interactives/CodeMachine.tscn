@@ -30,7 +30,6 @@ shape = SubResource( 6 )
 [node name="TerminalLabel" type="Label3D" parent="Matrix"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 2.18716, 0, -2.18716, 0, -9.56037e-08, 1.01784, 3.52931, 0.00205082 )
 pixel_size = 0.0005
-modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 text = "Wprowadź kod"
 font = SubResource( 4 )
 
