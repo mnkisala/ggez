@@ -1,49 +1,46 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/coolvetica rg.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/CodeMachine.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Models/Hub/Computer/komputer.glb" type="PackedScene" id=3]
 
 [sub_resource type="BoxShape" id=6]
-
-[sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="DynamicFont" id=4]
 size = 256
 font_data = ExtResource( 1 )
 
-[sub_resource type="QuadMesh" id=2]
-
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0, 0, 0, 1 )
-
 [sub_resource type="BoxShape" id=5]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.205013, 0.227374, 0.2085 )
 
 [node name="CodeMachine" type="StaticBody"]
 script = ExtResource( 2 )
+
+[node name="komputer" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6242, 1.35587, 0.024571 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52934, 0 )
 shape = SubResource( 6 )
 
-[node name="Monitor" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52097, 0 )
-mesh = SubResource( 1 )
-
 [node name="Matrix" type="StaticBody" parent="."]
 
 [node name="TerminalLabel" type="Label3D" parent="Matrix"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 2.18716, 0, -2.18716, 0, -9.56037e-08, 1.01415, 3.52931, 0.00205082 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 2.18716, 0, -2.18716, 0, -9.56037e-08, 1.01784, 3.52931, 0.00205082 )
 pixel_size = 0.0005
 modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
 text = "Wprowadź kod"
 font = SubResource( 4 )
 
-[node name="TerminalBackground" type="MeshInstance" parent="Matrix"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 0.780146, 0, -1.76743, 0, -7.72566e-08, 1.01111, 3.53282, 0 )
-mesh = SubResource( 2 )
-skeleton = NodePath("../..")
-material/0 = SubResource( 3 )
-
 [node name="CollisionShape" type="CollisionShape" parent="Matrix"]
-transform = Transform( 0.116336, 0, 0, 0, 0.390101, 0, 0, 0, 0.880309, 1.08681, 3.55059, 0 )
+transform = Transform( 0.116336, 0, 0, 0, 0.390101, 0, -8.88178e-16, 0, 0.880309, 1.08681, 3.55059, 0 )
 shape = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 13.2852, 0, 0, 0, 10.8748, 0, 0, 0, 8.5426, 0, 2.43475, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 7 )
