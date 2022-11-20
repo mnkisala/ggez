@@ -1,55 +1,114 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/cube.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/water.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Interactives/Chemicalias.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Interactives/ChemicaliasTurnOffer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Interactives/ParkourRestartArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Levels/Parkour.gd" type="Script" id=6]
-
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 166.409, 21.1613, 60.1498 )
 
 [node name="Parkour" type="Spatial"]
 script = ExtResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5323, -63.5384 )
 
-[node name="floor" parent="." instance=ExtResource( 2 )]
-transform = Transform( 158.156, -0.656278, 0, 0.00884412, 0.285128, 0.0194343, -0.0318417, -1.02655, 112.595, -0.0281911, -32.7721, 0 )
+[node name="blockout poziomu" type="Spatial" parent="."]
 
-[node name="cube2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 155.153, 0, 0, 0, 21.023, 0, 0, 0, 26.3659, 8.41319, -13.4502, -85.4852 )
+[node name="cube" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 10.3109, 0, 0, 0, 1.00215, 0, 0, 0, 63.3784, 0, -3.20111, 0 )
 
-[node name="cube4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 155.153, 0, 0, 0, 35.7323, 0, 0, 0, 26.3659, 8.41319, -13.4502, -130.023 )
+[node name="cube4" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, -7.04183, 0 )
 
-[node name="cube5" parent="." instance=ExtResource( 2 )]
-transform = Transform( 155.153, 0, 0, 0, 35.7323, 0, 0, 0, 26.3659, 8.41319, -13.4502, 200.946 )
+[node name="cube10" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, -7.04183, -35.4889 )
 
-[node name="cube3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 155.153, 0, 0, 0, 21.023, 0, 0, 0, 60.1627, 8.41319, -13.4502, 123.749 )
+[node name="cube11" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 5.83374e-06, 1.02185, 0, -77.2702, 7.71478e-08, 0, 0, 0, 64.2023, 9.63986, -7.04183, 0 )
 
-[node name="water" parent="." instance=ExtResource( 3 )]
-transform = Transform( 10.4041, 0, 0, 0, 1, 0, 0, 0, 4.03925, 0, 0, 0 )
+[node name="cube15" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 5.83374e-06, 1.02185, 0, -77.2702, 7.71478e-08, 0, 0, 0, 64.2023, -111.838, -7.04184, 0 )
 
-[node name="cube" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.93521, 0, 0, 0, 1.54464, 0, 0, 0, 2.16628, -9.91669, 8.62927, -66.8012 )
+[node name="cube12" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -1.2151e-13, -4.46667e-08, -87.0581, -36.8199, 7.71478e-08, 0, 2.77983e-06, 1.02185, -3.80543e-06, -68.0013, 33.616, 24.2653 )
 
-[node name="Chemicalias" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -58.3168 )
+[node name="cube13" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -1.2151e-13, -4.46667e-08, -90.601, -36.8199, 7.71478e-08, 0, 2.77983e-06, 1.02185, -3.9603e-06, -41.4726, 32.6033, -56.2631 )
 
-[node name="ChemicaliasTurnOffer" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.67292, 11.2759, -66.1902 )
-chemicalias_emmiter = NodePath("../Chemicalias")
+[node name="cube5" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 40.5813, -51.1389, 22.4475, 0 )
 
-[node name="Area" type="Area" parent="."]
-collision_layer = 3
-collision_mask = 3
+[node name="cube17" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -5.30347e-07, 1.00215, 0, -12.1329, -4.38053e-08, 0, 0, 0, 63.3245, -51.1389, 42.484, -30.5721 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.452, 0 )
-shape = SubResource( 1 )
+[node name="cube6" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, 10.0505, 21.4299 )
 
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[node name="cube7" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, 10.0505, -35.0036 )
+
+[node name="cube2" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 10.3109, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, 0, 0.464149, 20.4062 )
+
+[node name="cube3" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 20.6733, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -30.6252, 1.92582, 20.4062 )
+
+[node name="cube8" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 20.6733, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -30.379, 1.95082, -6.62325 )
+
+[node name="cube18" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 20.6733, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -81.8543, 1.95082, -6.62325 )
+
+[node name="cube21" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 30.3295, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -121.255, 3.23477, 17.9845 )
+
+[node name="cube24" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -114.339, -1.92618, -58.8687 )
+
+[node name="cube25" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -85.3091, 2.29715, -58.8687 )
+
+[node name="cube26" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 6.57579, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -59.2834, 6.30076, -58.8687 )
+
+[node name="cube27" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 7.88068, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -59.0379, 10.2109, -42.2634 )
+
+[node name="cube28" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -79.3331, 14.3786, -42.2634 )
+
+[node name="cube29" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -103.231, 18.5354, -42.2634 )
+
+[node name="cube23" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 30.3295, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -81.4391, -5.89887, -51.833 )
+
+[node name="cube22" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 14.9748, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -66.8422, 6.69678, 17.6408 )
+
+[node name="cube16" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 121.21, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, 16.3556, 23.1033, -48.6815 )
+
+[node name="cube14" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 1.04932, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -49.6555, 1.95082, -0.332842 )
+
+[node name="cube9" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -9.03659e-07, -1.00215, 0, 20.6733, -4.38053e-08, 0, 0, 0, 4.28397, -10.7175, -17.7277, -6.62325 )
+
+[node name="cube19" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -9.03659e-07, -1.00215, 0, 20.6733, -4.38053e-08, 0, 0, 0, 4.28397, -62.5649, -18.5774, -6.62325 )
+
+[node name="cube20" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -9.03659e-07, -1.00215, 0, 20.6733, -4.38053e-08, 0, 0, 0, 4.28397, -100.046, -18.5774, -6.62325 )
+
+[node name="water" parent="blockout poziomu" instance=ExtResource( 3 )]
+transform = Transform( 18.5922, 0, 0, 0, 1, 0, 0, 0, 10.4539, 0, -8.94304, 0 )
+
+[node name="ParkourRestartArea" parent="blockout poziomu" instance=ExtResource( 4 )]
+transform = Transform( 555.027, 0, 0, 0, 1, 0, 0, 0, 655.829, 0, -11.7521, -3.68103 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.225234, -0.206696, 0.952127, -0.119601, 0.975712, 0.183524, -0.966936, -0.0725398, -0.244484, 0, 0, 0 )
+light_energy = 0.427
+light_indirect_energy = 0.0
+
+[connection signal="body_entered" from="blockout poziomu/ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]

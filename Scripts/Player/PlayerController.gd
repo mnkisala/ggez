@@ -43,7 +43,7 @@ func _physics_process(delta):
 	var mul = 1.0
 	if _run:
 		mul = running_multiplier
-	_h_vel = _h_vel.linear_interpolate(_direction.normalized() * speed * mul, _h_acc * delta)
+	_h_vel = _h_vel.linear_interpolate(_direction * speed * mul, _h_acc * delta)
 
 	var vforce = -9.8
 	if _jump and is_on_floor():
