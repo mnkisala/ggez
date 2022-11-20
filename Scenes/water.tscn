@@ -1,10 +1,12 @@
 [gd_scene load_steps=19 format=2]
 
 [sub_resource type="CubeMesh" id=1]
-size = Vector3( 512, 2, 512 )
+size = Vector3( 32, 2, 32 )
+subdivide_width = 1
+subdivide_height = 1
 
 [sub_resource type="VisualShaderNodeScalarOp" id=9]
-default_input_values = [ 0, 0.0, 1, 0.001 ]
+default_input_values = [ 0, 0.0, 1, 0.004 ]
 operator = 2
 
 [sub_resource type="VisualShaderNodeInput" id=10]
@@ -17,7 +19,7 @@ default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 1, 1, 1 ) ]
 operator = 2
 
 [sub_resource type="VisualShaderNodeColorConstant" id=18]
-constant = Color( 0.105882, 0.160784, 0.254902, 0.521569 )
+constant = Color( 0.0792711, 0.22338, 0.16937, 0.705882 )
 
 [sub_resource type="VisualShaderNodeVectorLen" id=20]
 
@@ -28,21 +30,21 @@ operator = 2
 [sub_resource type="VisualShaderNodeVectorInterp" id=22]
 
 [sub_resource type="VisualShaderNodeColorConstant" id=23]
-constant = Color( 0.12549, 0.164706, 0.129412, 0.913725 )
+constant = Color( 0.0517146, 0.122504, 0.0582997, 0.8 )
 
 [sub_resource type="VisualShaderNodeScalarConstant" id=8]
 constant = 0.3
 
 [sub_resource type="OpenSimplexNoise" id=12]
-octaves = 8
-period = 128.0
-persistence = 1.0
-lacunarity = 4.0
+octaves = 9
+period = 82.7
+persistence = 0.221
+lacunarity = 0.62
 
 [sub_resource type="NoiseTexture" id=13]
 seamless = true
 as_normalmap = true
-bump_strength = 3.2
+bump_strength = 16.0
 noise = SubResource( 12 )
 noise_offset = Vector2( 0.007, 0 )
 
@@ -70,12 +72,12 @@ void vertex() {
 
 void fragment() {
 // Color:14
-	vec3 n_out14p0 = vec3(0.105882, 0.160784, 0.254902);
-	float n_out14p1 = 0.521569;
+	vec3 n_out14p0 = vec3(0.079271, 0.223380, 0.169370);
+	float n_out14p1 = 0.705882;
 
 // Color:19
-	vec3 n_out19p0 = vec3(0.125490, 0.164706, 0.129412);
-	float n_out19p1 = 0.913725;
+	vec3 n_out19p0 = vec3(0.051715, 0.122504, 0.058300);
+	float n_out19p1 = 0.800000;
 
 // Input:11
 	vec3 n_out11p0 = vec3(UV, 0.0);
@@ -84,7 +86,7 @@ void fragment() {
 	float n_out7p0 = TIME;
 
 // ScalarOp:10
-	float n_in10p1 = 0.00100;
+	float n_in10p1 = 0.00400;
 	float n_out10p0 = n_out7p0 * n_in10p1;
 
 // ScalarFunc:9
@@ -126,23 +128,23 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -360.8, -248.301 )
+graph_offset = Vector2( -488.94, 30.7332 )
 nodes/vertex/0/position = Vector2( 300, 140 )
 nodes/fragment/0/position = Vector2( 340, -40 )
 nodes/fragment/5/node = SubResource( 8 )
 nodes/fragment/5/position = Vector2( 0, 300 )
 nodes/fragment/6/node = SubResource( 14 )
-nodes/fragment/6/position = Vector2( -580, 80 )
+nodes/fragment/6/position = Vector2( -620, 60 )
 nodes/fragment/7/node = SubResource( 15 )
 nodes/fragment/7/position = Vector2( -1040, 180 )
 nodes/fragment/9/node = SubResource( 16 )
 nodes/fragment/9/position = Vector2( -800, 200 )
 nodes/fragment/10/node = SubResource( 9 )
-nodes/fragment/10/position = Vector2( -880, 360 )
+nodes/fragment/10/position = Vector2( -880, 280 )
 nodes/fragment/11/node = SubResource( 10 )
 nodes/fragment/11/position = Vector2( -860, 100 )
 nodes/fragment/12/node = SubResource( 11 )
-nodes/fragment/12/position = Vector2( -620, 340 )
+nodes/fragment/12/position = Vector2( -580, 340 )
 nodes/fragment/13/node = SubResource( 17 )
 nodes/fragment/13/position = Vector2( 80, -120 )
 nodes/fragment/14/node = SubResource( 18 )
@@ -161,6 +163,5 @@ nodes/fragment/connections = PoolIntArray( 7, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 
 shader = SubResource( 5 )
 
 [node name="water" type="MeshInstance"]
-transform = Transform( 0.7573, 0, 0, 0, 0.203058, 0, 0, 0, 0.7573, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 6 )

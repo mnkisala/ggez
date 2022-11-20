@@ -23,8 +23,8 @@ func _ready():
 func _process(dt):
 	# mrygansko
 	var light = get_node("OmniLight")
-	light.light_energy = lerp(
-		light.light_energy, BASE_LIGHT + (randf() * 2 - 1.0) * 3.0, dt * 20.0 * randf()
+	light.light_energy = max(
+		0.01, lerp(light.light_energy, BASE_LIGHT + (randf() * 2 - 1.0) * 3.0, dt * 20.0 * randf())
 	)
 
 
