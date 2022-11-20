@@ -66,7 +66,7 @@ func _input(event):
 				_code_machine.active = false
 				_typing = false
 			if (
-				event.as_text().is_valid_integer()
+				event.as_text().length() == 1
 				or event.as_text() == "BackSpace"
 				or event.as_text() == "Enter"
 			):
