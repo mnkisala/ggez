@@ -29,7 +29,7 @@ var _code_machine
 
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	set_level_specific_text("")
 
 	if state_provider == "":
 		_state = PlayerState.new()
@@ -80,6 +80,8 @@ func _input(event):
 
 
 func _process(_delta):
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 	# poruszanie
 	if not _typing:
 		_head.rotation = Vector3(_state.pitch, _state.yaw, 0.0)
@@ -140,6 +142,7 @@ func collect_a_garbage(garbage: GarbageRes):
 		_state.inventory[garbage.name] += 1
 	else:
 		_state.inventory[garbage.name] = 1
+
 
 func set_level_specific_text(t):
 	get_node("hud/level_specific").text = t
