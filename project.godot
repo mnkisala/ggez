@@ -19,15 +19,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/CodeMachine.gd"
 }, {
-"base": "Spatial",
+"base": "RigidBody",
 "class": "Garbage",
 "language": "GDScript",
 "path": "res://Scripts/Garbage.gd"
-}, {
-"base": "Resource",
-"class": "GarbageRes",
-"language": "GDScript",
-"path": "res://Scripts/GarbageRes.gd"
 }, {
 "base": "Reference",
 "class": "LevelEnum",
@@ -48,7 +43,6 @@ _global_script_class_icons={
 "ChemicaliasTurnoffer": "",
 "CodeMachine": "",
 "Garbage": "",
-"GarbageRes": "",
 "LevelEnum": "",
 "PlayerController": "",
 "PlayerState": ""

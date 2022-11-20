@@ -67,8 +67,7 @@ func _input(event):
 				_code_machine.active = false
 				_typing = false
 			if (
-				event.as_text().length() == 1
-				and event.as_text().is_valid_integer()
+				event.as_text().length() == 1 and event.as_text().is_valid_integer()
 				or event.as_text() == "BackSpace"
 				or event.as_text() == "Enter"
 			):
@@ -112,16 +111,11 @@ func _process(_delta):
 	# smieci
 	var collision: Node = _raycast.get_collider()
 	if collision:
-		if collision.get_parent().get_parent() is Garbage:
+		if collision is Garbage:
 			_hud_hint.text = "[E] to collect"
 			if Input.is_action_just_pressed("interact"):
-				var res = collision.get_parent().get_parent().resource
-				collect_a_garbage(res)
-				var grandgrandparent = collision.get_parent().get_parent().get_parent()
-				grandgrandparent.hide()
-				grandgrandparent.queue_free()
-				print("points: %d" % _state.points)
-				print("inventory: ", _state.inventory)
+				_state.garbage_bag.push_back(collision)
+				collision.get_parent().remove_child(collision)
 		elif collision.get_parent() is CodeMachine:
 			_code_machine = collision.get_parent()
 			if _code_machine.active:
@@ -136,14 +130,6 @@ func _process(_delta):
 			_hud_hint.text = "[E] to turn off chemicalias"
 			if Input.is_action_just_pressed("interact"):
 				collision.turn_off_chemicalias()
-
-
-func collect_a_garbage(garbage: GarbageRes):
-	_state.points += int(garbage.points)
-	if _state.inventory.has(garbage.name):
-		_state.inventory[garbage.name] += 1
-	else:
-		_state.inventory[garbage.name] = 1
 
 
 func set_level_specific_text(t):
