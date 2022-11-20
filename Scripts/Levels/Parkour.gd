@@ -8,3 +8,8 @@ func _process(_dt):
 
 func _exit_tree():
 	get_node('player').set_level_specific_text("")
+
+
+func _on_Area_body_entered(body:Node):
+	if body is PlayerController:
+		GameManager.changeScene(LevelEnum.Level.PARKOUR)

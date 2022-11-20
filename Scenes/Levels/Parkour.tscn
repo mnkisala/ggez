@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/cube.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Scenes/Interactives/Chemicalias.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Interactives/ChemicaliasTurnOffer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Levels/Parkour.gd" type="Script" id=6]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 166.409, 21.1613, 60.1498 )
 
 [node name="Parkour" type="Spatial"]
 script = ExtResource( 6 )
@@ -40,3 +43,13 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -
 [node name="ChemicaliasTurnOffer" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.67292, 11.2759, -66.1902 )
 chemicalias_emmiter = NodePath("../Chemicalias")
+
+[node name="Area" type="Area" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.452, 0 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

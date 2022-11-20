@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name PlayerController
 
 export var speed: float = 10.0
 export var jump_force: float = 500
