@@ -42,7 +42,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23508, -0.230876, 10.7521 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94083, -0.230885, 11.6031 )
 
 [node name="Sign" parent="." instance=ExtResource( 4 )]
-transform = Transform( 7.35426, 0, 0, 0, 7.35426, 0, 0, 0, 1, 0, 4.64371, 0 )
+transform = Transform( 8.85577, 0, 0, 0, 10.5126, 0, 0, 0, 1, 1.28254, 10.5933, -6.2573 )
 
 [node name="chooseP2" parent="." instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.9984, -0.150721, -4.09515 )
