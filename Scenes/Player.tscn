@@ -34,7 +34,7 @@ far = 500.0
 
 [node name="RayCast" type="RayCast" parent="head"]
 enabled = true
-cast_to = Vector3( 0, 0, -5 )
+cast_to = Vector3( 0, 0, -7 )
 collide_with_areas = true
 
 [node name="hud" type="Control" parent="."]
@@ -60,5 +60,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -120.0
 text = "HINT"
+align = 1
+valign = 1
+
+[node name="level_specific" type="Label" parent="hud"]
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_right = 40.0
+margin_bottom = 20.0
+text = "level specific text here"
 align = 1
 valign = 1

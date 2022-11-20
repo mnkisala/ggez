@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "StaticBody",
+"class": "ChemicaliasTurnoffer",
+"language": "GDScript",
+"path": "res://Scripts/ChemicaliasTurnoffer.gd"
+}, {
 "base": "Spatial",
 "class": "CodeMachine",
 "language": "GDScript",
@@ -35,6 +40,7 @@ _global_script_classes=[ {
 "path": "res://Scripts/Player/PlayerState.gd"
 } ]
 _global_script_class_icons={
+"ChemicaliasTurnoffer": "",
 "CodeMachine": "",
 "Garbage": "",
 "GarbageRes": "",

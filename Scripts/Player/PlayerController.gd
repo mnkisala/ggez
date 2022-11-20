@@ -27,6 +27,7 @@ onready var _hud_hint: Label = $"./hud/hint"
 
 var _code_machine
 
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -64,7 +65,11 @@ func _input(event):
 			if event.as_text() == "Escape":
 				_code_machine.active = false
 				_typing = false
-			if event.as_text().is_valid_integer() or event.as_text() == "BackSpace" or event.as_text() == "Enter":
+			if (
+				event.as_text().is_valid_integer()
+				or event.as_text() == "BackSpace"
+				or event.as_text() == "Enter"
+			):
 				_code_machine.handle_input(event.as_text())
 	else:
 		if event is InputEventMouseMotion:
@@ -113,7 +118,7 @@ func _process(_delta):
 				grandgrandparent.queue_free()
 				print("points: %d" % _state.points)
 				print("inventory: ", _state.inventory)
-		if collision.get_parent() is CodeMachine:
+		elif collision.get_parent() is CodeMachine:
 			_code_machine = collision.get_parent()
 			if _code_machine.active:
 				_hud_hint.text = "[Esc] to close typing mode"
@@ -123,6 +128,10 @@ func _process(_delta):
 					_code_machine.active = true
 					_typing = true
 					_direction = Vector3.ZERO
+		elif collision is ChemicaliasTurnoffer and collision.turned_off == false:
+			_hud_hint.text = "[E] to turn off chemicalias"
+			if Input.is_action_just_pressed("interact"):
+				collision.turn_off_chemicalias()
 
 
 func collect_a_garbage(garbage: GarbageRes):
@@ -131,3 +140,6 @@ func collect_a_garbage(garbage: GarbageRes):
 		_state.inventory[garbage.name] += 1
 	else:
 		_state.inventory[garbage.name] = 1
+
+func set_level_specific_text(t):
+	get_node("hud/level_specific").text = t
