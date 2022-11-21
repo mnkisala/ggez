@@ -1,0 +1,15 @@
+kod.py
+widoczny: TAK
+do edycji: TAK
+
+przychody.txt
+widoczny: TAK
+do edycji: NIE
+
+test.py
+widoczny: NIE
+do edycji: NIE
+
+output: TAK
+testy: TAK
+liczba_testow: 1
