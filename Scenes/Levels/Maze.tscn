@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Models/Maze/maze2trimesh.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Models/Maze/pass.glb" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 0.516236, 50 )
@@ -112,3 +113,83 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 
 [node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
 shape = SubResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="BeerCan6" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.984, -0.0336118, 12.9346 )
+
+[node name="BeerCan5" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3085, 0, -2.73905 )
+
+[node name="BeerCan" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21478, -0.0391877, -25.7079 )
+
+[node name="BeerCan" parent="StaticBody/BeerCan" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.50766 )
+
+[node name="BeerCan3" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8432, 0.0199385, -37.4231 )
+
+[node name="BeerCan2" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9953, -0.162503, -35.7207 )
+
+[node name="BeerCan4" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.13225, 0, 3.15812 )
+
+[node name="BeerCan7" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6537, 0, 3.52785 )
+
+[node name="BeerCan8" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.2904 )
+
+[node name="BeerCan9" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9076, 0, -22.8903 )
+
+[node name="BeerCan10" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3145, 0, 0 )
+
+[node name="BeerCan11" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0624, 0, 24.5723 )
+
+[node name="BeerCan12" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.182, 0, 20.1867 )
+
+[node name="BeerCan13" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0262, 0, 0 )
+
+[node name="BeerCan14" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7016, 0, 43.266 )
+
+[node name="BeerCan15" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5255, 0, 38.2007 )
+
+[node name="BeerCan16" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.2065, 0, -41.463 )
+
+[node name="BeerCan17" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.4474, 0, -40.4696 )
+
+[node name="BeerCan18" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5242, 0, -30.7988 )
+
+[node name="BeerCan19" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1784, 0, 36.9091 )
+
+[node name="BeerCan20" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4967, 0, 36.0497 )
+
+[node name="BeerCan21" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.0116, 0, 13.6471 )
+
+[node name="BeerCan22" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.319, 0, -7.70733 )
+
+[node name="BeerCan23" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9636, 0, -7.77895 )
+
+[node name="BeerCan24" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.781, 0, -6.35452 )
+
+[node name="BeerCan25" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1224, 0, -35.2585 )
