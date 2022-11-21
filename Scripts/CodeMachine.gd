@@ -29,8 +29,14 @@ func handle_input(text):
 		return
 	if text == "Enter":
 		_can_type = false
-		_set_color(Color(1, 0, 0))
-		_set_text("Błędny kod")
+		var success = GameManager.checkCode(_text)
+		print(_text)
+		if success:
+			_set_color(Color(0, 1, 0))
+			_set_text("Prawidłowy kod")
+		else:
+			_set_color(Color(1, 0, 0))
+			_set_text("Błędny kod")
 		yield(get_tree().create_timer(1.0), "timeout")
 		_can_type = true
 		_set_color(Color(1, 1, 1))
