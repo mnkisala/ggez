@@ -1,5 +1,11 @@
-kod.py - widoczny: TAK, do edycji: TAK
-test.py - widoczny: NIE, do edycji: NIE
+kod.py
+widoczny: TAK
+do edycji: TAK
+
+test.py
+widoczny: NIE
+do edycji: NIE
 
 output: TAK
-testy: TAK, liczba_testow: 1
+testy: TAK
+liczba_testow: 1
