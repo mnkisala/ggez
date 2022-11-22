@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Models/Hub/Computer/klawiatura1.glb" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Models/Hub/Computer/stol.glb" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Levels/Hub.gd" type="Script" id=12]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.18907, 2.20846, 0.476956 )
@@ -19,6 +20,7 @@ extents = Vector3( 2.18907, 2.20846, 0.476956 )
 extents = Vector3( 1, 6.5934, 19.5959 )
 
 [node name="Spatial" type="Spatial"]
+script = ExtResource( 12 )
 
 [node name="stol" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9073, 1.6956, 22.8772 )

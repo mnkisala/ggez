@@ -18,6 +18,12 @@ const __CODE_TO_PORTAL = {
 }
 
 const portals = {}
+var enabled_portals = []
+
+func update_portals():
+	for portal_id in enabled_portals:
+		var portal = portals[portal_id]
+		portal.enable()
 
 func __changeScene(path):
 	var err = get_tree().change_scene(path)
@@ -41,6 +47,7 @@ func checkCode(code):
 		var portal_id = __CODE_TO_PORTAL[code]
 		var portal = portals[portal_id]
 		portal.enable()
+		enabled_portals += [ portal_id ]
 		return true
 	else:
 		return false

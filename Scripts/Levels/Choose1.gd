@@ -63,7 +63,6 @@ func _ready() -> void:
 	origin_transform = get_node("Player").transform
 	randomize_question()
 
-
 func randomize_question():
 	var left_anwser = get_node("LeftPlate/Answer")
 	var right_answer = get_node("RightPlate/Answer")
