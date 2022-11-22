@@ -13,6 +13,7 @@ var _h_acc: float = 20
 var _h_vel: Vector3 = Vector3.ZERO
 var _v_acc: float = 5
 var _v_vel: float = 0
+var accell = 0
 
 export var mouse_sensitivty = 0.003
 
@@ -50,7 +51,15 @@ func _physics_process(delta):
 		vforce += jump_force
 	_jump = false
 
-	_v_vel = lerp(_v_vel, vforce, _v_acc * delta)
+	if is_on_floor():
+		accell = 0
+	else:
+		if _v_vel < 0:
+			accell -= 0.4
+			if accell < -10:
+				accell = -10
+
+	_v_vel = lerp(_v_vel, vforce + accell, _v_acc * delta)
 	var movement = Vector3(_h_vel.x, _v_vel, _h_vel.z)
 
 	var _res = move_and_slide(movement, Vector3.UP, true)
