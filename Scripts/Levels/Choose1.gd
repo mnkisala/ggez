@@ -42,6 +42,13 @@ func _process(_dt):
 	get_node("Player").set_level_specific_text(
 		"punkty: %d/%d" % [points, questions.size()]
 	)
+	#debug
+	if Input.is_action_just_pressed("debug"):
+		print("debug")
+		get_node("LeftPlate").disable()
+		get_node("RightPlate").disable()
+		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
+		get_node("HubPortal").enable()
 
 func _exit_tree():
 	get_node("Player").set_level_specific_text("")
@@ -82,7 +89,10 @@ func trigger_anwser(side):
 		active_questions = [] + questions
 
 	if questions.size() == 0 or points >= 10:
-		GameManager.changeScene(LevelEnum.Level.HUB)
+		get_node("LeftPlate").disable()
+		get_node("RightPlate").disable()
+		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
+		get_node("HubPortal").enable()
 	else:
 		randomize_question()
 		get_node("Player").transform = origin_transform

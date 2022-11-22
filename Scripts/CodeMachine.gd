@@ -29,8 +29,7 @@ func handle_input(text):
 		return
 	if text == "Enter":
 		_can_type = false
-		var success = GameManager.checkCode(_text)
-		print(_text)
+		var success = GameManager.checkCode(int(_text))
 		if success:
 			_set_color(Color(0, 1, 0))
 			_set_text("Prawidłowy kod")

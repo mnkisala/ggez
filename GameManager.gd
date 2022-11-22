@@ -10,20 +10,14 @@ const __ID_TO_LEVEL_PATH = {
 	LevelEnum.Level.PARKOUR: "res://Scenes/Levels/Parkour.tscn",
 }
 
-const __portalTarget = {
-	LevelEnum.Level.HUB: true,
-	LevelEnum.Level.CHOOSE1: false,
-	LevelEnum.Level.GARGABE_BASE: false,
-	LevelEnum.Level.MAZE: false,
-	LevelEnum.Level.PARKOUR: false,
+const __CODE_TO_PORTAL = {
+	1883: 2,
+	3306: 3,
+	0443: 4,
+	8080: 5
 }
 
-const __CODE_TO_LEVEL = {
-	"1883": LevelEnum.Level.CHOOSE1,
-	"3306": LevelEnum.Level.GARGABE_BASE,
-	"0443": LevelEnum.Level.MAZE,
-	"8080": LevelEnum.Level.PARKOUR
-}
+const portals = {}
 
 func __changeScene(path):
 	var err = get_tree().change_scene(path)
@@ -38,21 +32,15 @@ func changeScene(level):
 		print("poziom nie istnieje: ", level)
 
 
-# level - LevelEnum.Level
-func setPortalTargetActive(level, active):
-	__portalTarget[level] = active
-
-# level - LevelEnum.Level
-func isPortalTargetActive(level):
-	if level in __portalTarget:
-		return __portalTarget[level] == true
-	else:
-		return false
+func registerPortal(id, portal):
+	portals[id] = portal
 
 
 func checkCode(code):
-	if code in __CODE_TO_LEVEL:
-		setPortalTargetActive(__CODE_TO_LEVEL[code], true)
+	if code in __CODE_TO_PORTAL:
+		var portal_id = __CODE_TO_PORTAL[code]
+		var portal = portals[portal_id]
+		portal.enable()
 		return true
 	else:
 		return false
