@@ -8,7 +8,7 @@ size = 48
 font_data = ExtResource( 1 )
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 0.2, 0.2, 0.2 )
+extents = Vector3( 0.133197, 0.2, 0.2 )
 
 [node name="Sign" type="StaticBody"]
 script = ExtResource( 2 )
