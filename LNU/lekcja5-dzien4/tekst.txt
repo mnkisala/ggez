@@ -1,11 +1,12 @@
 ...
 
-Dzisiaj potrzebujemy, abys na podstawie pliku z danymi o
-przychodach naszej firmy, znalazl dla nas liczbe, ktora
-okresli ile razy nasze przychody wzrosly wobec poprzeniej wartosci
+Plik z danymi zawiera informacje o przychodach naszej firmy.
+Twoim dzisiejszym zadaniem jest wyszukanie informacji, ile razy
+nasze przychody w firmie wzrosly w stosunku do wartosci poprzedzajacej.
+Napisz funkcje, ktora zwroci ten wynik. Przyklad ponizej.
 
 Format pliku:
-    id:przychod
+    id:przychody
 
 np:
     1:135 (wartosc poczatkowa)

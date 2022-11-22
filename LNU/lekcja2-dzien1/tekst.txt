@@ -1,12 +1,12 @@
 ...
 
-Potrzebujemy abys wyciagnal z bazy informacje o nazwach oraz ilosci zmarnowanego materialu przez firmy, ktorych:
+Baza danych zawiera informacje o firmach i zuzywanych przez nie materialach. Twoje dzisiejsze zadanie polega na uzyskaniu z tej bazy danych informacji o zmarnowanych materialach w tych firmach. Interesuja nas: nazwa materialu oraz jego ilosc. Wszystkie zapisane ponizej warunki musza byc spelnione, lacznie:
 - ilosc odpadow jest mniejsza od 8000
 - ilosc zuzytego papieru jest wieksza od 8000
 - ilosc zuzytego plastiku jest wieksza badz rowna 2000
 - ilosc zuzytego szkla przekracza 2500
 - ilosc zmarnowanego materialu zawiera sie w granicach od 1500 i 8000
 Posortuj dane wedlug ilosci zmarnowanego materialu, malejaco.
-Ogranicz ilosc rekordow do 3.
+Wybierz 3 pierwsze rekordy.
 
 ...
