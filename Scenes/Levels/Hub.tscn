@@ -92,6 +92,15 @@ Interakcja: E
 Sprint: Shift"
 font_size = 3
 
+[node name="sciaga" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2953, 4, 18.2899 )
+text = "Sciaga:
+1883: Choose1
+3306: GarbageBase
+0443: Maze
+8080: Parkour"
+font_size = 3
+
 [node name="CodeMachine" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9204, 0.45573, 22.408 )
 player = NodePath("../player")
