@@ -2,7 +2,7 @@ lekcja1 - wstep (fabula)
 lekcja2 - dzien 1 (sql + maze)
 lekcja3 - dzien 2 (xor + parkour)
 lekcja4 - dzien 3 (cypher + choose 1)
-lekcja5 - dzien 4 (zliczanie wzrostu przychodow (aoc2021-d1) + )
+lekcja5 - dzien 4 (zliczanie wzrostu przychodow (aoc2021-d1) + sadzenie drzew?)
 lekcja6 - dzien 5 (garbage)
 lekcja7 - zakonczenie (fabula)
 

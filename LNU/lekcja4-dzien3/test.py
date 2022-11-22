@@ -1,15 +1,16 @@
-from kod import wzrosty_przychodow
+from kod import cipher
 
 def test():
-    nazwa_pliku = "przychody.txt"
+    szyfr = "To jest test, jezeli to zadziala, wszystko zadziala!"
     try:
-        wartosc = wzrosty_przychodow(nazwa_pliku)
-        oczekiwania = 5042
+        wartosc = cipher(szyfr, 4)
+        oczekiwania = "Xs niwx xiwx, nidipm xs dehdmepe, awdcwxos dehdmepe!"
         if wartosc == oczekiwania:
             komunikat = "testy OK"
             print(komunikat)
             return True
         else:
+            print(wartosc)
             komunikat = "testy FAIL"
             print(komunikat)
             return False

@@ -1,0 +1,9 @@
+...
+
+Dostalismy pewna wiadomosc biznesowa od klienta,
+jako ze komunikacja musi byc bezpieczna, zostala
+ona zaszyfrowana pewnym szyfrem, klient wspominal
+cos o nazwie "szyfr cezara". Czy potrafisz
+rozszyfrowac wiadomosc?
+
+...

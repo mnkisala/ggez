@@ -8,12 +8,15 @@ def test():
         oczekiwania = [(ord(a) ^ ord(b)) for a,b in zip(klucz1, klucz2)]
         if wartosc == oczekiwania:
             komunikat = "testy OK"
+            print(komunikat)
             return True
         else:
             komunikat = "testy FAIL"
+            print(komunikat)
             return False
     except:
         komunikat = "Cos poszlo nie tak..."
+        print(komunikat)
         return False
 
 test()
