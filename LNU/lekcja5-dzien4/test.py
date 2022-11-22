@@ -6,11 +6,11 @@ def test():
         wartosc = wzrosty_przychodow(nazwa_pliku)
         oczekiwania = 5042
         if wartosc == oczekiwania:
-            komunikat = "testy OK"
+            komunikat = "testy OK, wyjscie: " + str(wartosc)
             print(komunikat)
             return True
         else:
-            komunikat = "testy FAIL"
+            komunikat = "testy FAIL, wyjscie: " + str(wartosc)
             print(komunikat)
             return False
     except:

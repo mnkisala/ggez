@@ -7,11 +7,11 @@ def test():
         wartosc = xor(klucz1, klucz2)
         oczekiwania = [(ord(a) ^ ord(b)) for a,b in zip(klucz1, klucz2)]
         if wartosc == oczekiwania:
-            komunikat = "testy OK"
+            komunikat = "testy OK, wyjscie: " + str(wartosc)
             print(komunikat)
             return True
         else:
-            komunikat = "testy FAIL"
+            komunikat = "testy FAIL, wyjscie: " + str(wartosc)
             print(komunikat)
             return False
     except:

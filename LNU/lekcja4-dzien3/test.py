@@ -6,12 +6,11 @@ def test():
         wartosc = cipher(szyfr, 4)
         oczekiwania = "Xs niwx xiwx, nidipm xs dehdmepe, awdcwxos dehdmepe!"
         if wartosc == oczekiwania:
-            komunikat = "testy OK"
+            komunikat = "testy OK, wyjscie: " + str(wartosc)
             print(komunikat)
             return True
         else:
-            print(wartosc)
-            komunikat = "testy FAIL"
+            komunikat = "testy FAIL, wyjscie: " + str(wartosc)
             print(komunikat)
             return False
     except:
