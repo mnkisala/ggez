@@ -40,6 +40,8 @@ func handle_input(text):
 			_set_color(Color(0, 1, 0))
 			_set_text("Prawidłowy kod")
 			get_node(player)._typing = false
+			_can_type = false
+			active = false
 		else:
 			_set_color(Color(1, 0, 0))
 			_set_text("Błędny kod")
