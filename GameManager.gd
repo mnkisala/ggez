@@ -20,6 +20,8 @@ const __CODE_TO_PORTAL = {
 const portals = {}
 var enabled_portals = []
 
+onready var player_state = PlayerState.new()
+
 func update_portals():
 	for portal_id in enabled_portals:
 		var portal = portals[portal_id]

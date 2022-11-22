@@ -84,7 +84,7 @@ func trigger_anwser(side):
 		points = points + 1
 		active_questions.pop_at(question_index)
 	else:
-		points = 0
+		points -= 1
 		active_questions = [] + questions
 
 	if questions.size() == 0 or points >= 10:

@@ -19,7 +19,7 @@ export var mouse_sensitivty = 0.003
 
 export var running_multiplier = 1.5
 
-var _state: PlayerState = null
+onready var _state: PlayerState = GameManager.player_state
 
 export(NodePath) var state_provider
 
@@ -32,13 +32,6 @@ var _code_machine
 
 func _ready():
 	set_level_specific_text("")
-
-	if state_provider == "":
-		_state = PlayerState.new()
-	else:
-		var provider = get_node(state_provider)
-		_state = provider.player_state()
-
 
 func _physics_process(delta):
 	var mul = 1.0
