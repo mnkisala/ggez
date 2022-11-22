@@ -2,16 +2,21 @@ tool
 extends Spatial
 class_name CodeMachine
 
+export(NodePath) var player = null
+
 var active = false
 var _can_type = true
 var _text = ""
 var _terminal_label
 
+
 func _ready():
 	_terminal_label = get_node("Matrix/TerminalLabel")
 
+
 func _set_color(color):
 	_terminal_label.modulate = color
+
 
 func _set_text(text):
 	_text = text
@@ -19,6 +24,7 @@ func _set_text(text):
 		_terminal_label.text = "Wprowadź kod"
 	else:
 		_terminal_label.text = _text
+
 
 func handle_input(text):
 	if not _can_type:
@@ -33,6 +39,7 @@ func handle_input(text):
 		if success:
 			_set_color(Color(0, 1, 0))
 			_set_text("Prawidłowy kod")
+			get_node(player)._typing = false
 		else:
 			_set_color(Color(1, 0, 0))
 			_set_text("Błędny kod")
