@@ -80,10 +80,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120.721, 4.42763, -7.28161 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.2523, -0.270077, -29.0574 )
 
 [node name="smietnikpla" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42243, 6.12061, 8.21724 )
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -16.9501, 4.96784, -7.35281 )
 
 [node name="smietnikszklo" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52178, 5.82311, 2.91617 )
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -17.2535, 4.88443, -32.1584 )
 
 [node name="smietnikpapier" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6711, 5.81144, 16.1844 )
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -17.7971, 4.92363, 16.1844 )
