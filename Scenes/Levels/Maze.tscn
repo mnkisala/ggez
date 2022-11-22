@@ -2,17 +2,15 @@
 
 [ext_resource path="res://Scenes/Models/Maze/maze2trimesh.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Models/Maze/pass.glb" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Interactives/QuestionWall.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 0.516236, 50 )
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 100, 1, 100 )
-
-[sub_resource type="BoxShape" id=8]
-extents = Vector3( 0.542851, 3.86851, 3.1281 )
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766335, -0.00540543, -0.0763702 )
@@ -32,87 +30,35 @@ mesh = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.562324, 0.76005, -46.581 )
 
 [node name="maze2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64492, -0.422228, 47.1618 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64492, -0.938203, 47.1618 )
 
-[node name="pass" parent="maze2" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.9315, -0.183265, -14.2129 )
+[node name="QuestionWall1" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.0545, -0.213265, -14.1719 )
+question = "Siema"
 
-[node name="StaticBody" type="StaticBody" parent="maze2/pass"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+[node name="QuestionWall2" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23601, -0.213265, -55.4836 )
 
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
+[node name="QuestionWall" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.2941, -0.213265, -53.6196 )
 
-[node name="pass" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0295258, 0, 12.9881 )
+[node name="QuestionWall3" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8036, -0.213265, -39.2717 )
 
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
+[node name="QuestionWall4" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8138, -0.213265, -64.1732 )
+question = "Wbrew pozorom,
+namniej energii zaoszczędzimy
+wyłączając w domu..."
 
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
+[node name="QuestionWall5" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31.2879, -0.213265, -66.6086 )
 
-[node name="pass2" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5058, 0, 9.31391 )
+[node name="QuestionWall6" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.8067, -0.213265, -65.2726 )
 
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
-
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass2/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
-
-[node name="pass4" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0726, 0, -0.909645 )
-
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
-
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass4/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
-
-[node name="pass5" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9895, 0, -0.879255 )
-
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
-
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass5/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
-
-[node name="pass6" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.435, 0, 42.186 )
-
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
-
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass6/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
-
-[node name="pass7" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.0838, 0, -26.882 )
-
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
-
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass7/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
-
-[node name="pass3" parent="maze2/pass" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39.4501, 0, 48.2106 )
-
-[node name="StaticBody" type="StaticBody" parent="maze2/pass/pass3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0234528, 4.03616, -0.85798 )
-
-[node name="CollisionShape" type="CollisionShape" parent="maze2/pass/pass3/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149712, 0.593273, 0.590019 )
-shape = SubResource( 8 )
+[node name="QuestionWall7" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.93, -0.213, -14.182 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -193,3 +139,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.781, 0, -6.35452 )
 
 [node name="BeerCan25" parent="StaticBody" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1224, 0, -35.2585 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2.68142, 0, 0, 0, 2.68142, 0, 0, 0, 1, 1.6311, 1.21362, 52.6568 )
+target = 1
+enabled = true

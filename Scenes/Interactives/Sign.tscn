@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Fonts/coolvetica rg.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Sign.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=2]
 size = 48
@@ -10,6 +11,7 @@ font_data = ExtResource( 1 )
 extents = Vector3( 0.2, 0.2, 0.2 )
 
 [node name="Sign" type="StaticBody"]
+script = ExtResource( 2 )
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.102934 )
