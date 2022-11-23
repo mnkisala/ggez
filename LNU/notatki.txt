@@ -16,3 +16,12 @@ dzien sklada sie z:
 - ze zmeczenia idziesz spac (level w grze, gdzie na koniec dostajesz info potrzebne do wykonania zadania w pracy w kolejnym dniu)
 
 mozna gdzies pomiedzy wrzucic fabularne lekcje
+
+dzialanie kodow:
+lekcja 1 - brak kodu, brak poziomu
+lekcja 2 - brak kodu, pierwszy poziom odblokowany, kod z maze
+lekcja 3 - uzycie kodu z maze w wyzwaniu, kod z wyniku, odblokowanie parkoura z uzyciem kodu z wyniku, kod z parkour
+lekcja 4 - uzycie kodu z parkoura w wyzwaniu, kod z wyniku, odblokowanie choose 1 z uzyciem kodu z wyniku, kod z choose 1
+lekcja 5 - uzycie kodu z choose 1 w wyzwaniu, kod z wyniku, odblokowanie sadzenie z uzyciem kodu z wyniku, kod z sadzenia
+lekcja 6 - brak kodu, odblokowanie garbage z uzyciem kodu z sadzenia drzew (moze jednak wyzwanie dac tutaj)
+lekcja 7 - brak kodu, brak poziomu
