@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/cube.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scripts/Levels/Parkour.gd" type="Script" id=6]
 [ext_resource path="res://Models/parkour_platforma.glb" type="PackedScene" id=7]
 [ext_resource path="res://Models/parkour_most.glb" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/rura_placeholder.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 32, 2, 32 )
@@ -251,11 +252,26 @@ transform = Transform( -4.53146e-08, -1, 0, 1.03668, -4.37114e-08, 0, 0, 0, 1, -
 [node name="parkour_platforma6" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -68.1423, 2.93446, 31.6664 )
 
+[node name="parkour_platforma16" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -68.1423, 14.0665, -0.984296 )
+
+[node name="parkour_platforma17" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -114.074, 13.8398, 34.5407 )
+
+[node name="parkour_platforma18" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 0.880808, -0.473473, 0, 0.473473, 0.880808, -114.074, 23.2074, -2.44568 )
+
+[node name="parkour_platforma19" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 0.880808, -0.473473, 0, 0.473473, 0.880808, -114.074, 41.9989, -37.4037 )
+
 [node name="parkour_platforma7" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -110.594, 0.682761, 24.2393 )
 
 [node name="parkour_platforma8" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -72.8888, -8.23674, -45.1202 )
+
+[node name="parkour_platforma15" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -120.863, 9.05688, -45.1202 )
 
 [node name="parkour_platforma9" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -114.236, -8.23674, -45.1202 )
@@ -277,6 +293,12 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.805
 
 [node name="parkour_most2" parent="." instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -78.7455, 2.38642, -4.34289 )
+
+[node name="parkour_most3" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -76.5057, 11.845, -29.2363 )
+
+[node name="parkour_most4" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -76.5057, 11.845, -29.2363 )
 
 [node name="void" type="MeshInstance" parent="."]
 transform = Transform( 1068.06, 0, 0, 0, 1, 0, 0, 0, 1068.06, -66.4411, -14.9918, -0.1761 )
@@ -301,5 +323,38 @@ transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -80.611, 90.9402, -28.32
 
 [node name="parkour_light4" parent="." instance=ExtResource( 3 )]
 transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -80.611, 90.9402, 5.0056 )
+
+[node name="rura_placeholder2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -95.7172, 9.04554, -50.4256 )
+
+[node name="rura_placeholder10" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -88.8517, 50.7448, -51.4798 )
+
+[node name="rura_placeholder11" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -82.8378, 54.061, -51.4798 )
+
+[node name="rura_placeholder12" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -76.9228, 56.5524, -51.4798 )
+
+[node name="rura_placeholder9" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -95.7172, 9.04554, -50.4256 )
+
+[node name="rura_placeholder3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -89.7677, 7.07504, -50.4256 )
+
+[node name="rura_placeholder4" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -83.1772, 4.41351, -50.4256 )
+
+[node name="rura_placeholder5" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -77.4687, 1.84017, -50.4256 )
+
+[node name="rura_placeholder6" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -71.4989, -1.16918, -50.4256 )
+
+[node name="rura_placeholder7" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -65.1349, -3.59651, -50.4256 )
+
+[node name="rura_placeholder8" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -58.0985, -5.98796, -50.4256 )
 
 [connection signal="body_entered" from="ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]

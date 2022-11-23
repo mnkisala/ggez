@@ -99,7 +99,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.2523, -0.270077, -29.0574 )
 
 [node name="smietnikpla" parent="." instance=ExtResource( 9 )]
 transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.593, 5.29613, -7.35281 )
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 kind = 2
 
 [node name="Area" type="Area" parent="smietnikpla"]
@@ -110,7 +110,7 @@ shape = SubResource( 6 )
 
 [node name="smietnikszklo" parent="." instance=ExtResource( 8 )]
 transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.6774, 5.24629, -32.1584 )
-script = ExtResource( 12 )
+script = ExtResource( 11 )
 kind = 1
 
 [node name="Area" type="Area" parent="smietnikszklo"]
@@ -121,7 +121,7 @@ shape = SubResource( 6 )
 
 [node name="smietnikpapier" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.7735, 5.24009, 16.1844 )
-script = ExtResource( 12 )
+script = ExtResource( 11 )
 
 [node name="Area" type="Area" parent="smietnikpapier"]
 

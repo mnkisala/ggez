@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="BoxShape" id=29]
+
+[sub_resource type="CylinderMesh" id=28]
+
+[node name="rura_placeholder" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.8268, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 29 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.8268, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 28 )
