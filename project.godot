@@ -38,6 +38,16 @@ _global_script_classes=[ {
 "class": "PlayerState",
 "language": "GDScript",
 "path": "res://Scripts/Player/PlayerState.gd"
+}, {
+"base": "Spatial",
+"class": "QuestionWall",
+"language": "GDScript",
+"path": "res://Scripts/Sign.gd"
+}, {
+"base": "Spatial",
+"class": "Sign",
+"language": "GDScript",
+"path": "res://Scripts/QuestionWall.gd"
 } ]
 _global_script_class_icons={
 "ChemicaliasTurnoffer": "",
@@ -45,7 +55,9 @@ _global_script_class_icons={
 "Garbage": "",
 "LevelEnum": "",
 "PlayerController": "",
-"PlayerState": ""
+"PlayerState": "",
+"QuestionWall": "",
+"Sign": ""
 }
 
 [application]

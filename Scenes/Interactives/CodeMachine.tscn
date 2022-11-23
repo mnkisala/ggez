@@ -39,7 +39,6 @@ shape = SubResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 13.2852, 0, 0, 0, 10.8748, 0, 0, 0, 8.5426, 0, 2.43475, 0 )
-script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 7 )

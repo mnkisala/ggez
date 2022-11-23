@@ -147,6 +147,10 @@ func _process(_delta):
 			_hud_hint.text = "[E] to turn off chemicalias"
 			if Input.is_action_just_pressed("interact"):
 				collision.turn_off_chemicalias()
+		elif collision.get_parent() is QuestionWall:
+			_hud_hint.text = "[E] to click button"
+			if Input.is_action_just_pressed("interact"):
+				print("Dziąłą")
 
 
 func set_level_specific_text(t):
