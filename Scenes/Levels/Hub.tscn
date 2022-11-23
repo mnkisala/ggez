@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Player/PlayerStateProvider.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Models/Hub/Computer/klawiatura1.glb" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Models/Hub/Computer/stol.glb" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Levels/Hub.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/Models/Hub/Tree/streecomplete.glb" type="PackedScene" id=13]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.18907, 2.20846, 0.476956 )
@@ -126,3 +127,6 @@ mass = 0.1
 [node name="CollisionShape" type="CollisionShape" parent="col"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0416, 2.73153, -6.45574 )
 shape = SubResource( 2 )
+
+[node name="streecomplete" parent="." instance=ExtResource( 13 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.53368, -2.25529, -1.56202 )
