@@ -52,8 +52,8 @@ func _physics_process(delta):
 	else:
 		if _v_vel < 0:
 			accell -= 0.4
-			if accell < -10:
-				accell = -10
+			if accell < -15:
+				accell = -15
 
 	_v_vel = lerp(_v_vel, vforce + accell, _v_acc * delta)
 	var movement = Vector3(_h_vel.x, _v_vel, _h_vel.z)
