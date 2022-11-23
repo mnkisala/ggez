@@ -36,7 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87058, 0 )
 shape = SubResource( 1 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.967513, 0.0101262, -0.25262, -0.00991638, 0.999949, 0.00210389, 0.252628, 0.000469539, 0.967564, 7.38049, 3.08335, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.90875, 3.87192, 0 )
 state_provider = NodePath("../PlayerStateProvider")
 
 [node name="PlayerStateProvider" type="Node" parent="."]
