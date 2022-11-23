@@ -108,7 +108,18 @@ player = NodePath("../player")
 [node name="BeerCan" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1106, 6.42756, 7.89241 )
 mass = 0.1
-contact_monitor = true
+
+[node name="BeerCan2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1106, 6.42756, -0.489964 )
+mass = 0.1
+
+[node name="BeerCan3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7298, 6.42756, 7.89241 )
+mass = 0.1
+
+[node name="BeerCan4" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7298, 6.42756, -0.489964 )
+mass = 0.1
 
 [node name="col" type="StaticBody" parent="."]
 
