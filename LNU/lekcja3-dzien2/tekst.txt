@@ -1,5 +1,12 @@
 ...
 
+TODO: ZO ZMIANY(cale zadanie do dokonczenia)
+Otrzymalismy dwa tajemnicze ciagi znakow, z analizy naszych informatykow wynika,
+ze sa one kluczem oraz wiadomoscia zaszyfrowana algorytmem XOR, Czy potrafisz
+odszyfrowac wiadomosc?
 
+Przyklady:
+
+Podpowiedzi:
 
 ...
