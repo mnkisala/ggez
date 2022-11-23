@@ -1,4 +1,5 @@
 extends Spatial
+class_name QuestionWall
 
 export(String, MULTILINE) var question setget set_question
 	

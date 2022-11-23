@@ -42,11 +42,6 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "QuestionWall",
 "language": "GDScript",
-"path": "res://Scripts/Sign.gd"
-}, {
-"base": "Spatial",
-"class": "Sign",
-"language": "GDScript",
 "path": "res://Scripts/QuestionWall.gd"
 } ]
 _global_script_class_icons={
@@ -56,8 +51,7 @@ _global_script_class_icons={
 "LevelEnum": "",
 "PlayerController": "",
 "PlayerState": "",
-"QuestionWall": "",
-"Sign": ""
+"QuestionWall": ""
 }
 
 [application]

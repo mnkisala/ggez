@@ -1,4 +1,4 @@
-extends StaticBody
+extends Spatial
 
 export(int) var font_size setget set_font_size
 

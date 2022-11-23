@@ -119,3 +119,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25438, -1.15839, 47.2609 )
 
 [node name="QuestionWall" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4288, -1.14914, -33.522 )
+question = "sdsd"
