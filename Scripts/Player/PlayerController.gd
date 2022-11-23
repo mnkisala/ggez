@@ -150,7 +150,12 @@ func _process(_delta):
 		elif collision.get_parent() is QuestionWall:
 			_hud_hint.text = "[E] to click button"
 			if Input.is_action_just_pressed("interact"):
-				print("Dziąłą")
+				var question_wall = collision.get_parent()
+				var button = collision
+				if button.correct:
+					question_wall.disable()
+				else:
+					get_tree().reload_current_scene()
 
 
 func set_level_specific_text(t):
