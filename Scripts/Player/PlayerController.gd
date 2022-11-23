@@ -3,6 +3,8 @@ class_name PlayerController
 
 export var speed: float = 10.0
 export var jump_force: float = 500
+export var throw_force: float = 150.0
+export var throwing_enabled: bool = true
 
 var _direction: Vector3 = Vector3.ZERO
 var _jump: bool = false
@@ -32,6 +34,7 @@ var _code_machine
 
 func _ready():
 	set_level_specific_text("")
+
 
 func _physics_process(delta):
 	var mul = 1.0
@@ -107,6 +110,18 @@ func _process(_delta):
 			_run = true
 		if Input.is_action_just_released("run"):
 			_run = false
+		if Input.is_action_just_pressed("throw"):
+			if _state.garbage_bag.size() > 0 and throwing_enabled:
+				var yaw = _state.yaw + deg2rad(-8) # liczba -8 stopni zostala naukowo dowiedziona ze daje najlepsza korekcje kursu
+				var head_dir = Vector3(sin(yaw), -sin(_state.pitch), cos(yaw)).normalized() * (-1)
+				var garbage = _state.garbage_bag.pop_back()
+				var throw_point = (head_dir * 3) + Vector3(0, 1.3, 0)
+
+				garbage.transform = Transform(self.transform)
+				garbage.translate(throw_point)
+
+				get_parent().add_child(garbage)
+				garbage.add_central_force(head_dir * throw_force)
 
 	_hud_hint.text = ""
 

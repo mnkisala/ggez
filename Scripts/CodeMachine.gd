@@ -7,11 +7,7 @@ export(NodePath) var player = null
 var active = false
 var _can_type = true
 var _text = ""
-var _terminal_label
-
-
-func _ready():
-	_terminal_label = get_node("Matrix/TerminalLabel")
+onready var _terminal_label = self.get_node("Matrix/TerminalLabel")
 
 
 func _set_color(color):

@@ -25,7 +25,7 @@ func _ready():
 		GameManager.registerPortal(id, self)
 
 
-func setActiveColor(active):
+func setActiveColor(_active):
 	if enabled:
 		get_node("Particles").process_material.color = COLOR_ON
 		get_node("OmniLight").light_color = COLOR_ON
@@ -49,7 +49,7 @@ func _process(dt):
 	)
 
 
-func _on_Area_body_entered(body: Node):
+func _on_Area_body_entered(_body: Node):
 	if enabled:
 		GameManager.changeScene(target)
 
