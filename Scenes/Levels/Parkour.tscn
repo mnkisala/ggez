@@ -1,114 +1,305 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/cube.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/water.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/parkour_light.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Interactives/ParkourRestartArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Models/parkour_sciany.glb" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Levels/Parkour.gd" type="Script" id=6]
+[ext_resource path="res://Models/parkour_platforma.glb" type="PackedScene" id=7]
+[ext_resource path="res://Models/parkour_most.glb" type="PackedScene" id=8]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 32, 2, 32 )
+subdivide_width = 1
+subdivide_height = 1
+
+[sub_resource type="VisualShaderNodeScalarOp" id=9]
+default_input_values = [ 0, 0.0, 1, 0.002 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeInput" id=10]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeVectorOp" id=11]
+
+[sub_resource type="VisualShaderNodeVectorOp" id=17]
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 1, 1, 1 ) ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorConstant" id=18]
+constant = Color( 0.0505966, 0.123166, 0.0959522, 0.894118 )
+
+[sub_resource type="VisualShaderNodeVectorLen" id=20]
+
+[sub_resource type="VisualShaderNodeVectorOp" id=21]
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0, 1, 0 ) ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorInterp" id=22]
+
+[sub_resource type="VisualShaderNodeColorConstant" id=23]
+constant = Color( 0.0666667, 0.141176, 0.0745098, 0.913725 )
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=8]
+constant = 0.3
+
+[sub_resource type="OpenSimplexNoise" id=12]
+octaves = 9
+period = 82.7
+persistence = 0.221
+lacunarity = 0.62
+
+[sub_resource type="NoiseTexture" id=13]
+seamless = true
+as_normalmap = true
+bump_strength = 16.0
+noise = SubResource( 12 )
+noise_offset = Vector2( 0.007, 0 )
+
+[sub_resource type="VisualShaderNodeTexture" id=14]
+texture = SubResource( 13 )
+
+[sub_resource type="VisualShaderNodeInput" id=15]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=16]
+function = 0
+
+[sub_resource type="VisualShader" id=5]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+uniform sampler2D tex_frg_6;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:14
+	vec3 n_out14p0 = vec3(0.050597, 0.123166, 0.095952);
+	float n_out14p1 = 0.894118;
+
+// Color:19
+	vec3 n_out19p0 = vec3(0.066667, 0.141176, 0.074510);
+	float n_out19p1 = 0.913725;
+
+// Input:11
+	vec3 n_out11p0 = vec3(UV, 0.0);
+
+// Input:7
+	float n_out7p0 = TIME;
+
+// ScalarOp:10
+	float n_in10p1 = 0.00200;
+	float n_out10p0 = n_out7p0 * n_in10p1;
+
+// ScalarFunc:9
+	float n_out9p0 = sin(n_out10p0);
+
+// VectorOp:12
+	vec3 n_out12p0 = n_out11p0 + vec3(n_out9p0);
+
+// Texture:6
+	vec4 tex_frg_6_read = texture(tex_frg_6, n_out12p0.xy);
+	vec3 n_out6p0 = tex_frg_6_read.rgb;
+	float n_out6p1 = tex_frg_6_read.a;
+
+// VectorMix:18
+	vec3 n_out18p0 = mix(n_out14p0, n_out19p0, n_out6p0);
+
+// VectorOp:17
+	vec3 n_in17p1 = vec3(0.00000, 1.00000, 0.00000);
+	vec3 n_out17p0 = n_out6p0 * n_in17p1;
+
+// VectorLen:16
+	float n_out16p0 = length(n_out17p0);
+
+// VectorOp:13
+	vec3 n_out13p0 = n_out18p0 * vec3(n_out16p0);
+
+// Output:0
+	ALBEDO = n_out13p0;
+	ALPHA = n_out14p1;
+	ROUGHNESS = n_out16p0;
+	SPECULAR = n_out16p0;
+	NORMALMAP = n_out6p0;
+	NORMALMAP_DEPTH = n_out6p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+nodes/vertex/0/position = Vector2( 300, 140 )
+nodes/fragment/0/position = Vector2( 340, -40 )
+nodes/fragment/5/node = SubResource( 8 )
+nodes/fragment/5/position = Vector2( 0, 300 )
+nodes/fragment/6/node = SubResource( 14 )
+nodes/fragment/6/position = Vector2( -620, 60 )
+nodes/fragment/7/node = SubResource( 15 )
+nodes/fragment/7/position = Vector2( -1040, 180 )
+nodes/fragment/9/node = SubResource( 16 )
+nodes/fragment/9/position = Vector2( -800, 200 )
+nodes/fragment/10/node = SubResource( 9 )
+nodes/fragment/10/position = Vector2( -880, 180 )
+nodes/fragment/11/node = SubResource( 10 )
+nodes/fragment/11/position = Vector2( -860, 100 )
+nodes/fragment/12/node = SubResource( 11 )
+nodes/fragment/12/position = Vector2( -580, 340 )
+nodes/fragment/13/node = SubResource( 17 )
+nodes/fragment/13/position = Vector2( 80, -120 )
+nodes/fragment/14/node = SubResource( 18 )
+nodes/fragment/14/position = Vector2( -200, 80 )
+nodes/fragment/16/node = SubResource( 20 )
+nodes/fragment/16/position = Vector2( -360, -200 )
+nodes/fragment/17/node = SubResource( 21 )
+nodes/fragment/17/position = Vector2( -520, -100 )
+nodes/fragment/18/node = SubResource( 22 )
+nodes/fragment/18/position = Vector2( 20, -280 )
+nodes/fragment/19/node = SubResource( 23 )
+nodes/fragment/19/position = Vector2( -180, -20 )
+nodes/fragment/connections = PoolIntArray( 7, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 9, 0, 12, 1, 12, 0, 6, 0, 6, 0, 0, 8, 6, 1, 0, 9, 16, 0, 13, 1, 6, 0, 17, 0, 17, 0, 16, 0, 18, 0, 13, 0, 6, 0, 18, 2, 19, 0, 18, 1, 14, 0, 18, 0, 13, 0, 0, 0, 16, 0, 0, 3, 16, 0, 0, 4, 14, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = SubResource( 5 )
+
+[sub_resource type="CubeMesh" id=25]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0, 0, 0, 1 )
+metallic = 0.95
+metallic_specular = 0.0
+
+[sub_resource type="Environment" id=26]
+background_mode = 1
+background_color = Color( 0.94902, 0.74902, 0.74902, 1 )
+background_energy = 0.41
+ambient_light_color = Color( 0.215686, 0.211765, 0.211765, 1 )
+ambient_light_energy = 0.05
+fog_enabled = true
+fog_color = Color( 0.545098, 0.309804, 0.196078, 0.133333 )
+fog_sun_color = Color( 1, 0.854902, 0.701961, 1 )
+fog_sun_amount = 1.0
+fog_transmit_enabled = true
+tonemap_exposure = 1.1
+glow_enabled = true
+glow_intensity = 0.45
+glow_bloom = 0.83
+adjustment_enabled = true
+adjustment_contrast = 1.2
+adjustment_saturation = 0.94
 
 [node name="Parkour" type="Spatial"]
 script = ExtResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07256, -0.0809784, -22.9884 )
+
+[node name="water" type="MeshInstance" parent="."]
+transform = Transform( 5.63147, 0, 0, 0, 1, 0, 0, 0, 4.74995, -55.3391, -8.94304, -14.6301 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../blockout poziomu")
+material/0 = SubResource( 24 )
+
+[node name="ParkourRestartArea" parent="." instance=ExtResource( 4 )]
+transform = Transform( 555.027, 0, 0, 0, 1, 0, 0, 0, 655.829, 0, -16.4312, -3.68103 )
 
 [node name="blockout poziomu" type="Spatial" parent="."]
 
-[node name="cube" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 10.3109, 0, 0, 0, 1.00215, 0, 0, 0, 63.3784, 0, -3.20111, 0 )
-
-[node name="cube4" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, -7.04183, 0 )
-
-[node name="cube10" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, -7.04183, -35.4889 )
-
-[node name="cube11" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 5.83374e-06, 1.02185, 0, -77.2702, 7.71478e-08, 0, 0, 0, 64.2023, 9.63986, -7.04183, 0 )
-
-[node name="cube15" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 5.83374e-06, 1.02185, 0, -77.2702, 7.71478e-08, 0, 0, 0, 64.2023, -111.838, -7.04184, 0 )
-
-[node name="cube12" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -1.2151e-13, -4.46667e-08, -87.0581, -36.8199, 7.71478e-08, 0, 2.77983e-06, 1.02185, -3.80543e-06, -68.0013, 33.616, 24.2653 )
-
-[node name="cube13" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -1.2151e-13, -4.46667e-08, -90.601, -36.8199, 7.71478e-08, 0, 2.77983e-06, 1.02185, -3.9603e-06, -41.4726, 32.6033, -56.2631 )
-
-[node name="cube5" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 40.5813, -51.1389, 22.4475, 0 )
-
-[node name="cube17" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -5.30347e-07, 1.00215, 0, -12.1329, -4.38053e-08, 0, 0, 0, 63.3245, -51.1389, 42.484, -30.5721 )
-
-[node name="cube6" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, 10.0505, 21.4299 )
-
-[node name="cube7" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -4.50705e-07, 1.00215, 0, -10.3109, -4.38053e-08, 0, 0, 0, 24.8833, -51.1389, 10.0505, -35.0036 )
-
-[node name="cube2" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 10.3109, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, 0, 0.464149, 20.4062 )
-
-[node name="cube3" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 20.6733, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -30.6252, 1.92582, 20.4062 )
-
-[node name="cube8" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 20.6733, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -30.379, 1.95082, -6.62325 )
-
-[node name="cube18" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 20.6733, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -81.8543, 1.95082, -6.62325 )
-
-[node name="cube21" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 30.3295, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -121.255, 3.23477, 17.9845 )
-
-[node name="cube24" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -114.339, -1.92618, -58.8687 )
-
-[node name="cube25" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -85.3091, 2.29715, -58.8687 )
-
-[node name="cube26" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 6.57579, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -59.2834, 6.30076, -58.8687 )
-
-[node name="cube27" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 7.88068, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -59.0379, 10.2109, -42.2634 )
-
-[node name="cube28" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -79.3331, 14.3786, -42.2634 )
-
-[node name="cube29" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 11.7539, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -103.231, 18.5354, -42.2634 )
-
-[node name="cube23" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 30.3295, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -81.4391, -5.89887, -51.833 )
-
-[node name="cube22" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 14.9748, 0, 0, 0, 1.06457, 0, 0, 0, 8.33538, -66.8422, 6.69678, 17.6408 )
+[node name="cube30" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( 31.2077, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -18.8129, 56.2533, 1.71874 )
 
 [node name="cube16" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 121.21, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, 16.3556, 23.1033, -48.6815 )
+transform = Transform( 121.21, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, 16.3556, 55.6933, -36.2655 )
 
-[node name="cube14" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 1.04932, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -49.6555, 1.95082, -0.332842 )
-
-[node name="cube9" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -9.03659e-07, -1.00215, 0, 20.6733, -4.38053e-08, 0, 0, 0, 4.28397, -10.7175, -17.7277, -6.62325 )
-
-[node name="cube19" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -9.03659e-07, -1.00215, 0, 20.6733, -4.38053e-08, 0, 0, 0, 4.28397, -62.5649, -18.5774, -6.62325 )
-
-[node name="cube20" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -9.03659e-07, -1.00215, 0, 20.6733, -4.38053e-08, 0, 0, 0, 4.28397, -100.046, -18.5774, -6.62325 )
-
-[node name="water" parent="blockout poziomu" instance=ExtResource( 3 )]
-transform = Transform( 18.5922, 0, 0, 0, 1, 0, 0, 0, 10.4539, 0, -8.94304, 0 )
-
-[node name="ParkourRestartArea" parent="blockout poziomu" instance=ExtResource( 4 )]
-transform = Transform( 555.027, 0, 0, 0, 1, 0, 0, 0, 655.829, 0, -11.7521, -3.68103 )
+[node name="cube17" parent="blockout poziomu" instance=ExtResource( 2 )]
+transform = Transform( -5.29826e-06, 0, -4.28397, 0, 1.00215, 0, 121.21, 0, -1.87258e-07, -0.152678, 59.984, -24.2178 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.225234, -0.206696, 0.952127, -0.119601, 0.975712, 0.183524, -0.966936, -0.0725398, -0.244484, 0, 0, 0 )
 light_energy = 0.427
 light_indirect_energy = 0.0
 
-[connection signal="body_entered" from="blockout poziomu/ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]
+[node name="parkour_sciany" parent="." instance=ExtResource( 5 )]
+transform = Transform( -2.18731e-08, 0, -0.750919, 0, 0.716287, 0, 0.500397, 0, -3.28237e-08, -50.3837, -14.0779, -13.0485 )
+
+[node name="parkour_platforma" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, 12.1211 )
+
+[node name="parkour_platforma4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -3.63877, 28.0106 )
+
+[node name="parkour_platforma11" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -2.45577, 31.3256 )
+
+[node name="parkour_platforma5" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -26.8713, -0.629476, 28.0133 )
+
+[node name="parkour_platforma12" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -29.9554, 57.6911, 31.5547 )
+
+[node name="parkour_platforma10" parent="." instance=ExtResource( 7 )]
+transform = Transform( -4.53146e-08, -1, 0, 1.03668, -4.37114e-08, 0, 0, 0, 1, -7.09632, -20.3982, 28.0133 )
+
+[node name="parkour_platforma6" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -68.1423, 2.93446, 31.6664 )
+
+[node name="parkour_platforma7" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -110.594, 0.682761, 24.2393 )
+
+[node name="parkour_platforma8" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -72.8888, -8.23674, -45.1202 )
+
+[node name="parkour_platforma9" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -114.236, -8.23674, -45.1202 )
+
+[node name="parkour_platforma2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, -27.6449 )
+
+[node name="parkour_platforma3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, -67.5429 )
+
+[node name="parkour_platforma13" parent="." instance=ExtResource( 7 )]
+transform = Transform( 2.25, 0, 0, 0, 1, 0, 0, 0, 2.25, -6.60377, 92.068, -16.2291 )
+
+[node name="parkour_platforma14" parent="." instance=ExtResource( 7 )]
+transform = Transform( 2.25, 0, 0, 0, 1, 0, 0, 0, 2.25, -98.0012, 92.068, -16.2291 )
+
+[node name="parkour_most" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.8054, 2.45192, -4.36639 )
+
+[node name="parkour_most2" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -78.7455, 2.38642, -4.34289 )
+
+[node name="void" type="MeshInstance" parent="."]
+transform = Transform( 1068.06, 0, 0, 0, 1, 0, 0, 0, 1068.06, -66.4411, -14.9918, -0.1761 )
+mesh = SubResource( 25 )
+material/0 = SubResource( 2 )
+
+[node name="void2" type="MeshInstance" parent="."]
+transform = Transform( 14.0388, 0, 0, 0, 3.02897, 0, 0, 0, 47.9352, -42.7213, -11.6516, -0.1761 )
+mesh = SubResource( 25 )
+material/0 = SubResource( 2 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 26 )
+
+[node name="parkour_light" parent="." instance=ExtResource( 3 )]
+
+[node name="parkour_light2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -13.144, 90.9402, -28.3298 )
+
+[node name="parkour_light3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -80.611, 90.9402, -28.3298 )
+
+[node name="parkour_light4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -80.611, 90.9402, 5.0056 )
+
+[connection signal="body_entered" from="ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]
