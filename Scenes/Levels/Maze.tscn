@@ -27,7 +27,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.383194, 0.0960732, 0.167585 
 mesh = SubResource( 2 )
 
 [node name="KinematicBody" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0851669, 0.76005, -45.9444 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182545, 0.76005, -38.0089 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -137,7 +137,8 @@ przyrody jest Żubr"
 
 [node name="QuestionWall4" parent="maze2" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.2894, -0.21019, -53.6294 )
-question = "Ekologia to przeciwdziałająca
+question = "Ekologia to 
+nauka przeciwdziałająca
 szkodliwym wpływom
 człowieka na środowisko"
 right_correct_anwser = false
