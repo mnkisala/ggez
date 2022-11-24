@@ -1,3 +1,9 @@
+rozpoczyna sie znowu kolejny dzien
+
+(praca)
+siadasz jak zwykle przy swoim biurku
+
+(podpowiedzi do rozwiazania zadania programistycznego)
 ...
 
 Dostalismy pewna wiadomosc biznesowa od klienta,
@@ -7,3 +13,8 @@ cos o nazwie "szyfr cezara". Czy potrafisz
 rozszyfrowac wiadomosc?
 
 ...
+
+[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+
+(mieszkanie)
+ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]

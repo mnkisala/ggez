@@ -1,5 +1,12 @@
-...
+rozpoczyna sie kolejny dzien, tak samo jak zwykle
 
+(praca)
+siadasz jak zwykle przy swoim biurku
 
+(podpowiedzi do rozwiazania zadania programistycznego)
+TODO
 
-...
+[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+
+(mieszkanie)
+ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]

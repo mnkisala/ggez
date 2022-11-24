@@ -1,0 +1,22 @@
+nastal poranek, budzisz sie od dzwieku budzika
+
+(praca)
+siadasz jak zwykle przy swoim biurku, numer? nie pamietasz. o chwila tu jest naklejona tabliczna - "biurko nr. 5287". Zapomniales tego numeru juz tydzien po rozpoczeciu pracy, przeciez nie byl ci on do niczego potrzebny a na miejsce pracy chodziles juz na pamiec. tutaj w prawo, 7 rzedow biurek dalej, skret w lewo, dwa biurka w przod, i trzecie z prawej to twoje. siadasz i uruchamiasz komputer, na monitorze naklejona jest zolta kartka z twoim dzisiejszym zadaniem, odklejasz ja, jest na niej napisane:
+"
+Potrzebujemy abys wyciagnal z bazy informacje o nazwach oraz ilosci zmarnowanego materialu przez firmy, ktorych:
+- ilosc odpadow przekracza 8000
+- ilosc zuzytego papieru jest mniejsza od 8000
+- ilosc zuzytego plastiku jest wieksza badz rowna 2000
+- ilosc zuzytego szkla jest wieksza od 2500
+- ilosc zmarnowanego materialu zawiera sie w granicach od 1500 i 8000
+Posortuj dane wedlug ilosci zmarnowanego materialu, malejaco.
+Ogranicz ilosc rekordow do 3.
+"
+
+(podpowiedzi do rozwiazania zadania programistycznego)
+TODO
+
+[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+
+(mieszkanie)
+ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do pierwszego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]

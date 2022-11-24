@@ -1,3 +1,10 @@
+
+rozpoczyna sie kolejny dzien, tak samo jak zwykle
+
+(praca)
+siadasz jak zwykle przy swoim biurku
+
+(podpowiedzi do rozwiazania zadania programistycznego)
 ...
 
 Baza danych zawiera informacje o firmach i zuzywanych przez nie materialach. Twoje dzisiejsze zadanie polega na uzyskaniu z tej bazy danych informacji o zmarnowanych materialach w tych firmach. Interesuja nas: nazwa materialu oraz jego ilosc. Wszystkie zapisane ponizej warunki musza byc spelnione, lacznie:
@@ -10,3 +17,8 @@ Posortuj dane wedlug ilosci zmarnowanego materialu, malejaco.
 Wybierz 3 pierwsze rekordy.
 
 ...
+
+[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+
+(mieszkanie)
+ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
