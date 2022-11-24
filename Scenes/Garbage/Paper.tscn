@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Garbage.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Models/Choose1/RUBBISH.glb" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Garbage/tabela-karty-reka-400-26629693.jpg" type="Texture" id=3]
+[ext_resource path="res://Scenes/Models/Obrazki/papier.png" type="Texture" id=3]
 
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 1.31313, 0.0542621, 0.670762 )
@@ -11,7 +11,7 @@ extents = Vector3( 1.31313, 0.0542621, 0.670762 )
 script = ExtResource( 1 )
 preview = ExtResource( 3 )
 
-[node name="RUBBISH" type="Spatial" parent="." instance=ExtResource( 2 )]
+[node name="RUBBISH" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.129673, 0.847109 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
