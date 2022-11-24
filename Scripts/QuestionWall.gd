@@ -14,7 +14,7 @@ func _set_correct_anwser(correct):
 	if correct:
 		get_node("QuestionRightButton").correct = true
 	else:
-		get_node("QuestionFalseButton").correct = true
+		get_node("QuestionLeftButton").correct = true
 
 func disable():
 	visible = false

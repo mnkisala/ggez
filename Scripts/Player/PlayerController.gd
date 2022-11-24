@@ -31,7 +31,6 @@ onready var _hud_hint: Label = $"./hud/hint"
 
 var _code_machine
 
-
 func _ready():
 	set_level_specific_text("")
 
@@ -156,6 +155,9 @@ func _process(_delta):
 					question_wall.disable()
 				else:
 					get_tree().reload_current_scene()
+					set_level_specific_text("Błędna odpowiedź")
+					yield(get_tree().create_timer(1.0), "timeout")
+					set_level_specific_text("")
 
 
 func set_level_specific_text(t):

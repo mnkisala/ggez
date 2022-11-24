@@ -16,7 +16,7 @@ size = Vector3( 100, 1, 100 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766335, -0.00540543, -0.0763702 )
 
 [node name="Floor" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0136719, -1.74713, 0.126053 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014, -1.76, 0.126 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00998318, 0 )
@@ -117,6 +117,50 @@ enabled = true
 [node name="maze2" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25438, -1.15839, 47.2609 )
 
-[node name="QuestionWall" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4288, -1.14914, -33.522 )
-question = "Czy lubisz marchewki?"
+[node name="QuestionWall" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31.277, -0.21019, -66.623 )
+question = "Szacowne jest, że z powodu
+zmian klimatu umiera mniej
+niż 50 000 ludzi"
+right_correct_anwser = false
+
+[node name="QuestionWall2" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2495, -0.21019, -60.8843 )
+question = "Mniej energii zaoszczędzimy
+wyłączając w domu oświetlenie
+niż klimatyzację"
+
+[node name="QuestionWall3" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.07056, -0.21019, -14.1804 )
+question = "Symbolem Ligi Ochrony
+przyrody jest Żubr"
+
+[node name="QuestionWall4" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.2894, -0.21019, -53.6294 )
+question = "Ekologia to przeciwdziałająca
+szkodliwym wpływom
+człowieka na środowisko"
+right_correct_anwser = false
+
+[node name="QuestionWall5" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15.6111, -0.21019, -49.1759 )
+question = "Akcja „Sprzątanie Świata”
+odbywa się w październiku"
+right_correct_anwser = false
+
+[node name="QuestionWall6" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30.8653, -0.21019, -11.1794 )
+question = "Recykling to odzyskiwanie
+surowców wtórnych "
+
+[node name="QuestionWall7" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.0738, -0.21019, -18.178 )
+question = "Skuter jest ekologicznym
+pojazdem"
+right_correct_anwser = false
+
+[node name="QuestionWall8" parent="maze2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6273, -0.21019, -49.0208 )
+question = "Pescowegetarianizm to
+dieta wykluczająca jedzenie
+mięsa, ale nie ryb"
