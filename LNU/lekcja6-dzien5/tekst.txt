@@ -1,13 +1,9 @@
-robi sie jasno, rozpoczyna sie dzien. dzien jak co dzien
-
+Robi sie jasno, rozpoczyna sie dzień jak co dzień.
 (praca)
-siadasz jak zwykle przy swoim biurku
-
+Siadasz jak zwykle przy swoim biurku.
 (podpowiedzi do rozwiazania zadania programistycznego)
-TODO
-
-[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
-
+TODO)
+[ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuły]
 (mieszkanie)
 Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
 Budzisz się, we śnie. świadomym snie?! 

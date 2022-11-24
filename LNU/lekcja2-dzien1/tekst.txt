@@ -1,9 +1,8 @@
-Nastał poranek, budzisz sie od dźwięku budzika
-
+Nastał poranek, budzisz sie od dźwięku budzika.
 (praca)
-Siadasz jak zwykle przy swoim biurku, numer? Nie pamietasz. 
-O chwila tu jest naklejona tabliczna - "biurko nr. 5287". 
-Nie pamiętasz tego numeru już tydzien po rozpoczeciu pracy, 
+Siadasz jak zwykle przy swoim biurku, numer? Nie pamiętasz. 
+O chwila tu jest naklejona tabliczka - "biurko nr. 5287". 
+Nie pamiętasz tego numeru już tydzień po rozpoczęciu pracy, 
 przecież nie był ci on do niczego potrzebny, a drogę do miejsca pracy znasz już na pamięć. 
 Tutaj w prawo, 7 rzędów biurek dalej, skręt w lewo, dwa biurka w przód, i trzecie z prawej to twoje. 
 Siadasz i uruchamiasz komputer, na monitorze naklejona jest żółta kartka z twoim dzisiejszym zadaniem, 
@@ -14,7 +13,7 @@ Potrzebujemy informacje z bazy danych o nazwach oraz ilości zmarnowanego materi
 
 - ilość odpadów przekracza 8000
 - ilość zużytego papieru jest mniejsza od 8000
-- ilość zużytego plastiku jest większa badz rowna 2000
+- ilość zużytego plastiku jest większa bądź równa 2000
 - ilość zużytego szkła jest większa od 2500
 - ilość zmarnowanego materiału zawiera się w granicach od 1500 i 8000
 
@@ -29,5 +28,5 @@ TODO
 
 (mieszkanie)
 Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
-Budzisz się, we śnie. świadomym snie?! 
+Budzisz się, we śnie. świadomym śnie?! 
 [Przejdź do pierwszego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
