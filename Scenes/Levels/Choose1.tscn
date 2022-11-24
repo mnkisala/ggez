@@ -29,7 +29,7 @@ script = ExtResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0136719, -1.74713, 0.126053 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Colliders"]
-transform = Transform( 0.500549, 0, 0, 0, 1, 0, 0, 0, 0.500549, 0, 1, 0 )
+transform = Transform( 0.500549, 0, 0, 0, 1, 0, 0, 0, 0.500549, 0, 1.15, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Colliders"]
@@ -79,3 +79,5 @@ spot_range = 91.792
 spot_angle = 46.9996
 
 [node name="Paper" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7382, 4.16504, 21.7474 )
+points = 20
