@@ -27,7 +27,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.383194, 0.0960732, 0.167585 
 mesh = SubResource( 2 )
 
 [node name="KinematicBody" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.562324, 0.76005, -46.581 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0851669, 0.76005, -45.9444 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -37,11 +37,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.984, -0.0336118, 12.9346 )
 [node name="BeerCan5" parent="StaticBody" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3085, 0, -2.73905 )
 
+[node name="BeerCan26" parent="StaticBody" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21478, -0.0391877, -29.2156 )
+
 [node name="BeerCan" parent="StaticBody" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21478, -0.0391877, -25.7079 )
-
-[node name="BeerCan" parent="StaticBody/BeerCan" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.50766 )
 
 [node name="BeerCan3" parent="StaticBody" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8432, 0.0199385, -37.4231 )
@@ -110,7 +110,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.781, 0, -6.35452 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1224, 0, -35.2585 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2.68142, 0, 0, 0, 2.68142, 0, 0, 0, 1, 1.6311, 1.21362, 46.6735 )
+transform = Transform( -0.0939078, 0, 0.999386, 0, 2.68142, 0, -2.67978, 0, -0.0350217, 14.47, 1.21362, 37.2994 )
 target = 1
 enabled = true
 
@@ -154,7 +154,7 @@ question = "Recykling to odzyskiwanie
 surowców wtórnych "
 
 [node name="QuestionWall7" parent="maze2" instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.0738, -0.21019, -18.178 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.0738, -0.21019, -18.186 )
 question = "Skuter jest ekologicznym
 pojazdem"
 right_correct_anwser = false
