@@ -153,3 +153,4 @@ margin_top = 74.0
 margin_right = 219.0
 margin_bottom = 138.0
 texture = SubResource( 5 )
+stretch_mode = 3

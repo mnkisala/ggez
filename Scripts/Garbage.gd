@@ -9,6 +9,7 @@ enum Kind {
 
 export(int) var points = 0
 export(Kind) var kind = null
+export(Texture) var preview = null
 
 onready var uuid = hash(self.get_path())
 

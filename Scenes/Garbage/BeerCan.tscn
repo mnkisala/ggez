@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Garbage.gd" type="Script" id=1]
 [ext_resource path="res://Models/can.gltf" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Garbage/BeerCan.jpg" type="Texture" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.531946, 0.993077, 0.419986 )
@@ -10,6 +11,7 @@ extents = Vector3( 0.531946, 0.993077, 0.419986 )
 script = ExtResource( 1 )
 points = 50
 kind = 2
+preview = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
