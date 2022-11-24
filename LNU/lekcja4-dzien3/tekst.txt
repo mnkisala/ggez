@@ -1,20 +1,22 @@
-rozpoczyna sie znowu kolejny dzien
+Rozpoczyna się znowu kolejny dzien.
 
 (praca)
-siadasz jak zwykle przy swoim biurku
+Siadasz jak zwykle przy swoim biurku.
 
-(podpowiedzi do rozwiazania zadania programistycznego)
+(Podpowiedzi do rozwiazania zadania programistycznego)
 ...
 
-Dostalismy pewna wiadomosc biznesowa od klienta,
-jako ze komunikacja musi byc bezpieczna, zostala
-ona zaszyfrowana pewnym szyfrem, klient wspominal
-cos o nazwie "szyfr cezara". Czy potrafisz
-rozszyfrowac wiadomosc?
+Dostaliśmy pewną wiadomość biznesową od klienta,
+jako że komunikacja musi być bezpieczna, została
+ona zaszyfrowana pewnym szyfrem, klient wspomniał
+coś o nazwie "szyfr cezara". Czy potrafisz
+rozszyfrować wiadomość?
 
 ...
 
-[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuły]
 
 (mieszkanie)
-ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
+Budzisz się, we śnie. świadomym snie?! 
+[Przejdź do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]

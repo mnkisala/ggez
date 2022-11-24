@@ -23,7 +23,9 @@ wynik: 2
 
 ...
 
-[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuły]
 
 (mieszkanie)
-ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
+Budzisz się, we śnie. świadomym snie?! 
+[Przejdź do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]

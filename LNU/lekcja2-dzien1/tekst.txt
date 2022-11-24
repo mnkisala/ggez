@@ -1,24 +1,33 @@
-
-rozpoczyna sie kolejny dzien, tak samo jak zwykle
+Nastał poranek, budzisz sie od dźwięku budzika
 
 (praca)
-siadasz jak zwykle przy swoim biurku
+Siadasz jak zwykle przy swoim biurku, numer? Nie pamietasz. 
+O chwila tu jest naklejona tabliczna - "biurko nr. 5287". 
+Nie pamiętasz tego numeru już tydzien po rozpoczeciu pracy, 
+przecież nie był ci on do niczego potrzebny, a drogę do miejsca pracy znasz już na pamięć. 
+Tutaj w prawo, 7 rzędów biurek dalej, skręt w lewo, dwa biurka w przód, i trzecie z prawej to twoje. 
+Siadasz i uruchamiasz komputer, na monitorze naklejona jest żółta kartka z twoim dzisiejszym zadaniem, 
+odklejasz ją, jest na niej napisane:
+
+"
+Potrzebujemy informacje z bazy danych o nazwach oraz ilości zmarnowanego materiału przez firmy, ktorych:
+
+- ilość odpadów przekracza 8000
+- ilość zużytego papieru jest mniejsza od 8000
+- ilość zużytego plastiku jest większa badz rowna 2000
+- ilość zużytego szkła jest większa od 2500
+- ilość zmarnowanego materiału zawiera się w granicach od 1500 i 8000
+
+Posortuj dane według ilości zmarnowanego materiału, malejąco.
+Ogranicz ilość rekordów do 3.
+"
 
 (podpowiedzi do rozwiazania zadania programistycznego)
-...
+TODO
 
-Baza danych zawiera informacje o firmach i zuzywanych przez nie materialach. Twoje dzisiejsze zadanie polega na uzyskaniu z tej bazy danych informacji o zmarnowanych materialach w tych firmach. Interesuja nas: nazwa materialu oraz jego ilosc. Wszystkie zapisane ponizej warunki musza byc spelnione, lacznie:
-- ilosc odpadow jest mniejsza od 8000
-- ilosc zuzytego papieru jest wieksza od 8000
-- ilosc zuzytego plastiku jest wieksza badz rowna 2000
-- ilosc zuzytego szkla przekracza 2500
-- ilosc zmarnowanego materialu zawiera sie w granicach od 1500 i 8000
-Posortuj dane wedlug ilosci zmarnowanego materialu, malejaco.
-Wybierz 3 pierwsze rekordy.
-
-...
-
-[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuly]
 
 (mieszkanie)
-ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
+Budzisz się, we śnie. świadomym snie?! 
+[Przejdź do pierwszego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]

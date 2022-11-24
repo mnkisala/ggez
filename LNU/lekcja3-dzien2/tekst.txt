@@ -1,12 +1,14 @@
-rozpoczyna sie kolejny dzien, tak samo jak zwykle
+Rozpoczyna się kolejny dzień, tak samo jak zwykle.
 
 (praca)
-siadasz jak zwykle przy swoim biurku
+Siadasz jak zwykle przy swoim biurku.
 
-(podpowiedzi do rozwiazania zadania programistycznego)
+(Podpowiedzi do rozwiazania zadania programistycznego)
 TODO
 
-[ukoncz zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuly]
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuly]
 
 (mieszkanie)
-ze zmeczenia kladziesz sie do lozka, pora odpoczac, zasypiasz... budzisz sie, we snie. swiadomym snie?! [przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
+Budzisz się, we śnie. świadomym snie?! 
+[Przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
