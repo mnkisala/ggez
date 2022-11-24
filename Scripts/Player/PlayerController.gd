@@ -112,7 +112,10 @@ func _process(_delta):
 			_run = false
 		if Input.is_action_just_pressed("throw"):
 			if _state.garbage_bag.size() > 0 and throwing_enabled:
-				var head_dir = Vector3(sin(_state.yaw), -sin(_state.pitch), cos(_state.yaw)).normalized() * (-1)
+				var head_dir = (
+					Vector3(sin(_state.yaw), -sin(_state.pitch), cos(_state.yaw)).normalized()
+					* (-1)
+				)
 				var garbage = _state.garbage_bag.pop_back()
 				var throw_point = (head_dir * 3) + Vector3(0, 1.3, 0)
 
@@ -154,7 +157,7 @@ func _process(_delta):
 				if button.correct:
 					question_wall.disable()
 				else:
-					get_tree().reload_current_scene()
+					var _unused = get_tree().reload_current_scene()
 					set_level_specific_text("Błędna odpowiedź")
 					yield(get_tree().create_timer(1.0), "timeout")
 					set_level_specific_text("")
