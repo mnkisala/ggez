@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/Levels/Choose1.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Models/Choose1/chooseP2.glb" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Models/Choose1/RUBBISH.glb" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Garbage/Paper.tscn" type="PackedScene" id=8]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 78.6677, 0.516236, 98.0939 )
@@ -78,5 +78,4 @@ shadow_enabled = true
 spot_range = 91.792
 spot_angle = 46.9996
 
-[node name="RUBBISH" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.21163, -0.186863, -26.173 )
+[node name="Paper" parent="." instance=ExtResource( 8 )]

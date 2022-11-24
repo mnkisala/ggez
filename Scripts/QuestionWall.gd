@@ -9,8 +9,8 @@ func _ready():
 	_set_correct_anwser(right_correct_anwser)
 
 
-func set_question(question):
-	get_node("Sign").set_text(question)
+func set_question(q):
+	get_node("Sign").set_text(q)
 
 
 func _set_correct_anwser(correct):
