@@ -56,10 +56,10 @@ shape = SubResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47035e-08, 1.92283, 22 )
 
 [node name="RightPlate" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23508, -0.16233, 10.7521 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23508, 0.312283, 10.7521 )
 
 [node name="LeftPlate" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94083, -0.162339, 11.6031 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94083, 0.312274, 11.6031 )
 
 [node name="Sign" parent="." instance=ExtResource( 4 )]
 transform = Transform( 12.4675, 0, 0, 0, 12.4675, 0, 0, 0, 1, 1.28254, 9.87987, -6.2573 )
