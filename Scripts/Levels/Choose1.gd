@@ -24,7 +24,7 @@ var questions = [
 		"Planowana zużywalność "],
 	[
 		"Na czym polega neutralność emisyjna:",
-		"Zmiejszenie emisji CO2, do takiego stopnia, \n że wraz wyprodukowaniem go będziemy pochłaniać taką samą ilość ",
+		"Zmiejszenie emisji CO2, do takiego stopnia, \n że wraz wyprodukowaniem go \n będziemy pochłaniać taką samą ilość ",
 		"Zaprzestaniemy produkować wogóle CO2 "
 	],
 	[
