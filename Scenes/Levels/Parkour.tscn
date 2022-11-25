@@ -373,19 +373,19 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -58.098
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.592, 0.370524, 8.29586 )
 
 [node name="Brench12" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.2552, 2.56068, -8.169 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.2552, 2.56068, -7.73413 )
 
 [node name="Brench14" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5561, 2.56068, -8.169 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5561, 2.56068, -7.73413 )
 
 [node name="Brench15" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87.1045, 2.56068, -8.169 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87.1045, 2.56068, -7.73413 )
 
 [node name="Brench16" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -94.5634, 2.56068, -8.169 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -94.5634, 2.56068, -7.73413 )
 
 [node name="Brench13" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.909, 13.025, -33.0331 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.909, 12.7692, -33.0331 )
 
 [node name="Brench31" parent="poziom" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, 13.025, -33.0331 )
@@ -394,7 +394,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, 13.025, -33.0331 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, 13.025, -33.0331 )
 
 [node name="Brench39" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.6904, 13.025, -33.0331 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.6904, 12.7692, -33.0331 )
 
 [node name="Brench32" parent="poziom" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.7583, 13.025, -33.0331 )
@@ -493,19 +493,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9579, 2.56068, -7.8393 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5063, 2.56068, -7.8393 )
 
 [node name="Brench26" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.9652, 2.56068, -7.8393 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.516, 2.56068, -7.8393 )
 
 [node name="Brench17" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4561, 2.56068, -0.552875 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4561, 2.56068, -0.75923 )
 
 [node name="Brench18" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6923, 2.56068, -0.552875 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6923, 2.56068, -0.75923 )
 
 [node name="Brench19" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9579, 2.56068, -0.552875 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9579, 2.56068, -0.75923 )
 
 [node name="Brench21" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.9652, 2.56068, -0.552875 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5577, 2.56068, -1.00611 )
 
 [node name="Brench5" parent="poziom" instance=ExtResource( 13 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, 3.30636 )
