@@ -149,7 +149,7 @@ func _process(_delta):
 			_hud_hint.text = "[E] to turn off chemicalias"
 			if Input.is_action_just_pressed("interact"):
 				collision.turn_off_chemicalias()
-		elif collision.get_parent() is QuestionWall:
+		elif collision is QuestionButton:
 			_hud_hint.text = "[E] to click button"
 			if Input.is_action_just_pressed("interact"):
 				var question_wall = collision.get_parent()
