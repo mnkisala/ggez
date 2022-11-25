@@ -1,7 +1,7 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/cube.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Interactives/ChemicaliasTurnOffer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/parkour_light.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Interactives/ParkourRestartArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Models/parkour_sciany.glb" type="PackedScene" id=5]
@@ -9,6 +9,29 @@
 [ext_resource path="res://Models/parkour_platforma.glb" type="PackedScene" id=7]
 [ext_resource path="res://Models/parkour_most.glb" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/rura_placeholder.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Models/DlugieRury.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Interactives/ChemicaliasEmmiter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Models/Brench.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Environment" id=26]
+background_mode = 1
+background_color = Color( 0.94902, 0.74902, 0.74902, 1 )
+background_energy = 0.41
+ambient_light_color = Color( 0.215686, 0.211765, 0.211765, 1 )
+ambient_light_energy = 0.05
+fog_enabled = true
+fog_color = Color( 0.545098, 0.309804, 0.196078, 0.133333 )
+fog_sun_color = Color( 1, 0.854902, 0.701961, 1 )
+fog_sun_amount = 1.0
+fog_transmit_enabled = true
+tonemap_exposure = 1.1
+glow_enabled = true
+glow_intensity = 0.45
+glow_bloom = 0.83
+adjustment_enabled = true
+adjustment_contrast = 1.2
+adjustment_saturation = 0.94
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 32, 2, 32 )
@@ -178,183 +201,395 @@ albedo_color = Color( 0, 0, 0, 1 )
 metallic = 0.95
 metallic_specular = 0.0
 
-[sub_resource type="Environment" id=26]
-background_mode = 1
-background_color = Color( 0.94902, 0.74902, 0.74902, 1 )
-background_energy = 0.41
-ambient_light_color = Color( 0.215686, 0.211765, 0.211765, 1 )
-ambient_light_energy = 0.05
-fog_enabled = true
-fog_color = Color( 0.545098, 0.309804, 0.196078, 0.133333 )
-fog_sun_color = Color( 1, 0.854902, 0.701961, 1 )
-fog_sun_amount = 1.0
-fog_transmit_enabled = true
-tonemap_exposure = 1.1
-glow_enabled = true
-glow_intensity = 0.45
-glow_bloom = 0.83
-adjustment_enabled = true
-adjustment_contrast = 1.2
-adjustment_saturation = 0.94
-
 [node name="Parkour" type="Spatial"]
 script = ExtResource( 6 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 26 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07256, -0.0809784, -22.9884 )
 
-[node name="water" type="MeshInstance" parent="."]
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.225234, -0.206696, 0.952127, -0.119601, 0.975712, 0.183523, -0.966936, -0.0725397, -0.244485, 0, 0, 0 )
+light_energy = 0.427
+light_indirect_energy = 0.0
+
+[node name="ParkourRestartArea" parent="." instance=ExtResource( 4 )]
+transform = Transform( 555.027, 0, 0, 0, 1, 0, 0, 0, 655.829, 0, -16.4312, -3.68103 )
+
+[node name="ChemicaliasTurnOffer" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -38.8889, 3.96331, 25.3488 )
+chemicalias_emmiter = NodePath("../ChemicaliasEmmiter")
+
+[node name="ChemicaliasTurnOffer2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -60.3881, 7.12101, 25.3488 )
+chemicalias_emmiter = NodePath("../ChemicaliasEmmiter2")
+
+[node name="ChemicaliasTurnOffer3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, -1.19209e-07, -5.2108e-15, 0, -4.37114e-08, 1, -1.19209e-07, -1, -4.37114e-08, -39.1429, 62.4093, 26.2069 )
+chemicalias_emmiter = NodePath("../ChemicaliasEmmiter3")
+
+[node name="poziom" type="Spatial" parent="."]
+
+[node name="blockout poziomu" type="Spatial" parent="poziom"]
+
+[node name="water" type="MeshInstance" parent="poziom"]
 transform = Transform( 5.63147, 0, 0, 0, 1, 0, 0, 0, 4.74995, -55.3391, -8.94304, -14.6301 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../blockout poziomu")
 material/0 = SubResource( 24 )
 
-[node name="ParkourRestartArea" parent="." instance=ExtResource( 4 )]
-transform = Transform( 555.027, 0, 0, 0, 1, 0, 0, 0, 655.829, 0, -16.4312, -3.68103 )
-
-[node name="blockout poziomu" type="Spatial" parent="."]
-
-[node name="cube30" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 31.2077, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, -18.8129, 56.2533, 1.71874 )
-
-[node name="cube16" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( 121.21, 0, 0, 0, 1.00215, 0, 0, 0, 4.28397, 16.3556, 55.6933, -36.2655 )
-
-[node name="cube17" parent="blockout poziomu" instance=ExtResource( 2 )]
-transform = Transform( -5.29826e-06, 0, -4.28397, 0, 1.00215, 0, 121.21, 0, -1.87258e-07, -0.152678, 59.984, -24.2178 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -0.225234, -0.206696, 0.952127, -0.119601, 0.975712, 0.183524, -0.966936, -0.0725398, -0.244484, 0, 0, 0 )
-light_energy = 0.427
-light_indirect_energy = 0.0
-
-[node name="parkour_sciany" parent="." instance=ExtResource( 5 )]
+[node name="parkour_sciany" parent="poziom" instance=ExtResource( 5 )]
 transform = Transform( -2.18731e-08, 0, -0.750919, 0, 0.716287, 0, 0.500397, 0, -3.28237e-08, -50.3837, -14.0779, -13.0485 )
 
-[node name="parkour_platforma" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, 12.1211 )
 
-[node name="parkour_platforma4" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma4" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -3.63877, 28.0106 )
 
-[node name="parkour_platforma11" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma11" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -2.45577, 31.3256 )
 
-[node name="parkour_platforma5" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma5" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -26.8713, -0.629476, 28.0133 )
 
-[node name="parkour_platforma12" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma12" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -29.9554, 57.6911, 31.5547 )
 
-[node name="parkour_platforma10" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma10" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( -4.53146e-08, -1, 0, 1.03668, -4.37114e-08, 0, 0, 0, 1, -7.09632, -20.3982, 28.0133 )
 
-[node name="parkour_platforma6" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma6" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -68.1423, 2.93446, 31.6664 )
 
-[node name="parkour_platforma16" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma16" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -68.1423, 14.0665, -0.984296 )
 
-[node name="parkour_platforma17" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma17" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -114.074, 13.8398, 34.5407 )
 
-[node name="parkour_platforma18" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma18" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 0.880808, -0.473473, 0, 0.473473, 0.880808, -114.074, 23.2074, -2.44568 )
 
-[node name="parkour_platforma19" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma19" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 0.880808, -0.473473, 0, 0.473473, 0.880808, -114.074, 41.9989, -37.4037 )
 
-[node name="parkour_platforma7" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma7" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -110.594, 0.682761, 24.2393 )
 
-[node name="parkour_platforma8" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma8" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -72.8888, -8.23674, -45.1202 )
 
-[node name="parkour_platforma15" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma15" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -120.863, 9.05688, -45.1202 )
 
-[node name="parkour_platforma9" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma9" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1.03668, 0, 0, 0, 1, 0, 0, 0, 1, -114.236, -8.23674, -45.1202 )
 
-[node name="parkour_platforma2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, -27.6449 )
+[node name="parkour_platforma2" parent="poziom" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, -27.652 )
 
-[node name="parkour_platforma3" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma3" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.878, -4.66283, -67.5429 )
 
-[node name="parkour_platforma13" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma13" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 2.25, 0, 0, 0, 1, 0, 0, 0, 2.25, -6.60377, 92.068, -16.2291 )
 
-[node name="parkour_platforma14" parent="." instance=ExtResource( 7 )]
+[node name="parkour_platforma14" parent="poziom" instance=ExtResource( 7 )]
 transform = Transform( 2.25, 0, 0, 0, 1, 0, 0, 0, 2.25, -98.0012, 92.068, -16.2291 )
 
-[node name="parkour_most" parent="." instance=ExtResource( 8 )]
+[node name="parkour_most" parent="poziom" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.8054, 2.45192, -4.36639 )
 
-[node name="parkour_most2" parent="." instance=ExtResource( 8 )]
+[node name="parkour_most2" parent="poziom" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -78.7455, 2.38642, -4.34289 )
 
-[node name="parkour_most3" parent="." instance=ExtResource( 8 )]
+[node name="parkour_most3" parent="poziom" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -76.5057, 11.845, -29.2363 )
 
-[node name="parkour_most4" parent="." instance=ExtResource( 8 )]
+[node name="parkour_most4" parent="poziom" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -76.5057, 11.845, -29.2363 )
 
-[node name="void" type="MeshInstance" parent="."]
+[node name="void" type="MeshInstance" parent="poziom"]
 transform = Transform( 1068.06, 0, 0, 0, 1, 0, 0, 0, 1068.06, -66.4411, -14.9918, -0.1761 )
 mesh = SubResource( 25 )
+skeleton = NodePath("../..")
 material/0 = SubResource( 2 )
 
-[node name="void2" type="MeshInstance" parent="."]
+[node name="void2" type="MeshInstance" parent="poziom"]
 transform = Transform( 14.0388, 0, 0, 0, 3.02897, 0, 0, 0, 47.9352, -42.7213, -11.6516, -0.1761 )
 mesh = SubResource( 25 )
+skeleton = NodePath("../..")
 material/0 = SubResource( 2 )
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 26 )
+[node name="parkour_light" parent="poziom" instance=ExtResource( 3 )]
+skeleton = NodePath("../..")
 
-[node name="parkour_light" parent="." instance=ExtResource( 3 )]
-
-[node name="parkour_light2" parent="." instance=ExtResource( 3 )]
+[node name="parkour_light2" parent="poziom" instance=ExtResource( 3 )]
 transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -13.144, 90.9402, -28.3298 )
+skeleton = NodePath("../..")
 
-[node name="parkour_light3" parent="." instance=ExtResource( 3 )]
+[node name="parkour_light3" parent="poziom" instance=ExtResource( 3 )]
 transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -80.611, 90.9402, -28.3298 )
+skeleton = NodePath("../..")
 
-[node name="parkour_light4" parent="." instance=ExtResource( 3 )]
+[node name="parkour_light4" parent="poziom" instance=ExtResource( 3 )]
 transform = Transform( 5.79623, 0, 0, 0, 1, 0, 0, 0, 1, -80.611, 90.9402, 5.0056 )
+skeleton = NodePath("../..")
 
-[node name="rura_placeholder2" parent="." instance=ExtResource( 9 )]
+[node name="DlugieRury" parent="poziom" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89838, 56.219, -36.0321 )
+
+[node name="DlugieRury3" parent="poziom" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89838, 56.4865, 2.53018 )
+
+[node name="DlugieRury2" parent="poziom" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 58.6768, 0 )
+
+[node name="rura_placeholder2" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -95.7172, 9.04554, -50.4256 )
 
-[node name="rura_placeholder10" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder10" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -88.8517, 50.7448, -51.4798 )
 
-[node name="rura_placeholder11" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder11" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -82.8378, 54.061, -51.4798 )
 
-[node name="rura_placeholder12" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder12" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -76.9228, 56.5524, -51.4798 )
 
-[node name="rura_placeholder9" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder9" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -95.7172, 9.04554, -50.4256 )
 
-[node name="rura_placeholder3" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder3" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -89.7677, 7.07504, -50.4256 )
 
-[node name="rura_placeholder4" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder4" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -83.1772, 4.41351, -50.4256 )
 
-[node name="rura_placeholder5" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder5" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -77.4687, 1.84017, -50.4256 )
 
-[node name="rura_placeholder6" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder6" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -71.4989, -1.16918, -50.4256 )
 
-[node name="rura_placeholder7" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder7" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -65.1349, -3.59651, -50.4256 )
 
-[node name="rura_placeholder8" parent="." instance=ExtResource( 9 )]
+[node name="rura_placeholder8" parent="poziom" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -58.0985, -5.98796, -50.4256 )
+
+[node name="Brench" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.592, 0.370524, 8.29586 )
+
+[node name="Brench12" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.2552, 2.56068, -8.169 )
+
+[node name="Brench14" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5561, 2.56068, -8.169 )
+
+[node name="Brench15" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87.1045, 2.56068, -8.169 )
+
+[node name="Brench16" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -94.5634, 2.56068, -8.169 )
+
+[node name="Brench13" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.909, 13.025, -33.0331 )
+
+[node name="Brench31" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, 13.025, -33.0331 )
+
+[node name="Brench38" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, 13.025, -33.0331 )
+
+[node name="Brench39" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.6904, 13.025, -33.0331 )
+
+[node name="Brench32" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.7583, 13.025, -33.0331 )
+
+[node name="Brench41" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.7304, 13.9656, -20.3339 )
+
+[node name="Brench45" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9988, 13.9656, -20.3339 )
+
+[node name="Brench43" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.5118, 13.9656, -20.3339 )
+
+[node name="Brench44" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.5797, 13.9656, -20.3339 )
+
+[node name="Brench46" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.7304, 13.9656, 18.0417 )
+
+[node name="Brench47" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9988, 13.9656, 18.0417 )
+
+[node name="Brench48" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.0312, 13.9656, 18.0417 )
+
+[node name="Brench49" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.5118, 13.9656, 18.0417 )
+
+[node name="Brench50" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.5797, 13.9656, 18.0417 )
+
+[node name="Brench33" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2172, 13.025, -33.0331 )
+
+[node name="Brench34" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.909, 13.025, -25.6976 )
+
+[node name="Brench35" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, 13.025, -25.6976 )
+
+[node name="Brench36" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.7583, 13.025, -25.6976 )
+
+[node name="Brench37" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2172, 13.025, -25.6976 )
+
+[node name="Brench58" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2099, -7.32079, -25.6976 )
+
+[node name="Brench61" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.3438, -7.32079, -25.6976 )
+
+[node name="Brench59" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.7583, -7.32079, -25.6976 )
+
+[node name="Brench60" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2172, -7.32079, -25.6976 )
+
+[node name="Brench40" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104.615, 10.0281, -25.6976 )
+
+[node name="Brench27" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.2552, 2.56068, -0.783627 )
+
+[node name="Brench28" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.2905, 2.56068, -0.783627 )
+
+[node name="Brench29" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5561, 2.56068, -0.783627 )
+
+[node name="Brench42" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0347, 3.29452, 12.1487 )
+
+[node name="Brench55" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.07, 3.29452, 12.1487 )
+
+[node name="Brench56" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.3355, 3.29452, 12.1487 )
+
+[node name="Brench57" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5547, 3.29452, 12.1487 )
+
+[node name="Brench30" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87.1045, 2.56068, -0.783627 )
+
+[node name="Brench22" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4561, 2.56068, -7.8393 )
+
+[node name="Brench23" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6923, 2.56068, -7.8393 )
+
+[node name="Brench24" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9579, 2.56068, -7.8393 )
+
+[node name="Brench25" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5063, 2.56068, -7.8393 )
+
+[node name="Brench26" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.9652, 2.56068, -7.8393 )
+
+[node name="Brench17" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4561, 2.56068, -0.552875 )
+
+[node name="Brench18" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6923, 2.56068, -0.552875 )
+
+[node name="Brench19" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9579, 2.56068, -0.552875 )
+
+[node name="Brench21" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.9652, 2.56068, -0.552875 )
+
+[node name="Brench5" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, 3.30636 )
+
+[node name="Brench20" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -3.8909e-08, 0, -1, 0, 1, 0, 0.890135, 0, -4.37114e-08, -10.9701, 2.34946, -4.27064 )
+
+[node name="Brench6" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, -5.14311 )
+
+[node name="Brench7" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, -13.5711 )
+
+[node name="Brench8" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, -22.0047 )
+
+[node name="Brench9" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21658, -3.57482, -30.5744 )
+
+[node name="Brench10" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21658, -3.57482, -38.9619 )
+
+[node name="Brench11" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21658, -3.57482, -47.4434 )
+
+[node name="Brench51" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -88.138, 13.9586, 9.49249 )
+
+[node name="Brench52" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -88.138, 13.9586, 0.922791 )
+
+[node name="Brench53" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -88.138, 13.9586, -7.46466 )
+
+[node name="Brench54" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -88.138, 13.9586, -15.9462 )
+
+[node name="Brench2" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.908, 0.370524, 8.29586 )
+
+[node name="Brench3" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.3079, 0.370524, 8.29586 )
+
+[node name="Brench4" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4126, 0.370524, 8.29586 )
+
+[node name="Brench62" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.794, 57.7425, 12.2656 )
+
+[node name="Brench65" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.7899, 57.7425, 24.1129 )
+
+[node name="Brench66" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.7899, 57.7425, 15.8188 )
+
+[node name="Brench63" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.11, 57.7425, 12.2656 )
+
+[node name="Brench64" parent="poziom" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6146, 57.7425, 12.2656 )
+
+[node name="ChemicaliasEmmiter" parent="." instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -46.6441, -7.5882, -20.0402 )
+
+[node name="ChemicaliasEmmiter2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 7.54979e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 7.54979e-08, -3.30012e-15, -53.6834, -8.03632, -20.952 )
+
+[node name="ChemicaliasEmmiter3" parent="." instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -46.6441, -7.5882, -47.1233 )
+
+[node name="Portal" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -45.7936, 61.1806, 19.8339 )
+target = 1
 
 [connection signal="body_entered" from="ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]

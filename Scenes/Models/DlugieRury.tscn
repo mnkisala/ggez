@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Models/DlugaRura.tscn" type="PackedScene" id=1]
+
+[node name="DlugieRury" type="Spatial"]
+
+[node name="DlugaRura" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.84054 )
+
+[node name="DlugaRura2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.552154 )
+
+[node name="DlugaRura3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000826836, 0, -0.842336 )
+
+[node name="DlugaRura4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00154114, 0, -2.11138 )
