@@ -128,17 +128,13 @@ shape = SubResource( 2 )
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.53368, -2.25529, -1.56202 )
 
 [node name="SzkloButelka" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 0.628122, 14.3922 )
-points = 100
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 14.3922 )
 
 [node name="SzkloButelka2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 0.628122, 11.2016 )
-points = 100
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 11.2016 )
 
 [node name="SzkloButelka3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 0.628122, 12.3922 )
-points = 100
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 12.3922 )
 
 [node name="SzkloButelka4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 0.628122, 13.1434 )
-points = 100
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 13.1434 )
