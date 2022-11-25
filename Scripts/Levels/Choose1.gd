@@ -1,31 +1,51 @@
 extends Spatial
 
 var questions = [
-	["W jaki sposób można dbać o środowisko?", "jeżdżąc na rowerze", "jeżdżąc samochodem"],
+	["Docelowe zaprzestanie emisji CO2 do \n atmosfery w polityce ochrony środowiska to:", 
+		"Dekarbonizacja", 
+		"Karbonizacja"],
 	["Do jakiego kosza na śmieci należy wrzucać plastik?", "żółtego", "zielonego"],
-	["Co to jest recykling?", "powtórne wykorzystanie odpadów", "zbieranie śmieci w lesie"],
-	["Do jakiego kosza na śmieci należy wrzucać szkło?", "zielonego", "żółtego"],
+	["Co to jest recykling?"
+		, "powtórne wykorzystanie odpadów"
+		, "nie wykorzystywanie odpadów potórnie"],
+	["Do jakiego kosza na śmieci należy wrzucać szkło?"
+		, "zielonego"
+		, "żółtego"],
 	[
-		"Dlaczego kartonowe pudełka należy\nzgniatać przed wyrzuceniem?",
-		"żeby zajmowały mniej miejsca na wysypisku",
-		"wtedy szybciej sie rozłożą"
+		"Minimalna odległość elektrowni wiatrowej \n od najbliższego budynku mieszkalnego wynosi: ",
+		"2 km",
+		"20 km"
 	],
-	["Do jakiego kosza na śmieci należy wrzucać papier?", "niebieskiego", "żółtego"],
-	["Czym są zielone płuca ziemii?", "to lasy", "to największe rzeki"],
+	["Do jakiego kosza na śmieci należy wrzucać papier?", 
+		"niebieskiego", 
+		"żółtego"],
+	["Model ekonomiczny polegający na m.in na recyklingu, \n naprawie i odnawianiu,\n który wydłuża cykl życia produktów, \n czyli ogranicza nam odpady do minimum.",
+		"Gospodarka o obiegu zamkniętym ", 
+		"Planowana zużywalność "],
 	[
-		"Co jest przyczyną zanieczyszczenia wody?",
-		"wrzucanie do niej odpadów i scieków",
-		"rosnące w niej rośliny"
+		"Na czym polega neutralność emisyjna:",
+		"Zmiejszenie emisji CO2, do takiego stopnia, \n że wraz wyprodukowaniem go będziemy pochłaniać taką samą ilość ",
+		"Zaprzestaniemy produkować wogóle CO2 "
 	],
 	[
-		"Dlaczego należy sadzić drzewa?",
-		"ponieważ wchłaniają trujące gazy i dają tlen",
-		"ponieważ ładnie wyglądają"
+		"Ile rocznie naturalne pochłaniacze CO2 (m.in:  gleba, lasy) \n pochłaniają dwutlenku węgla: ",
+		"do 11 gigaton",
+		"do 36 gigaton"
 	],
 	[
-		"Co to jest smog?",
-		"zanieczyszczenie powietrza powstałe\nz mgły z dymem i spalinami",
-		"dym wylatujący z komina"
+		"Na którym miejscu na świecie znajduje  \n się UE pod względem emisji CO2:",
+		"3",
+		"8"
+	],
+	[
+		"Możliwość swobodnego poruszania się bez paszportu \n w większości państw europy daje nam :",
+		"Strefa Szengen",
+		"Strefa Wolna"
+	],
+	[
+		"Do którego roku Unia Europejska osiągnie \n zerowy poziom emisji gazów cieplarnianych netto: ",
+		"2050",
+		"2060"
 	]
 ]
 
@@ -40,7 +60,7 @@ var points = 0
 
 func _process(_dt):
 	get_node("Player").set_level_specific_text(
-		"punkty: %d/%d" % [points, questions.size()]
+		"punkty: %d/%d" % [points, 10]
 	)
 	#debug
 	if Input.is_action_just_pressed("debug"):
