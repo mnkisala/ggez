@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Scenes/Models/Parkour/Pipe6.glb" type="PackedScene" id=1]
 
 [sub_resource type="BoxShape" id=4]
 
@@ -16,6 +18,185 @@ angle = 90.0
 [sub_resource type="CubeMesh" id=5]
 size = Vector3( 0.3, 0.3, 0.3 )
 
+[sub_resource type="SphereMesh" id=31]
+
+[sub_resource type="VisualShaderNodeScalarOp" id=9]
+default_input_values = [ 0, 0.0, 1, 0.1 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeInput" id=10]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeVectorOp" id=11]
+operator = 1
+
+[sub_resource type="VisualShaderNodeVectorOp" id=17]
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 1, 1, 1 ) ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorConstant" id=18]
+constant = Color( 0, 1, 0.00392157, 0.498039 )
+
+[sub_resource type="VisualShaderNodeVectorLen" id=20]
+
+[sub_resource type="VisualShaderNodeVectorOp" id=21]
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0, 1, 0 ) ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorInterp" id=22]
+
+[sub_resource type="VisualShaderNodeColorConstant" id=23]
+constant = Color( 0.584314, 0, 1, 0.407843 )
+
+[sub_resource type="Gradient" id=27]
+offsets = PoolRealArray( 0, 0.780392, 0.960784, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.0142857, 0.0142857, 0.0142857, 1, 0, 0, 0, 1, 0.0163552, 0.0163552, 0.0163552, 1 )
+
+[sub_resource type="GradientTexture" id=28]
+gradient = SubResource( 27 )
+width = 512
+
+[sub_resource type="VisualShaderNodeTexture" id=29]
+texture = SubResource( 28 )
+
+[sub_resource type="VisualShaderNodeInput" id=30]
+input_name = "world"
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=8]
+constant = 0.3
+
+[sub_resource type="OpenSimplexNoise" id=12]
+octaves = 9
+period = 10.0
+persistence = 0.221
+lacunarity = 0.62
+
+[sub_resource type="NoiseTexture" id=13]
+seamless = true
+as_normalmap = true
+bump_strength = 16.0
+noise = SubResource( 12 )
+noise_offset = Vector2( 0.007, 0 )
+
+[sub_resource type="VisualShaderNodeTexture" id=14]
+texture = SubResource( 13 )
+
+[sub_resource type="VisualShaderNodeInput" id=15]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=16]
+function = 0
+
+[sub_resource type="VisualShader" id=24]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+uniform sampler2D tex_frg_6;
+uniform sampler2D tex_frg_20;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:19
+	vec3 n_out19p0 = vec3(0.584314, 0.000000, 1.000000);
+	float n_out19p1 = 0.407843;
+
+// Color:14
+	vec3 n_out14p0 = vec3(0.000000, 1.000000, 0.003922);
+	float n_out14p1 = 0.498039;
+
+// Input:11
+	vec3 n_out11p0 = vec3(UV, 0.0);
+
+// Input:7
+	float n_out7p0 = TIME;
+
+// ScalarOp:10
+	float n_in10p1 = 0.10000;
+	float n_out10p0 = n_out7p0 * n_in10p1;
+
+// VectorOp:12
+	vec3 n_out12p0 = n_out11p0 - vec3(n_out10p0);
+
+// Texture:6
+	vec4 tex_frg_6_read = texture(tex_frg_6, n_out12p0.xy);
+	vec3 n_out6p0 = tex_frg_6_read.rgb;
+	float n_out6p1 = tex_frg_6_read.a;
+
+// VectorMix:18
+	vec3 n_out18p0 = mix(n_out19p0, n_out14p0, n_out6p0);
+
+// VectorOp:17
+	vec3 n_in17p1 = vec3(0.00000, 1.00000, 0.00000);
+	vec3 n_out17p0 = n_out6p0 * n_in17p1;
+
+// VectorLen:16
+	float n_out16p0 = length(n_out17p0);
+
+// VectorOp:13
+	vec3 n_out13p0 = n_out18p0 * vec3(n_out16p0);
+
+// Texture:20
+	vec4 tex_frg_20_read = texture(tex_frg_20, UV.xy);
+	vec3 n_out20p0 = tex_frg_20_read.rgb;
+	float n_out20p1 = tex_frg_20_read.a;
+
+// Output:0
+	ALBEDO = n_out13p0;
+	ALPHA = dot(n_out20p0, vec3(0.333333, 0.333333, 0.333333));
+	ROUGHNESS = n_out16p0;
+	SPECULAR = n_out16p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -542.88, -169.843 )
+nodes/vertex/0/position = Vector2( 300, 140 )
+nodes/fragment/0/position = Vector2( 340, -40 )
+nodes/fragment/5/node = SubResource( 8 )
+nodes/fragment/5/position = Vector2( 0, 300 )
+nodes/fragment/6/node = SubResource( 14 )
+nodes/fragment/6/position = Vector2( -340, 160 )
+nodes/fragment/7/node = SubResource( 15 )
+nodes/fragment/7/position = Vector2( -1040, 180 )
+nodes/fragment/9/node = SubResource( 16 )
+nodes/fragment/9/position = Vector2( -640, 420 )
+nodes/fragment/10/node = SubResource( 9 )
+nodes/fragment/10/position = Vector2( -860, 300 )
+nodes/fragment/11/node = SubResource( 10 )
+nodes/fragment/11/position = Vector2( -860, 100 )
+nodes/fragment/12/node = SubResource( 11 )
+nodes/fragment/12/position = Vector2( -540, 240 )
+nodes/fragment/13/node = SubResource( 17 )
+nodes/fragment/13/position = Vector2( 80, -120 )
+nodes/fragment/14/node = SubResource( 18 )
+nodes/fragment/14/position = Vector2( -180, 160 )
+nodes/fragment/16/node = SubResource( 20 )
+nodes/fragment/16/position = Vector2( -360, -200 )
+nodes/fragment/17/node = SubResource( 21 )
+nodes/fragment/17/position = Vector2( -520, -100 )
+nodes/fragment/18/node = SubResource( 22 )
+nodes/fragment/18/position = Vector2( 80, 60 )
+nodes/fragment/19/node = SubResource( 23 )
+nodes/fragment/19/position = Vector2( -180, -20 )
+nodes/fragment/20/node = SubResource( 29 )
+nodes/fragment/20/position = Vector2( -160, 440 )
+nodes/fragment/21/node = SubResource( 30 )
+nodes/fragment/21/position = Vector2( -424.84, 479.04 )
+nodes/fragment/connections = PoolIntArray( 7, 0, 10, 0, 11, 0, 12, 0, 12, 0, 6, 0, 16, 0, 13, 1, 6, 0, 17, 0, 17, 0, 16, 0, 18, 0, 13, 0, 6, 0, 18, 2, 13, 0, 0, 0, 16, 0, 0, 3, 16, 0, 0, 4, 14, 0, 18, 1, 19, 0, 18, 0, 20, 0, 0, 1, 10, 0, 9, 0, 10, 0, 12, 1 )
+
+[sub_resource type="ShaderMaterial" id=25]
+shader = SubResource( 24 )
+
 [node name="ChemicaliasEmmiter" type="StaticBody"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 
@@ -23,9 +204,19 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0
 shape = SubResource( 4 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+visible = false
 mesh = SubResource( 2 )
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1.05464, 4.60999e-08 )
+visible = false
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 5 )
+
+[node name="chemicalias" type="MeshInstance" parent="."]
+transform = Transform( 2.0623e-07, 1, -8.74228e-08, 4.42238, 5.80804e-08, 2.73551e-08, -1.94191e-07, 3.54558e-08, 0.405567, 0.42407, -1.33078, 0.452367 )
+mesh = SubResource( 31 )
+material/0 = SubResource( 25 )
+
+[node name="Pipe6" parent="." instance=ExtResource( 1 )]
+transform = Transform( -5.21394e-08, 5.00981, -2.18986e-07, -1, -1.83588e-07, 2.37245e-07, 4.37114e-08, 2.37245e-07, 5.42753, 0, -1.38994e-08, -0.317981 )

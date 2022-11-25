@@ -218,18 +218,6 @@ light_indirect_energy = 0.0
 [node name="ParkourRestartArea" parent="." instance=ExtResource( 4 )]
 transform = Transform( 555.027, 0, 0, 0, 1, 0, 0, 0, 655.829, 0, -16.4312, -3.68103 )
 
-[node name="ChemicaliasTurnOffer" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -38.8889, 3.96331, 25.3488 )
-chemicalias_emmiter = NodePath("../ChemicaliasEmmiter")
-
-[node name="ChemicaliasTurnOffer2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -60.3881, 7.12101, 25.3488 )
-chemicalias_emmiter = NodePath("../ChemicaliasEmmiter2")
-
-[node name="ChemicaliasTurnOffer3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, -1.19209e-07, -5.2108e-15, 0, -4.37114e-08, 1, -1.19209e-07, -1, -4.37114e-08, -39.1429, 62.4093, 26.2069 )
-chemicalias_emmiter = NodePath("../ChemicaliasEmmiter3")
-
 [node name="poziom" type="Spatial" parent="."]
 
 [node name="blockout poziomu" type="Spatial" parent="poziom"]
@@ -579,14 +567,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.11, 57.7425, 12.2656 )
 [node name="Brench64" parent="poziom" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6146, 57.7425, 12.2656 )
 
-[node name="ChemicaliasEmmiter" parent="." instance=ExtResource( 11 )]
+[node name="ChemicaliasEmmiter" parent="poziom" instance=ExtResource( 11 )]
 transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -46.6441, -7.5882, -20.0402 )
 
-[node name="ChemicaliasEmmiter2" parent="." instance=ExtResource( 11 )]
+[node name="ChemicaliasEmmiter2" parent="poziom" instance=ExtResource( 11 )]
 transform = Transform( 7.54979e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 7.54979e-08, -3.30012e-15, -53.6834, -8.03632, -20.952 )
 
-[node name="ChemicaliasEmmiter3" parent="." instance=ExtResource( 11 )]
+[node name="ChemicaliasEmmiter3" parent="poziom" instance=ExtResource( 11 )]
 transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -46.6441, -7.5882, -47.1233 )
+
+[node name="ChemicaliasTurnOffer" parent="poziom" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -38.8889, 3.96331, 25.3488 )
+chemicalias_emmiter = NodePath("../ChemicaliasEmmiter")
+
+[node name="ChemicaliasTurnOffer2" parent="poziom" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -60.3881, 7.12101, 25.3488 )
+chemicalias_emmiter = NodePath("../ChemicaliasEmmiter2")
+
+[node name="ChemicaliasTurnOffer3" parent="poziom" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.19209e-07, -5.2108e-15, 0, -4.37114e-08, 1, -1.19209e-07, -1, -4.37114e-08, -39.1429, 62.4093, 26.2069 )
+chemicalias_emmiter = NodePath("../ChemicaliasEmmiter3")
 
 [node name="Portal" parent="." instance=ExtResource( 12 )]
 transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -45.7936, 61.1806, 19.8339 )

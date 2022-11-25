@@ -13,8 +13,7 @@ func _ready():
 func turn_off_chemicalias():
 	if not turned_off:
 		var chemicalias = get_node(chemicalias_emmiter)
-		var particles = chemicalias.get_node("Particles")
-		particles.emitting = false
+		chemicalias.get_node("chemicalias").hide()
 
 		get_node("/root/Parkour").chemicalias_remaining -= 1
 
