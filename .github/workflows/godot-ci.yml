@@ -42,7 +42,7 @@ jobs:
           path: ./build
           
   deploy-to-gh-pages:
-    needs: export-web
+    needs: export
     runs-on: ubuntu-latest
     environment:
       name: github-pages
