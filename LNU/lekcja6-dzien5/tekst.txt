@@ -9,27 +9,22 @@ Próbujesz go otworzyć. Edytor tekstu wiesza komputer i po chwili wyłącza si�
 Plik waży 3GB! Może jest jakiś inny sposób aby pozyskać zawarte w nim informacje?
 
 (podpowiedzi do rozwiazania zadania programistycznego)
-Pliki '.cfg' są podzielone na sekcje, których nazwy zapisane są
-w nawiasach kwadratowych (np. '[SuperTajneDane]'). Każda sekcja
-posiada listę właściwości. Właściwość składa się z nazwy i wartości,
-które oddzielone są znakiem '='. Po za tymi regułami nie obowiązują żadne
-inne obostrzenia dotyczące spacji na początku i końcu linijki, znaków zawartych
-w nazwach sekcji i właściwośc oraz samych wartości.
+Pliki '.cfg' opisują właściwości. Właściwość składa się z nazwy i wartości,
+które oddzielone są znakiem '='. Po za tą regułą nie obowiązują żadne
+inne obostrzenia dotyczące spacji na początku i końcu linijki lub znaków zawartych
+w nazwach właściwości i wartościach.
 
 Przykład:
 
 ```
-  [Hej]
-
     jestem=plikiem
-
   cfg= miło
-  [ Mi ]
+
     cię = poznać
 ```
 
-Napisz kod tłumaczący zawartość pliku konfiguracyjnego na słownik sekcji i ich właściwości, ktore same w 
-sobie są słownikami nazw właściwości i wartości ({sekcja: {własność: wartość}}, cfg['Hej']['jestem'] == 'plikiem').
+Napisz kod tłumaczący zawartość pliku konfiguracyjnego na słownik właściwości
+({własność: wartość}, cfg['jestem'] == 'plikiem').
     
 [ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuły]
 
