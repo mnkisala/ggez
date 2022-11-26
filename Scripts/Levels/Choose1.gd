@@ -58,7 +58,7 @@ var questions = [
 		"Argon"
 	],
 	[
-		"Czysta energia (m.in zaczęcie wykorzystywania wodoru \n w większej skali), czysty przemysł oraz oszczędzanie \n energi są to przedsięwzięcia zawarte w :",
+		"Czysta energia (m.in rozpoczęcie wykorzystywania wodoru \n w większej skali), czysty przemysł oraz oszczędzanie \n energi są to przedsięwzięcia zawarte w :",
 		"REPowerEU",
 		"PowerForAll"
 	]
