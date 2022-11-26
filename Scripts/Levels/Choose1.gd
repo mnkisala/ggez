@@ -82,7 +82,7 @@ func _process(_dt):
 		print("debug")
 		get_node("LeftPlate").disable()
 		get_node("RightPlate").disable()
-		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
+		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 2131"
 		get_node("HubPortal").enable()
 
 func _exit_tree():
@@ -127,7 +127,7 @@ func trigger_anwser(side):
 	if questions.size() == 0 or points >= 10:
 		get_node("LeftPlate").disable()
 		get_node("RightPlate").disable()
-		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
+		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 2131"
 		get_node("HubPortal").enable()
 	else:
 		randomize_question()
