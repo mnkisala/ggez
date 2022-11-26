@@ -12,3 +12,4 @@ func _process(_dt):
 	else:
 		get_node("Control").visible = false
 		get_node("Portal").enable()
+		get_node("player").set_level_specific_text("punkty: %d\nkod to 4279" % GameManager.player_state.points)

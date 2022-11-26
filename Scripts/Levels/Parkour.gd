@@ -7,7 +7,7 @@ func _process(_dt):
 	if (chemicalias_remaining > 0):
 		get_node('player').set_level_specific_text("pozostało %s chemikaliów do wyłączenia" %  chemicalias_remaining)
 	else:
-		get_node('player').set_level_specific_text("")
+		get_node('player').set_level_specific_text("kod to 3141")
 		get_node("Portal").enable()
 
 func _exit_tree():
