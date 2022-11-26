@@ -84,10 +84,10 @@ func _process(_dt):
 		get_node("RightPlate").disable()
 		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
 		get_node("HubPortal").enable()
-		GameManager.levels_finished.choose1 = true
 
 func _exit_tree():
 	get_node("Player").set_level_specific_text("")
+	GameManager.levels_finished.choose1 = true
 
 
 func _randi_range(from, to):
@@ -129,7 +129,6 @@ func trigger_anwser(side):
 		get_node("RightPlate").disable()
 		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
 		get_node("HubPortal").enable()
-		GameManager.levels_finished.choose1 = true
 	else:
 		randomize_question()
 		get_node("Player").transform = origin_transform
