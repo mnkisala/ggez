@@ -18,6 +18,7 @@ var enabled_portals = []
 var easter_egg = false
 
 onready var player_state = PlayerState.new()
+var garbage_collected = []
 
 
 func update_portals():

@@ -12,3 +12,4 @@ func _process(_dt):
 		get_node("Control/GridContainer/TextureRect").texture = GameManager.player_state.garbage_bag[-1].preview
 	else:
 		get_node("Control").visible = false
+		get_node("Portal").enable()

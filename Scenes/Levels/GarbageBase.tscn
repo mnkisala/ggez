@@ -12,7 +12,7 @@
 [ext_resource path="res://Scripts/Levels/GarbageBase.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/Garbage/Paper.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/TrashCan.gd" type="Script" id=12]
-[ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=13]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 42.1982, 44.1414, 1 )
@@ -45,7 +45,7 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.7297
 shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Coliders"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.3906, 12.5786, -2.86662 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0325, 12.5786, -2.86662 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Coliders"]
@@ -110,7 +110,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.58046 )
 shape = SubResource( 6 )
 
 [node name="smietnikszklo" parent="." instance=ExtResource( 8 )]
-transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.6774, 5.24629, -32.1584 )
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.6774, 5.24629, -16.4206 )
 script = ExtResource( 12 )
 kind = 1
 
@@ -121,7 +121,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.266322, 0, 0.580463 )
 shape = SubResource( 6 )
 
 [node name="smietnikpapier" parent="." instance=ExtResource( 3 )]
-transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.7735, 5.24009, 16.1844 )
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -24.7735, 5.24009, 1.69497 )
 script = ExtResource( 12 )
 
 [node name="Area" type="Area" parent="smietnikpapier"]
@@ -157,8 +157,9 @@ margin_bottom = 138.0
 texture = SubResource( 5 )
 stretch_mode = 3
 
-[node name="BeerCan" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5888, 3.93761, 3.25843 )
-
 [node name="Paper" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4659, 6.20029, 14.2831 )
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -25.7763, 5.95225, 13.0042 )
+target = 1

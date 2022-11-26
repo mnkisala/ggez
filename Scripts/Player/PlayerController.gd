@@ -117,6 +117,7 @@ func _process(_delta):
 					* (-1)
 				)
 				var garbage = _state.garbage_bag.pop_back()
+				GameManager.garbage_collected.remove(GameManager.garbage_collected.find(garbage.uuid))
 				var throw_point = (head_dir * 3) + Vector3(0, 1.3, 0)
 
 				garbage.transform = Transform(self.transform)
@@ -127,13 +128,13 @@ func _process(_delta):
 
 	_hud_hint.text = ""
 
-	# smieci
 	var collision: Node = _raycast.get_collider()
 	if collision:
 		if collision is Garbage:
 			_hud_hint.text = "[E] to collect"
 			if Input.is_action_just_pressed("interact"):
 				_state.garbage_bag.push_back(collision)
+				GameManager.garbage_collected.push_back(collision.uuid)
 				collision.get_parent().remove_child(collision)
 		elif collision.get_parent() is CodeMachine:
 			_code_machine = collision.get_parent()

@@ -15,7 +15,7 @@ onready var uuid = hash(self.get_path())
 
 
 func _ready():
-	for g in GameManager.player_state.garbage_bag:
-		if self.uuid == g.uuid:
+	for g in GameManager.garbage_collected:
+		if self.uuid == g:
 			hide()
 			queue_free()
