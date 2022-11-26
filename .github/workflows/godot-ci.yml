@@ -29,7 +29,7 @@ jobs:
         run: |
           sh Tools/optimize_assets.sh
           mkdir -v -p build/web
-          godot -v --no-window --export "HTML5" ./build/web/index.html
+          godot -v --no-window --export "HTML5" build/web/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -51,7 +51,7 @@ jobs:
       - name: Mac Build
         run: |
           mkdir -v -p build/mac
-          godot -v --no-window --export "Mac OSX" ../build/mac/$EXPORT_NAME.zip
+          godot -v --no-window --export "Mac OSX" build/mac/$EXPORT_NAME.zip
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
@@ -74,7 +74,7 @@ jobs:
       - name: Windows Build
         run: |
           mkdir -v -p build/windows
-          godot -v --no-window --export "Windows Desktop" ../build/windows/$EXPORT_NAME.exe
+          godot -v --no-window --export "Windows Desktop" build/windows/$EXPORT_NAME.exe
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
@@ -84,7 +84,7 @@ jobs:
     name: Linux Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:3.3.4
+      image: barichello/godot-ci:3.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -97,7 +97,7 @@ jobs:
       - name: Linux Build
         run: |
           mkdir -v -p build/linux
-          godot -v --no-window --export "Linux/X11" ../build/linux/$EXPORT_NAME.x86_64
+          godot -v --no-window --export "Linux/X11" build/linux/$EXPORT_NAME.x86_64
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
