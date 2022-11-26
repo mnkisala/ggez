@@ -45,7 +45,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87058, 0 )
 shape = SubResource( 1 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.992489, 0, 0.122337, 0, 1, 0, -0.122337, 0, 0.992489, 13.5533, 3.87192, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5533, 3.87192, 0 )
 
 [node name="hub" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.819, 0.4, -108.67 )
@@ -89,14 +89,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2022, 4, 0.0412984 )
 text = "Sterowanie: WSAD
 Interakcja: E
 Sprint: Shift
-Rzucanie: R"
+Wyrzucanie śmieci: R"
 font_size = 2
 
 [node name="sterowanie2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9183, 4, 10.3668 )
-text = "Śmieci można zbierać aby
-wyrzucić je na ostatnim
-poziomie gry"
+text = "Warto zbierać śmieci!
+Dzięki ich poprawnej segregacji
+otrzymasz dodatkowe punkty
+w ostatnim poziomie!"
 font_size = 2
 
 [node name="CodeMachine" parent="." instance=ExtResource( 4 )]

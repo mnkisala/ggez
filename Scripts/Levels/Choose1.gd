@@ -48,17 +48,17 @@ var questions = [
 		"2060"
 	],
 	[
-		"'Przyszłość unijnej polityki czystego powietrza w \n ramach dążenia do  osiągnięcia zerowego \n poziomu emisji zanieczyszczeń' \n opinia ta została opracowana przez:",
+		"Przyszłość unijnej polityki czystego powietrza w ramach \n dążenia do osiągnięcia zerowego poziomu emisji \n zanieczyszczeń opinia ta została opracowana przez:",
 		"János Ádám Karácsony",
 		"Charles Michel"
 	],
 	[
-		"W 2020 został zawiązany sojusz na rzecz pewnego pierwiastku, \n który pomoże w dekarbonizajci przemysłu oraz \n w promowaniu tego pierwiastka. Jest nim :",
+		"W 2020 został zawiązany sojusz na rzecz pewnego \n pierwiastku, który pomoże w dekarbonizajci przemysłu \n oraz w promowaniu tego pierwiastka. Jest nim :",
 		"Wodór",
 		"Argon"
 	],
 	[
-		"Czysta energia (m.in zaczęcie wykorzystywania wodoru w większej skali), \n czysty przemysł oraz oszczędzanie energi są \n to przedsięwzięcia zawarte w :",
+		"Czysta energia (m.in rozpoczęcie wykorzystywania wodoru \n w większej skali), czysty przemysł oraz oszczędzanie \n energi są to przedsięwzięcia zawarte w :",
 		"REPowerEU",
 		"PowerForAll"
 	]
