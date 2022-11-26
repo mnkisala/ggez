@@ -51,6 +51,16 @@ var questions = [
 		"Przyszłość unijnej polityki czystego powietrza w ramach dążenia do \n osiągnięcia zerowego poziomu emisji zanieczyszczeń \n opinia ta została opracowana przez:",
 		"János Ádám Karácsony",
 		"Charles Michel"
+	],
+	[
+		"W 2020 został zawiązany sojusz na rzecz pewnego pierwiastku, \n który pomoże w dekarbonizajci przemysłu oraz \n w promowaniu tego pierwiastka. Jest nim :",
+		"Wodór",
+		"Argon"
+	],
+	[
+		"Czysta energia (m.in zaczęcie wykorzystywania wodoru w większej skali), \n czysty przemysł oraz oszczędzanie energi są \n to przedsięwzięcia zawarte w :",
+		"REPowerEU",
+		"PowerForAll"
 	]
 ]
 
