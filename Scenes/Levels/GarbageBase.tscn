@@ -159,7 +159,7 @@ texture = SubResource( 5 )
 stretch_mode = 3
 
 [node name="Paper" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4659, 6.20029, 14.2831 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4659, 3.9082, 14.2831 )
 
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -25.7763, 5.95225, 13.0042 )
@@ -167,3 +167,8 @@ target = 1
 
 [node name="Kwietnik" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06666, 3.30063, -17.7317 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.94702, 27.2706, -26.6296 )
+shadow_enabled = true
+omni_range = 64.5401

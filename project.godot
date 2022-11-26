@@ -70,6 +70,7 @@ _global_script_class_icons={
 
 config/name="ggez"
 run/main_scene="res://Scenes/Levels/Hub.tscn"
+boot_splash/image="res://titlescreen.png"
 config/icon="res://icon.png"
 
 [autoload]

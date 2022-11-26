@@ -79,6 +79,6 @@ spot_range = 91.792
 spot_angle = 46.9996
 
 [node name="Paper" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7382, 4.16504, 21.7474 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7382, 0.249147, 21.7474 )
 mass = 0.5
 points = 20

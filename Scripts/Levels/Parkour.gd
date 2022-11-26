@@ -12,6 +12,7 @@ func _process(_dt):
 
 func _exit_tree():
 	get_node('player').set_level_specific_text("")
+	GameManager.levels_finished.parkour = true
 
 
 func _on_ParkourRestartArea_body_entered(body:Node):
