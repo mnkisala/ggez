@@ -5,7 +5,7 @@ var chemicalias_remaining = 0
 
 func _process(_dt):
 	if (chemicalias_remaining > 0):
-		get_node('player').set_level_specific_text("pozostalo %s chemikaliow do wylaczenia" %  chemicalias_remaining)
+		get_node('player').set_level_specific_text("pozostało %s chemikaliów do wyłączenia" %  chemicalias_remaining)
 	else:
 		get_node('player').set_level_specific_text("")
 		get_node("Portal").enable()
