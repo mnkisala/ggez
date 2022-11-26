@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Garbage/SzkloButelka.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Models/Hub/roof2.glb" type="PackedScene" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://Scripts/Levels/Hub.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/Models/Hub/Tree/streecomplete.glb" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Secret.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Models/Hub/Tree/treeFourthStage.glb" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Models/Hub/Tree/treeFirstStage.glb" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Models/Hub/Tree/treeSecondStage.glb" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Models/Hub/Tree/treeThirdStage.glb" type="PackedScene" id=18]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.18907, 2.20846, 0.476956 )
@@ -118,8 +122,25 @@ mass = 0.1
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0416, 2.73153, -6.45574 )
 shape = SubResource( 2 )
 
+[node name="treeFirstStage" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71077, -0.573718, -1.61126 )
+visible = false
+
+[node name="treeSecondStage" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71077, -0.573718, -0.385979 )
+visible = false
+
+[node name="treeThirdStage" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71077, -0.573718, -0.178338 )
+visible = false
+
+[node name="treeFourthStage" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71077, -0.573718, -0.402449 )
+visible = false
+
 [node name="streecomplete" parent="." instance=ExtResource( 13 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.53368, -2.25529, -1.56202 )
+visible = false
 
 [node name="SzkloButelka" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 14.3922 )

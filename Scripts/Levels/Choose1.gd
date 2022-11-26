@@ -84,6 +84,7 @@ func _process(_dt):
 		get_node("RightPlate").disable()
 		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
 		get_node("HubPortal").enable()
+		GameManager.next_tree_stage()
 
 func _exit_tree():
 	get_node("Player").set_level_specific_text("")
@@ -128,6 +129,7 @@ func trigger_anwser(side):
 		get_node("RightPlate").disable()
 		get_node("Sign/Label3D").text = "Udało ci się odpowiedzieć na wszystkie pytania,\nkod to 3306"
 		get_node("HubPortal").enable()
+		GameManager.next_tree_stage()
 	else:
 		randomize_question()
 		get_node("Player").transform = origin_transform

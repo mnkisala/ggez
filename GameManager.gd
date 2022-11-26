@@ -15,11 +15,17 @@ const __CODE_TO_PORTAL = {1883: 2, 3306: 3, 1080: 4, 8080: 5}
 const portals = {}
 var enabled_portals = []
 
+var tree_stage = 1
+
 var easter_egg = false
 
 onready var player_state = PlayerState.new()
 var garbage_collected = []
 var kwietniki = {}
+
+
+func next_tree_stage():
+	tree_stage = tree_stage + 1
 
 
 func update_portals():
