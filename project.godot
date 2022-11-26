@@ -75,6 +75,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GameManager="*res://GameManager.gd"
+BackgroundMusic="*res://Scenes/Interactives/BackgroundMusic.tscn"
 
 [display]
 

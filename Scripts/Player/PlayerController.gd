@@ -147,7 +147,7 @@ func _process(_delta):
 					_typing = true
 					_direction = Vector3.ZERO
 		elif collision is ChemicaliasTurnoffer and collision.turned_off == false:
-			_hud_hint.text = "[E] to turn off chemicalias"
+			_hud_hint.text = "[E] aby wyłączyć chemikalia"
 			if Input.is_action_just_pressed("interact"):
 				collision.turn_off_chemicalias()
 		elif collision is Kwietnik:
