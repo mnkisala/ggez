@@ -36,6 +36,7 @@ jobs:
           godot -v --no-window --export "Mac OSX" build/mac/$EXPORT_NAME.zip
           mkdir -v -p build/windows
           godot -v --no-window --export "Windows Desktop" build/windows/$EXPORT_NAME.exe
+          cp strona.html ./build/index.html
       - name: Upload gh pages
         uses: actions/upload-pages-artifact@v1
         with:
