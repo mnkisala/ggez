@@ -131,7 +131,7 @@ func _process(_delta):
 	var collision: Node = _raycast.get_collider()
 	if collision:
 		if collision is Garbage:
-			_hud_hint.text = "[E] to collect"
+			_hud_hint.text = "[E] aby zebrać"
 			if Input.is_action_just_pressed("interact"):
 				_state.garbage_bag.push_back(collision)
 				GameManager.garbage_collected.push_back(collision.uuid)
@@ -139,9 +139,9 @@ func _process(_delta):
 		elif collision.get_parent() is CodeMachine:
 			_code_machine = collision.get_parent()
 			if _code_machine.active:
-				_hud_hint.text = "[Esc] to close typing mode"
+				_hud_hint.text = "[Esc] aby wyjść z trybu wpisywania"
 			else:
-				_hud_hint.text = "[E] to enter code"
+				_hud_hint.text = "[E] aby wprowadzić kod"
 				if Input.is_action_just_pressed("interact"):
 					_code_machine.active = true
 					_typing = true
@@ -150,8 +150,12 @@ func _process(_delta):
 			_hud_hint.text = "[E] to turn off chemicalias"
 			if Input.is_action_just_pressed("interact"):
 				collision.turn_off_chemicalias()
+		elif collision is Kwietnik:
+			_hud_hint.text = "[E] aby zasadzić kwiatka"
+			if Input.is_action_just_pressed("interact"):
+				collision.plant()
 		elif collision is QuestionButton:
-			_hud_hint.text = "[E] to click button"
+			_hud_hint.text = "[E] aby kliknąć przycisk"
 			if Input.is_action_just_pressed("interact"):
 				var question_wall = collision.get_parent()
 				var button = collision

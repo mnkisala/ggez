@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Garbage.gd"
 }, {
+"base": "StaticBody",
+"class": "Kwietnik",
+"language": "GDScript",
+"path": "res://Scenes/Interactives/Kwietnik.gd"
+}, {
 "base": "Reference",
 "class": "LevelEnum",
 "language": "GDScript",
@@ -53,6 +58,7 @@ _global_script_class_icons={
 "ChemicaliasTurnoffer": "",
 "CodeMachine": "",
 "Garbage": "",
+"Kwietnik": "",
 "LevelEnum": "",
 "PlayerController": "",
 "PlayerState": "",

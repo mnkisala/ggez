@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Models/GarbageScene/Flowers/kwietnik.glb" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Interactives/Kwietnik.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.91614, 0.596826, 0.808872 )
+
+[node name="Kwietnik" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02763, 0 )
+shape = SubResource( 1 )
+
+[node name="kwietnik" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.672477, 0, 0, 0, 0.672477, 0, 0, 0, 0.672477, 0, 0, -3.81797 )
