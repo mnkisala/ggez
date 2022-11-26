@@ -3,7 +3,7 @@ extends Spatial
 func _ready():
 	GameManager.update_portals()
 	var tree
-	match GameManager.tree_stage:
+	match GameManager.get_tree_stage():
 		1:
 			tree = get_node("treeFirstStage")
 		2:
@@ -14,6 +14,4 @@ func _ready():
 			tree = get_node("treeFourthStage")
 		5:
 			tree = get_node("streecomplete")
-		_:
-			print("Ups, nie ma takiego drzewa")
 	tree.visible = true

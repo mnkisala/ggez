@@ -10,12 +10,17 @@ const __ID_TO_LEVEL_PATH = {
 	LevelEnum.Level.PARKOUR: "res://Scenes/Levels/Parkour.tscn",
 }
 
+var levels_finished = {
+	choose1 = false,
+	maze = false,
+	parkour = false,
+	garbage = false
+}
+
 const __CODE_TO_PORTAL = {1883: 2, 3306: 3, 1080: 4, 8080: 5}
 
 const portals = {}
 var enabled_portals = []
-
-var tree_stage = 1
 
 var easter_egg = false
 
@@ -24,8 +29,12 @@ var garbage_collected = []
 var kwietniki = {}
 
 
-func next_tree_stage():
-	tree_stage = tree_stage + 1
+func get_tree_stage():
+	var tree_stage = 1
+	for i in levels_finished:
+		if levels_finished[i] == true:
+			tree_stage = tree_stage +1
+	return tree_stage
 
 
 func update_portals():
