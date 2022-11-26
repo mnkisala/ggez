@@ -15,6 +15,8 @@ const __CODE_TO_PORTAL = {1883: 2, 3306: 3, 1080: 4, 8080: 5}
 const portals = {}
 var enabled_portals = []
 
+var easter_egg = false
+
 onready var player_state = PlayerState.new()
 
 
@@ -42,6 +44,10 @@ func registerPortal(id, portal):
 
 
 func checkCode(code):
+	if code == 5287:
+		easter_egg = true
+		get_node("/root/hub/Secret").show()
+		return true
 	if code in __CODE_TO_PORTAL:
 		var portal_id = __CODE_TO_PORTAL[code]
 		var portal = portals[portal_id]
