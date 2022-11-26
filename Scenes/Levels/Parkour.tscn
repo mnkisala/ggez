@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Interactives/ChemicaliasTurnOffer.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Models/Brench.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Garbage/SzkloButelka.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Interactives/MessageBubble.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Environment" id=26]
 background_mode = 1
@@ -643,5 +644,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -97.1488, -7.23674, -48.5517 )
 
 [node name="SzkloButelka17" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75.449, -7.23674, -39.4126 )
+
+[node name="Spatial" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64449, -0.760855, -10.1742 )
+text = "Zablokuj wpływanie szkodliwych
+chemikaliów do wody przy pomocy
+zaworów na ścianach"
 
 [connection signal="body_entered" from="ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]

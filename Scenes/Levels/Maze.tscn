@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Models/Maze/maze2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Garbage/BeerCan.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Interactives/QuestionWall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Levels/Maze.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Interactives/MessageBubble.tscn" type="PackedScene" id=7]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 0.516236, 50 )
@@ -167,3 +168,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6273, -0.21019, -49.0208 )
 question = "Pescowegetarianizm to
 dieta wykluczająca jedzenie
 mięsa, ale nie ryb"
+
+[node name="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6343, 2.10931, -37.9323 )
+text = "Znajdź wyjście z labirytnu,
+na końcu uzykasz potrzebny ci
+kod"
