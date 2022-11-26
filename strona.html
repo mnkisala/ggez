@@ -6,14 +6,89 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eko Energetycy Gra Godot Ekologia Zieleń</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #242424;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    header,
+    footer {
+      background-color: #181818;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0px 0px 12px #121212;
+    }
+
+    main {
+      flex: 1 1 auto;
+    }
+
+    .panel {
+      box-shadow: 0px 0px 12px #181818;
+      border-radius: 1em;
+      padding: 1em;
+      margin: 2em 0;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    a {
+      font-size: 125%;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding: 0.2em;
+    }
+
+    em {
+      color: #e56;
+    }
+
+  </style>
 </head>
 
 <body>
-  <h1>Gra Godot Ekologia Zieleń</h1>
-  <a href="web/index.html">zagraj w przeglądarce</a>
-  <a href="windows/ggez.exe">wersja windows</a>
-  <a href="mac/ggez.zip">wersja mac</a>
-  <a href="linux/ggez.x86_64">wersja linux</a>
+  <header>
+    <h1>Gra Godot Ekologia Zieleń</h1>
+  </header>
+  <main>
+    <div class="panel">
+      <h2>Gra o ekologii na konkurs</h2>
+      <em>STRONA W BUDOWIE!</em>
+    </div>
+    <div class="panel">
+      <h2>Dostępne buildy</h2>
+      <em>wspieramy tylko systemy x86_64 i przeglądarki ze wsparciem dla WebAssembly</em>
+      <ul>
+        <li><a href="web/index.html">zagraj w przeglądarce</a></li>
+        <li><a href="windows/ggez.exe">wersja windows</a></li>
+        <li><a href="mac/ggez.zip">wersja mac</a></li>
+        <li><a href="linux/ggez.x86_64">wersja linux</a></li>
+      </ul>
+    </div>
+  </main>
+  <footer> copyright eko energetycy wałbrzych Mateusz Mączka, Piotr Suchecki, Dawid Janikowski, Mikołaj Kisała </footer>
 </body>
 
 </html>
