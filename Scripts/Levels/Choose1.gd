@@ -7,7 +7,7 @@ var questions = [
 	["Do jakiego kosza na śmieci należy wrzucać plastik?", "żółtego", "zielonego"],
 	["Co to jest recykling?"
 		, "powtórne wykorzystanie odpadów"
-		, "nie wykorzystywanie odpadów potórnie"],
+		, "nie wykorzystywanie odpadów powtórnie"],
 	["Do jakiego kosza na śmieci należy wrzucać szkło?"
 		, "zielonego"
 		, "żółtego"],
@@ -25,7 +25,7 @@ var questions = [
 	[
 		"Na czym polega neutralność emisyjna:",
 		"Zmiejszenie emisji CO2, do takiego stopnia, \n że wraz wyprodukowaniem go \n będziemy pochłaniać taką samą ilość ",
-		"Zaprzestaniemy produkować wogóle CO2 "
+		"Zaprzestaniemy produkować w ogóle CO2 "
 	],
 	[
 		"Ile rocznie naturalne pochłaniacze CO2 (m.in:  gleba, lasy) \n pochłaniają dwutlenku węgla: ",
@@ -46,6 +46,11 @@ var questions = [
 		"Do którego roku Unia Europejska osiągnie \n zerowy poziom emisji gazów cieplarnianych netto: ",
 		"2050",
 		"2060"
+	],
+	[
+		"Przyszłość unijnej polityki czystego powietrza w ramach dążenia do \n osiągnięcia zerowego poziomu emisji zanieczyszczeń \n opinia ta została opracowana przez:",
+		"János Ádám Karácsony",
+		"Charles Michel"
 	]
 ]
 
