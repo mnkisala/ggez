@@ -23,3 +23,5 @@ material/0 = SubResource( 3 )
 
 [node name="zawor" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.256844, 0, 0, 0, 0.537326, 0, 0, 0, 0.275131, -0.0921631, 0.401425, -2.92846 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
