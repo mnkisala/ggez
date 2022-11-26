@@ -3,7 +3,7 @@ Robi sie jasno, rozpoczyna sie dzień jak co dzień.
 (praca)
 Siadasz jak zwykle przy swoim biurku. Tym razem wygląda na to że nie 
 przydzielono ci na dzisiaj żadnego zadania. Może zaraz zjawi się
-ktoś kto rozwieje twoją niepewność? Przegladasz pliki porozrzucane
+ktoś kto rozwieje twoją niepewność? Przeglądasz pliki porozrzucane
 na pulpicie komputera. Nagle w oczy wpada ci plik o nazwie "secrets.cfg". 
 Próbujesz go otworzyć. Edytor tekstu wiesza komputer i po chwili wyłącza się. 
 Plik waży 3GB! Może jest jakiś inny sposób aby pozyskać zawarte w nim informacje?
