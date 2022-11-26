@@ -1,10 +1,40 @@
 Robi sie jasno, rozpoczyna sie dzień jak co dzień.
+
 (praca)
-Siadasz jak zwykle przy swoim biurku.
+Siadasz jak zwykle przy swoim biurku. Tym razem wygląda na to że nie 
+przydzielono ci na dzisiaj żadnego zadania. Może zaraz zjawi się
+ktoś kto rozwieje twoją niepewność? Przegladasz pliki porozrzucane
+na pulpicie komputera. Nagle w oczy wpada ci plik o nazwie "secrets.cfg". 
+Próbujesz go otworzyć. Edytor tekstu wiesza komputer i po chwili wyłącza się. 
+Plik waży 3GB! Może jest jakiś inny sposób aby pozyskać zawarte w nim informacje?
+
 (podpowiedzi do rozwiazania zadania programistycznego)
-TODO)
+Pliki '.cfg' są podzielone na sekcje, których nazwy zapisane są
+w nawiasach kwadratowych (np. '[SuperTajneDane]'). Każda sekcja
+posiada listę właściwości. Właściwość składa się z nazwy i wartości,
+które oddzielone są znakiem '='. Po za tymi regułami nie obowiązują żadne
+inne obostrzenia dotyczące spacji na początku i końcu linijki, znaków zawartych
+w nazwach sekcji i właściwośc oraz samych wartości.
+
+Przykład:
+
+```
+  [Hej]
+
+    jestem=plikiem
+
+  cfg= miło
+  [ Mi ]
+    cię = poznać
+```
+
+Napisz kod tłumaczący zawartość pliku konfiguracyjnego na słownik sekcji i ich właściwości, ktore same w 
+sobie są słownikami nazw właściwości i wartości ({sekcja: {własność: wartość}}, cfg['Hej']['jestem'] == 'plikiem').
+    
 [ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuły]
+
 (mieszkanie)
 Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
 Budzisz się, we śnie. świadomym snie?! 
+
 [Przejdź do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
