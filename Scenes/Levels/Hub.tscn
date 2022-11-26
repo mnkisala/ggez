@@ -85,14 +85,12 @@ Sprint: Shift
 Rzucanie: R"
 font_size = 2
 
-[node name="sciaga" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2953, 4, 18.2899 )
-text = "Sciaga:
-1883: Choose1
-3306: GarbageBase
-1080: Maze
-8080: Parkour"
-font_size = 1
+[node name="sterowanie2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9183, 4, 10.3668 )
+text = "Śmieci można zbierać aby
+wyrzucić je na ostatnim
+poziomie gry"
+font_size = 2
 
 [node name="CodeMachine" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0368, 0.45573, 10.6932 )
