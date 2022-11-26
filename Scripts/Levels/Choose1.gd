@@ -48,7 +48,7 @@ var questions = [
 		"2060"
 	],
 	[
-		"Przyszłość unijnej polityki czystego powietrza w ramach dążenia do \n osiągnięcia zerowego poziomu emisji zanieczyszczeń \n opinia ta została opracowana przez:",
+		"'Przyszłość unijnej polityki czystego powietrza w \n ramach dążenia do  osiągnięcia zerowego \n poziomu emisji zanieczyszczeń' \n opinia ta została opracowana przez:",
 		"János Ádám Karácsony",
 		"Charles Michel"
 	],

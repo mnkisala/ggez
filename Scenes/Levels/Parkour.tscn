@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Interactives/ChemicaliasTurnOffer.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scenes/Interactives/ChemicaliasEmmiter.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Interactives/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Models/Brench.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Garbage/SzkloButelka.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Environment" id=26]
 background_mode = 1
@@ -203,6 +204,9 @@ metallic_specular = 0.0
 
 [node name="Parkour" type="Spatial"]
 script = ExtResource( 6 )
+
+[node name="SzkloButelka15" parent="." instance=ExtResource( 14 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.7975, 58.6911, 18.867 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 26 )
@@ -508,28 +512,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9579, 2.56068, -0.75923 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5577, 2.56068, -1.00611 )
 
 [node name="Brench5" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, 3.30636 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21659, -3.57482, 3.30636 )
 
 [node name="Brench20" parent="poziom" instance=ExtResource( 13 )]
 transform = Transform( -3.8909e-08, 0, -1, 0, 1, 0, 0.890135, 0, -4.37114e-08, -10.9701, 2.34946, -4.27064 )
 
 [node name="Brench6" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, -5.14311 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21659, -3.57482, -5.14311 )
 
 [node name="Brench7" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, -13.5711 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21659, -3.57482, -13.5711 )
 
 [node name="Brench8" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21659, -3.57482, -22.0047 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21659, -3.57482, -22.0047 )
 
 [node name="Brench9" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21658, -3.57482, -30.5744 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21658, -3.57482, -30.5744 )
 
 [node name="Brench10" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21658, -3.57482, -38.9619 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21658, -3.57482, -38.9619 )
 
 [node name="Brench11" parent="poziom" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.21658, -3.57482, -47.4434 )
+transform = Transform( -4.37114e-08, 0, -1.5, 0, 1, 0, 1, 0, -6.55671e-08, -5.21658, -3.57482, -47.4434 )
 
 [node name="Brench51" parent="poziom" instance=ExtResource( 13 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -88.138, 13.9586, 9.49249 )
@@ -591,5 +595,53 @@ chemicalias_emmiter = NodePath("../ChemicaliasEmmiter3")
 [node name="Portal" parent="." instance=ExtResource( 12 )]
 transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -45.7936, 61.1806, 19.8339 )
 target = 1
+
+[node name="SzkloButelka2" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4375, 0.370523, 17.7127 )
+
+[node name="SzkloButelka" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01096, -2.36122, 10.8527 )
+
+[node name="SzkloButelka3" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6668, 0.370524, 16.5036 )
+
+[node name="SzkloButelka4" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.694, 6.55907, -4.23848 )
+
+[node name="SzkloButelka5" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.7053, 2.95192, -3.44315 )
+
+[node name="SzkloButelka6" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.0601, 15.0665, -17.6994 )
+
+[node name="SzkloButelka7" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.8399, 15.0665, -4.01237 )
+
+[node name="SzkloButelka8" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.6908, 15.0665, 12.0585 )
+
+[node name="SzkloButelka9" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.9279, 12.345, -28.5675 )
+
+[node name="SzkloButelka10" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -95.5791, 10.0455, -50.396 )
+
+[node name="SzkloButelka11" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104.489, 56.6812, -35.3195 )
+
+[node name="SzkloButelka12" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -76.9253, 57.5524, -51.408 )
+
+[node name="SzkloButelka13" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7118, 56.0589, -36.6122 )
+
+[node name="SzkloButelka14" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95428, 57.275, -36.2854 )
+
+[node name="SzkloButelka16" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -97.1488, -7.23674, -48.5517 )
+
+[node name="SzkloButelka17" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75.449, -7.23674, -39.4126 )
 
 [connection signal="body_entered" from="ParkourRestartArea" to="." method="_on_ParkourRestartArea_body_entered"]

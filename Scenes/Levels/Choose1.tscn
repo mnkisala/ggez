@@ -19,7 +19,7 @@ extents = Vector3( 1, 10.2574, 40.6041 )
 extents = Vector3( 32.1907, 13.2006, 1 )
 
 [sub_resource type="BoxShape" id=6]
-extents = Vector3( 15.7333, 9.97318, 4.29478 )
+extents = Vector3( 15.7333, 12.5553, 4.63066 )
 
 [node name="Choose1" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766335, -0.00540543, -0.0763702 )
@@ -82,3 +82,21 @@ spot_angle = 46.9996
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7382, 0.249147, 21.7474 )
 mass = 0.5
 points = 20
+
+[node name="Paper3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4702, 13.8256, -27.9937 )
+
+[node name="Paper2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26268, 5.62386, -24.8855 )
+
+[node name="Paper4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5595, 5.32404, -39.7308 )
+
+[node name="Paper5" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2821, 1.87832, -34.0078 )
+
+[node name="Paper6" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8962, -0.0808935, -9.05609 )
+
+[node name="Paper7" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3213, 2.23501, 9.42322 )
