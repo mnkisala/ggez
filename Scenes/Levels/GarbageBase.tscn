@@ -167,3 +167,8 @@ target = 1
 
 [node name="Kwietnik" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06666, 3.30063, -17.7317 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.94702, 27.2706, -26.6296 )
+shadow_enabled = true
+omni_range = 64.5401
