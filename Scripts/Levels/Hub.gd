@@ -14,4 +14,6 @@ func _ready():
 			tree = get_node("treeFourthStage")
 		5:
 			tree = get_node("streecomplete")
+			get_node("roof_closed").visible = false
+			get_node("roof_open").visible = true
 	tree.visible = true
