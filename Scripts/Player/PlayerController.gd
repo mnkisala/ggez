@@ -151,9 +151,12 @@ func _process(_delta):
 			if Input.is_action_just_pressed("interact"):
 				collision.turn_off_chemicalias()
 		elif collision is Kwietnik:
-			_hud_hint.text = "[E] aby zasadzić kwiatka"
-			if Input.is_action_just_pressed("interact"):
-				collision.plant()
+			if collision.ilosc_kwiatkow() >= 50:
+				_hud_hint.text = "kwietnik pełny"
+			else:
+				_hud_hint.text = "[E] aby zasadzić kwiatka"
+				if Input.is_action_just_pressed("interact"):
+					collision.plant()
 		elif collision is QuestionButton:
 			_hud_hint.text = "[E] aby kliknąć przycisk"
 			if Input.is_action_just_pressed("interact"):
