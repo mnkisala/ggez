@@ -30,10 +30,11 @@ jobs:
           sh Tools/optimize_assets.sh
           mkdir -v -p build/web
           godot -v --no-window --export "HTML5" build/web/index.html
-      - name: Upload artifact
+      - name: Upload gh pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./build/web
+
   export-mac:
     name: Mac Export
     runs-on: ubuntu-latest
@@ -57,6 +58,11 @@ jobs:
         with:
           name: mac
           path: build/mac
+      - name: Upload gh pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./build/mac
+
   export-windows:
     name: Windows Export
     runs-on: ubuntu-20.04
@@ -80,6 +86,11 @@ jobs:
         with:
           name: windows
           path: build/windows
+      - name: Upload gh pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./build/windows
+
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
@@ -103,6 +114,10 @@ jobs:
         with:
           name: linux
           path: build/linux
+      - name: Upload gh pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./build/linux
           
   deploy-to-gh-pages:
     needs: export-web
