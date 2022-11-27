@@ -7,7 +7,7 @@ def test():
         wartosc = wzrosty_przychodow(nazwa_pliku)
         oczekiwania = 5042
         klucz_z_gry_od_uzytkownika = sprawdz_klucz_z_gry()
-        poprawny_klucz_z_gry = 4279
+        poprawny_klucz_z_gry = 2131
         if wartosc == oczekiwania and klucz_z_gry_od_uzytkownika == poprawny_klucz_z_gry:
             komunikat = "testy OK, wyjscie: " + str(wartosc)
             print(komunikat)
