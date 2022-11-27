@@ -1,22 +1,52 @@
-Rozpoczyna się znowu kolejny dzien.
+Rozpoczyna się znowu kolejny dzień.
 
-(praca)
-Siadasz jak zwykle przy swoim biurku.
+W marazmie otwierasz oczy, nagle zaczynają ci się pojawiać myśli...
+"Czemu żyję w takim świecie?".
+Wstajesz by ubierać się do pracy i kierujesz się do metra.
 
-(Podpowiedzi do rozwiazania zadania programistycznego)
-...
+Po chwili oczekiwania i krótkim biegu stajesz przed otwartymi drzwiami metra.
+Udaje ci się znaleźć wolne miejsce stojące. Orientujesz się że po prawej masz okno.
+Okno nie spogląda na nic ciekawego, ale przypominasz sobie
+o tym, że twoja mama zawsze uwielbiała siedzieć przy oknie. Opowiadała ci zawsze o zieleni, którą
+oglądała w swoim dzieciństwie. Nagle przypominasz sobie o swoich rozmyślaniach z ranka i nachodzi cię
+nieodparta chęć by coś zmienić, stać się częścią czegoś co polepszy ten świat.
 
-Dostaliśmy pewną wiadomość biznesową od klienta,
-jako że komunikacja musi być bezpieczna, została
+Trafiasz po raz kolejny na budynek firmy i rozpoczynasz swoją pracę.
+Dzisiaj na kartkce widnieje inna wiadomość:
+
+(łososiowa ramka)
+Zadanie:
+
+Dostaliśmy pewną wiadomość biznesową od klienta.
+Jako że komunikacja musi być bezpieczna, została
 ona zaszyfrowana pewnym szyfrem, klient wspomniał
 coś o nazwie "szyfr cezara". Czy potrafisz
 rozszyfrować wiadomość?
 
-...
+Pomoc do zadania:
+    Szyfr cezara, tak zwany szyfr przesuwający, polega na zastąpieniu
+    każdej litery tekstu na inną, przesuniętą względem litery kodowanej
+    o stałą liczbę pozycji w alfabecie.
+
+    Na przykład:
+        (przy przesunięciu o 4 w prawo)
+        pies -> tmiw
+    
+    Przydatne funkcje pythona:
+    - ord() (zamienia znak na liczbę w systemie ascii),
+    - chr() (zamienia liczbę z systemu ascii na znak)
+
+    (sprawdź też: https://pl.wikipedia.org/wiki/Szyfr_Cezara)
+
 
 [Ukończ zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuły]
 
-(mieszkanie)
-Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
-Budzisz się, we śnie. świadomym snie?! 
-[Przejdź do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+Wracając do mieszkania koncentrujesz się na podziwianiu krajobrazu. Czegoś w nim
+brakuje. Dobrze zdajesz sobie sprawę że wszystko jest na miejscu. Fabryka tlenu
+dumnie prezentuje się na tle betonowego lasu. Widok jak widok. No ale właśnie - jakiego lasu?
+
+Ze zmęczenia kładziesz się na prowizoryczne posłanie na środku mieszkania, pora odpocząć, zasypiasz... 
+Budzisz się, we śnie. W zasadzie to się tego spodziewałeś.
+
+Kod do odblokowania poziomu w grze: 1080
+[Przejdź do kolejnego poziomu gry]

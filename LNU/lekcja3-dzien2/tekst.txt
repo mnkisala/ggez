@@ -1,14 +1,42 @@
 Rozpoczyna się kolejny dzień, tak samo jak zwykle.
 
-(praca)
-Siadasz jak zwykle przy swoim biurku.
+Metro spóźnia się nieznacznie. Kiedy w końcu przyjeżdża, patrzysz jak powoli sunie jeszcze chwilę przed siebie.  
+Być może to przez te zużyte hamulce? Tłum pasażerów rozchyla się na twój widok, by ponownie się zacisnąc. 
+Wyjątkowo stoisz dziś przy oknie, niestety nie ma za nim niczego wartego zawieszenia oka.
 
-(Podpowiedzi do rozwiazania zadania programistycznego)
-TODO
+W budynku firmy wita cię winda. Życzy ci miłej pracy i pyta czy korzystałeś już ze zniżki pracowniczej na
+kursy motywacyjne. Być może pora spróbować? Na monitorze zastaje cię żółta karteczka:
 
-[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuly]
+(łososiowa ramka)
+Zadanie:
 
-(mieszkanie)
-Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
-Budzisz się, we śnie. świadomym snie?! 
-[Przejdz do kolejnego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+"Otrzymalismy od klienta dwie wiadomosci:
+1. a73232f36a2ce52f98ac3d8e7f8cd20a
+2. 98a72b80b723a097ffc5d7c801e26299
+Z analizy naszych informatyków wynika, że są one zaszyfrowane.
+Najprawdopodobniej pierwsza wiadomość jest właściwą wiadomością a druga kluczem potrzebnym do odszyfrowania jej.
+Wysłaliśmy obie wiadomości do firmy specjalizującej się kryptografią a oni przekazali nam
+więcej informacji o tych szyfrach: Algorytm jaki został użyty do zaszyfrowania wiadomości to XOR.
+Twoim dzisiejszym zadaniem jest odszyfrować wiadomość na podstawie podanych informacji."
+
+Instrukcja wykonania zadania:
+    Wykonaj operacje XOR (w pythonie oznaczona jako symbol: ^) dla każdej pary znaków
+    w wiadomości oraz kluczu. Operacja XOR działa na liczbach, więc użyj funkcji ord() aby
+    zamienić znak na liczbę (ord('A') = 65). Wyniki XOR wrzuć do listy a listę wyprowadź z funkcji.
+    Na przykład:
+        wiadomosc: asd
+            klucz: zxc
+        lista <- ord('a') XOR ord('z')
+        ...
+
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuły]
+
+Zmierzając tempem spacerowym w kierunku mieszkania przypominasz sobie o dziwnym śnie,
+który nawiedził cię tej nocy. Co to były za ściany? Czemu niektóre z nich znikały?
+Skąd ty w ogóle kojarzysz takie widoki? Po chwili zarzucasz głębsze rozmyślania na ten
+temat. Przeskakując po schodach nie możesz jednak odeprzeć wrażenia jakby ten cudaczny
+sen coś znaczył. Ze zmęczenia od razu kładziesz się na twardy materac, pora odpocząć... 
+Budzisz się, we śnie. Znowu?
+
+Kod do odblokowania poziomu w grze: 3306
+[Przejdź do pierwszego poziomu gry]

@@ -1,4 +1,4 @@
-lekcja1 - wstep (fabula)
+lekcja1 - wstep (fabula) - tylko tekst
 lekcja2 - dzien 1 (sql + maze)
 lekcja3 - dzien 2 (xor + parkour)
 lekcja4 - dzien 3 (cypher + choose 1)
@@ -15,8 +15,6 @@ dzien sklada sie z:
 - ewentualnie robisz cos w mieszkaniu (fabularnie cos dodac)
 - ze zmeczenia idziesz spac (level w grze, gdzie na koniec dostajesz info potrzebne do wykonania zadania w pracy w kolejnym dniu)
 
-mozna gdzies pomiedzy wrzucic fabularne lekcje
-
 dzialanie kodow:
 lekcja 1 - brak kodu, brak poziomu
 lekcja 2 - brak kodu, pierwszy poziom odblokowany, kod z maze
@@ -25,3 +23,6 @@ lekcja 4 - uzycie kodu z parkoura w wyzwaniu, kod z wyniku, odblokowanie choose 
 lekcja 5 - uzycie kodu z choose 1 w wyzwaniu, kod z wyniku, odblokowanie sadzenie z uzyciem kodu z wyniku, kod z sadzenia
 lekcja 6 - brak kodu, odblokowanie garbage z uzyciem kodu z sadzenia drzew (moze jednak wyzwanie dac tutaj)
 lekcja 7 - brak kodu, brak poziomu
+
+Rozmieszczenie na stronie: 
+1. Pliki tekstowe "tekst" są plikami, których opisana jest historia oraz zadanie dla uczestnika

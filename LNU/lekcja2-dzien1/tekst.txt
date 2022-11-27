@@ -1,32 +1,61 @@
 Nastał poranek, budzisz sie od dźwięku budzika.
-(praca)
-Siadasz jak zwykle przy swoim biurku, numer? Nie pamiętasz. 
+
+Wychodzisz przed blok i kierujesz się do najbliższej stacji metra firmy
+dla której pracujesz. Czekasz dobre 15 minut zanim klaustrofobiczna puszka przejedzie
+ci przed nosem i łaskawie zatrzyma się 30 metrów dalej. Wciskasz się między
+współpasażerów. Tym razem udało ci się stanąć przy oknie, nie żeby było przez nie
+co podziwiać.
+[...] Wyglądasz zza okna i widzisz, że zaraz dojedziesz do stacji końcowej.
+Wysiadasz i kierujesz się w stronę budynku firmy.
+Siadasz jak zwykle przy swoim biurku, numer? Nie pamiętasz.
 O chwila tu jest naklejona tabliczka - "biurko nr. 5287". 
 Nie pamiętasz tego numeru już tydzień po rozpoczęciu pracy, 
-przecież nie był ci on do niczego potrzebny, a drogę do miejsca pracy znasz już na pamięć. 
-Tutaj w prawo, 7 rzędów biurek dalej, skręt w lewo, dwa biurka w przód, i trzecie z prawej to twoje. 
-Siadasz i uruchamiasz komputer, na monitorze naklejona jest żółta kartka z twoim dzisiejszym zadaniem, 
-odklejasz ją, jest na niej napisane:
+przecież nie był ci on do niczego potrzebny, a drogę do stanowiska pracy znasz już na pamięć.
+Tutaj w prawo, 7 rzędów biurek dalej, skręt w lewo, dwa biurka w przód, i trzecie z prawej to twoje.
+Siadasz i uruchamiasz komputer, na monitorze naklejona jest żółta kartka z twoim dzisiejszym zadaniem,
+odklejasz ją i czytasz:
 
+(łososiowa ramka)
+Zadanie:
+
+"Baza danych zawiera informacje o firmach i zużywanych przez nie materiałach.
+Twoje dzisiejsze zadanie polega na uzyskaniu z tej bazy danych informacji o
+zmarnowanych materiałach w tych firmach. Interesują nas: nazwa materiału oraz jego ilość.
+Wszystkie zapisane poniżej warunki muszą być spełnione, łącznie:
+- Ilość odpadow jest mniejsza od 8000
+- Ilość zużytego papieru jest większa od 8000
+- Ilość zużytego plastiku jest większa bądz równa 2000
+- Ilość zużytego szkła przekracza 2500
+- Ilość zmarnowanego materialu zawiera sie w granicach od 1500 i 8000
+Do tego:
+- Posortuj dane wedlug ilości zmarnowanego materiału, malejąco.
+- Wybierz 3 pierwsze rekordy."
 "
-Potrzebujemy informacje z bazy danych o nazwach oraz ilości zmarnowanego materiału przez firmy, ktorych:
 
-- ilość odpadów przekracza 8000
-- ilość zużytego papieru jest mniejsza od 8000
-- ilość zużytego plastiku jest większa bądź równa 2000
-- ilość zużytego szkła jest większa od 2500
-- ilość zmarnowanego materiału zawiera się w granicach od 1500 i 8000
+Słowa kluczowe jezyka SQL przydatne do wykonania zadania:
+    - SELECT,
+    - WHERE,
+    - AND,
+    - BETWEEN,
+    - ORDER BY,
+    - ASC/DESC,
+    - LIMIT
 
-Posortuj dane według ilości zmarnowanego materiału, malejąco.
-Ogranicz ilość rekordów do 3.
-"
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuły]
 
-(podpowiedzi do rozwiazania zadania programistycznego)
-TODO
+To chyba tyle na dzisiaj. Przecierasz oczy i powoli wstajesz od biurka rozprostowując
+kręgosłup. Może trzeba było wziąść maść na ból pleców z domu? Po chwili namysłu wychodzisz
+z budynku.
 
-[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej części fabuly]
+Po drodze do domu mijasz niezliczone betonowe gmachy. Wysokie ściany budynków tworzą
+miejski labirynt. Zerkasz w prawo. Widzisz znajomą ci bryłę fabryki tlenu. Lubisz ten
+widok. Monumentalne ściany budynku dają ci poczucie stabilności i
+spokoju.
 
-(mieszkanie)
-Ze zmęczenia kładziesz się do łóżka, pora odpocząć, zasypiasz... 
-Budzisz się, we śnie. świadomym śnie?! 
-[Przejdź do pierwszego poziomu gry, kod do odblokowania to wynik z zadania programistycznego]
+Trafiasz w końcu na klatkę bloku który aktualnie zamieszkujesz.
+Wchodzisz po krętych schodach do swojego mieszkania. 
+Ze zmęczenia od razu kładziesz się do łóżka, pora odpocząć... 
+Budzisz się, we śnie. świadomym śnie?!
+
+Kod do odblokowania poziomu w grze: 1883
+[Przejdź do pierwszego poziomu gry]

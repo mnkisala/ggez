@@ -1,0 +1,4 @@
+- Wszystkie lekcje są obowiązkowe
+- Każda lekcja ma taki sam layout
+- Łososiowa ramka przy zadaniach
+- Tekst Times new Rome , kolor czarny
