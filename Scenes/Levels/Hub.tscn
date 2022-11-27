@@ -109,19 +109,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0368, 0.45573, 10.6932 )
 player = NodePath("../player")
 
 [node name="BeerCan" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1106, 1.81565, 7.89241 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0344, 1.81565, 13.933 )
 mass = 0.1
 
 [node name="BeerCan2" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1106, 1.81565, -0.489964 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9466, 1.81565, 14.6136 )
 mass = 0.1
 
 [node name="BeerCan3" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7298, 1.81565, 7.89241 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.307, 1.81565, 14.2356 )
 mass = 0.1
 
 [node name="BeerCan4" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7298, 1.81565, -0.489964 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.4562, 1.81565, 13.6306 )
 mass = 0.1
 
 [node name="col" type="StaticBody" parent="."]
@@ -151,16 +151,16 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.53368, -2.25529, -1.56202 )
 visible = false
 
 [node name="SzkloButelka" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 14.3922 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6553, 1.16893, 10.3871 )
 
 [node name="SzkloButelka2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 11.2016 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6573, 1.16893, 9.64136 )
 
 [node name="SzkloButelka3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 12.3922 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1079, 1.16893, 9.95665 )
 
 [node name="SzkloButelka4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5628, 1.16893, 13.1434 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1079, 1.16893, 10.7079 )
 
 [node name="Secret" parent="." instance=ExtResource( 14 )]
 transform = Transform( 0.763592, 0, -0.276627, 0, 0.812155, 0, 0.276627, 0, 0.763592, -32.612, 1.84807, 12.4042 )
