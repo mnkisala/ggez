@@ -6,5 +6,6 @@ enum Level {
 	CHOOSE1,
 	GARGABE_BASE,
 	MAZE,
-	PARKOUR,  
+	PARKOUR,
+	FINISH,
 }
