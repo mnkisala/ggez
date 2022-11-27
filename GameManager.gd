@@ -8,7 +8,6 @@ const __ID_TO_LEVEL_PATH = {
 	LevelEnum.Level.GARGABE_BASE: "res://Scenes/Levels/GarbageBase.tscn",
 	LevelEnum.Level.MAZE: "res://Scenes/Levels/Maze.tscn",
 	LevelEnum.Level.PARKOUR: "res://Scenes/Levels/Parkour.tscn",
-	LevelEnum.Level.FINISH: "res://Scenes/Levels/Finish.tscn",
 }
 
 var levels_finished = {

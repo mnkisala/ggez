@@ -164,7 +164,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4659, 3.9082, 14.2831 )
 
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -25.7763, 5.95225, 13.0042 )
-target = 6
+target = 1
 
 [node name="Kwietnik" parent="." instance=ExtResource( 14 )]
 transform = Transform( 0.703965, 0, 0.710235, 0, 1, 0, -0.710235, 0, 0.703965, -18.1432, 3.30063, -26.6922 )

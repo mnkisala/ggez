@@ -7,5 +7,4 @@ enum Level {
 	GARGABE_BASE,
 	MAZE,
 	PARKOUR,
-	FINISH,
 }

@@ -169,6 +169,9 @@ func _process(_delta):
 					set_level_specific_text("Błędna odpowiedź")
 					yield(get_tree().create_timer(1.0), "timeout")
 					set_level_specific_text("")
+					
+	if GameManager.get_tree_stage() == 5:
+		set_level_specific_text("Ukończyłeś grę! Twoje punkty: " + str(GameManager.player_state.points))
 
 
 func set_level_specific_text(t):
