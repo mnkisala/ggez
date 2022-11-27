@@ -6,7 +6,7 @@ def test():
         wartosc = cipher(szyfr, 4)
         oczekiwania = "Xs niwx xiwx, nidipm xs dehdmepe, awdcwxos dehdmepe!"
         klucz_z_gry_od_uzytkownika = sprawdz_klucz_z_gry()
-        poprawny_klucz_z_gry = 2131
+        poprawny_klucz_z_gry = 3141
         if wartosc == oczekiwania and klucz_z_gry_od_uzytkownika == poprawny_klucz_z_gry:
             komunikat = "testy OK, wyjscie: " + str(wartosc)
             print(komunikat)

@@ -104,6 +104,20 @@ otrzymasz dodatkowe punkty
 w ostatnim poziomie!"
 font_size = 2
 
+[node name="sterowanie3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3571, 4, -17.3465 )
+text = "Po ukończeniu każdego poziomu 
+otrzymasz kod. Kody są konieczne
+do ukończenia przyszłoch wyzwań 
+programistycznych!"
+font_size = 2
+
+[node name="sterowanie4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.2819, 4, 15.8949 )
+text = "Wpisz kod do komputera
+aby odblokowac poziom."
+font_size = 2
+
 [node name="CodeMachine" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0368, 0.45573, 10.6932 )
 player = NodePath("../player")
