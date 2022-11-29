@@ -108,7 +108,7 @@ font_size = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3571, 4, -17.3465 )
 text = "Po ukończeniu każdego poziomu 
 otrzymasz kod. Kody są konieczne
-do ukończenia przyszłoch wyzwań 
+do ukończenia przyszłych wyzwań 
 programistycznych!"
 font_size = 2
 

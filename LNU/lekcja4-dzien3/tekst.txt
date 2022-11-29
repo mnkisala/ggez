@@ -5,7 +5,7 @@ W marazmie otwierasz oczy, nagle zaczynają ci się pojawiać myśli...
 Wstajesz by ubierać się do pracy i kierujesz się do metra.
 
 Po chwili oczekiwania i krótkim biegu stajesz przed otwartymi drzwiami metra.
-Udaje ci się znaleźć wolne miejsce stojące. Orientujesz się że po prawej masz okno.
+Udaje ci się znaleźć wolne miejsce stojące. Orientujesz się, że po prawej masz okno.
 Okno nie spogląda na nic ciekawego, ale przypominasz sobie
 o tym, że twoja mama zawsze uwielbiała siedzieć przy oknie. Opowiadała ci zawsze o zieleni, którą
 oglądała w swoim dzieciństwie. Nagle przypominasz sobie o swoich rozmyślaniach z ranka i nachodzi cię
@@ -45,8 +45,8 @@ Wracając do mieszkania koncentrujesz się na podziwianiu krajobrazu. Czegoś w 
 brakuje. Dobrze zdajesz sobie sprawę że wszystko jest na miejscu. Fabryka tlenu
 dumnie prezentuje się na tle betonowego lasu. Widok jak widok. No ale właśnie - jakiego lasu?
 
-Ze zmęczenia kładziesz się na prowizoryczne posłanie na środku mieszkania, pora odpocząć, zasypiasz... 
-Budzisz się, we śnie. W zasadzie to się tego spodziewałeś.
+Ze zmęczenia kładziesz się na prowizoryczne posłanie na środku mieszkania, pora odpocząć, zasypiasz.
+Budzisz się we śnie... W zasadzie to się tego spodziewałeś.
 
 Kod do odblokowania poziomu w grze: 1080
 [Przejdź do kolejnego poziomu gry]

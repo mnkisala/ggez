@@ -1,10 +1,10 @@
 
 Jest rok 2077. Środowisko mocno się zmieniło od czasów okazałej zieleni. Powierzchnie zajmują niezliczone 
 fabryki, a atmosfera pogarsza się i staje się coraz bardziej toksyczna.
-Świat zatracił się w formie, w której występuje podział na klasę posiadającą i zwykłych robotników.
+Świat zatracił się w formie, w której występuje podział na klasę wyższą i zwykłych robotników.
 Wielkie korporacje wyparły małe firmy, a ludzie stracili swoje chęci dążenia do celów i spełniania marzeń.
 Dzisiejsze fabryki tlenu oraz pochłaniacze dwutlenku węgla, choć bardziej wydajne, zmieniły ten świat nie do poznania.
-Smuci cię w jakim środowisku żyjesz ale nawet jakbyś chciał nie wiesz co możesz w tej kwestii zdziałać.
+Smuci cię w jakim środowisku żyjesz, ale nawet jakbyś chciał nie wiesz co możesz w tej kwestii zdziałać.
 Jedna z tych korporacji okazuje się być twoim miejscem zatrudnienia, do którego niechętnie chodzisz.
 Pracujesz jako informatyk w wielkiej technologicznej firmie gdzie każdy dzień w pracy sprowadza się do nudnej rutyny.
 Każdego dnia przychodząc na swoje biurko nr. 5287 widzisz zadanie, które jak co dzień znajduje się na żółtej karteczce przyklejonej na monitorze.

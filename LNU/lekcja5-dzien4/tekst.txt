@@ -1,4 +1,5 @@
 Nastaje kolejny poranek.
+
 Czekając na metro zastanawiasz się nad sensem tego wszystkiego. Czemu w ogóle
 pracujesz dla tej firmy? Po co ludzie wykonują te bezsensowne prace skoro i tak
 nie mają po nich gdzie wrócić. Kiedy metro w końcu podjeżdża, 
@@ -7,32 +8,32 @@ podróży metrem dojedżasz wkońcu do pracy. Jak zwykle oczekujesz windy, żeby
 w ramionach pracy.
 
 Siadasz jak zwykle przy swoim biurku.
-Odklejasz kartke z monitora i czytasz:
+Odklejasz kartkę z monitora i czytasz:
 
 (łososiowa ramka)
 Zadanie:
 
 "Plik z danymi zawiera informacje o przychodach naszej firmy.
-Twoim dzisiejszym zadaniem jest wyszukanie informacji, ile razy
-nasze przychody w firmie wzrosly w stosunku do wartosci poprzedzajacej.
-Napisz funkcje, ktora zwroci ten wynik. Przyklad ponizej.
+Twoim dzisiejszym zadaniem jest wyszukanie informacji o tym ile razy
+nasze przychody w firmie wzrosły w stosunku do wartości poprzedzającej.
+Napisz funkcje, ktora zwróci ten wynik. Przykład poniżej.
 
 Format pliku:
     id:przychody
 
 np:
-    1:135 (wartosc poczatkowa)
-    2:246 (wartosc wzrosla, wynik + 1)
-    3:153 (wartosc zmalala)
-    4:200 (wartosc wzrosla, wynik + 1)
+    1:135 (wartość początkowa)
+    2:246 (wartość wzrosła, wynik + 1)
+    3:153 (wartość zmalała)
+    4:200 (wartość wzrosła, wynik + 1)
 wynik: 2"
 
-[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej czesci fabuły]
+[Ukończ zadanie programistyczne zanim przejdziesz do kolejnej częsci fabuły]
 
 Kończysz swoje zadanie. Zmęczonym wzrokiem patrzysz w monitor. Oczy zaczynają boleć, chwytasz szybko 
-ręką do szuflady. Chwilę grzebierz w niej, ale udaje ci się wyciągnąć z niej kroplę. "Skrapiasz sobie oczy".
+ręką do szuflady. Chwilę grzebierz w niej, ale udaje ci się wyciągnąć z niej kroplę. *Skrapiasz sobie oczy*
 Ból nagle przechodzi. Zamiast bólu, odczuwasz smutek, oczy same z siebie łzawią. Nagle zaczynasz myśleć, o czymś...
-... Dziwnym... Jakby czymś czego nigdy nie widziałeś, a było prawdziwe. Wstajesz z chęcią pójścia do domu, lecz
+dziwnym, jakby czymś czego nigdy nie widziałeś, a było prawdziwe. Wstajesz z chęcią pójścia do domu, lecz
 wewnętrzne ja karze ci krzyknąć: Mam tego dosyć!..
 
 Kod do odblokowania poziomu w grze: 8080
